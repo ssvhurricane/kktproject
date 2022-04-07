@@ -1,0 +1,256 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        // Windows Tasks.
+        {
+            "type": "cppbuild",
+            "label": "(Windows) -> engine_demo -> build active file (exe).",
+            "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+
+                // Base dependencies.
+                "-I${workspaceFolder}\\dependencies\\include\\boost",
+
+                // Add engine dll. 
+                "-I${workspaceFolder}\\Engine",
+                "-I${workspaceFolder}\\Engine\\KKTEngine.h",
+
+                "${workspaceFolder}\\bin\\windows_os\\KKTEngine.lib",
+                "${workspaceFolder}\\EngineDemo\\*.cpp",
+               
+                "-o", 
+                "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.exe",
+                
+               // "-DKIMPORT",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""
+        },
+        {
+            "type": "cppbuild",
+            "label": "(Windows) -> engine -> build dynamic library file (dll).",
+            "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-shared",
+                "-Wall",
+                "-g",
+
+                "-I${workspaceFolder}\\dependencies\\include",
+                "-L${workspaceFolder}\\dependencies\\library",
+              
+                "${workspaceFolder}\\dependencies\\library\\glfw3.lib", 
+                "${workspaceFolder}\\Engine\\*.cpp",
+                "${workspaceFolder}\\Engine\\*.c",
+                "-o", 
+                "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.dll",
+               
+              //  "-DKEXPORT",
+               "-DENGINEDLL_EXPORTS",
+
+                "-lwinmm",
+                "-lgdi32",
+                "-lopengl32",
+                "-lshell32",
+                "-luser32",
+                "-lglfw3",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""
+        },
+
+        // Linux Tasks.
+        {
+            "type": "cppbuild",
+            "label": "(Linux) -> engine_demo -> build active file ().",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+                "-I${workspaceFolder}/dependencies/include/boost",
+
+                // Add engine dll. 
+                "-I${workspaceFolder}/Engine",
+                "-I${workspaceFolder}/Engine/KKTEngine.h",
+                "${workspaceFolder}/bin/linux_os/KKTEngine.so",
+
+                "${workspaceFolder}/dependencies/library/libglfw3.a",
+                "${workspaceFolder}/EngineDemo/*.cpp",
+               
+                "-o",
+                "${workspaceFolder}/bin/linux_os/KKTEngineDemo",
+
+                "-DKIMPORT",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++"
+        },
+        {
+            "type": "cppbuild",
+            "label": "(Linux) -> engine -> build dynamic library file ().",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                 "-shared",
+                "-Wall",
+                "-g",
+                "-I${workspaceFolder}/dependencies/include",
+                "-L${workspaceFolder}/dependencies/library",
+                "${workspaceFolder}/dependencies/library/libglfw3.a",
+                "${workspaceFolder}/Engine/*.cpp",
+                "${workspaceFolder}/Engine/glad.c",
+
+                "-o",
+                "${workspaceFolder}/bin/linux_os/KKTEngine.so",
+                  
+                "-DKEXPORT",
+                "-fPIC",
+                "-lglfw3",
+                "-ldl",
+                "-lX11",
+                "-lpthread",
+                "-lm",
+                "-lXrandr",
+                "-lXi",
+                "-rpath",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++"
+        },
+
+        // Mac Tasks.
+        {
+            "type": "cppbuild",
+            "label": "(Mac) -> engine_demo -> build active file ().",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+
+                "-I${workspaceFolder}/dependencies/include/boost",
+
+                // Add engine dll. 
+                "-I${workspaceFolder}/Engine",
+                "-I${workspaceFolder}/Engine/KKTEngine.h",
+                "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
+
+                "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
+                "${workspaceFolder}/EngineDemo/*.cpp",
+                
+                "-o",
+                "${workspaceFolder}/bin/mac_os/KKTEngineDemo",
+
+                "-DKIMPORT",
+                
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++"
+        },
+        {
+            "type": "cppbuild",
+            "label": "(Mac) -> engine -> build dynamic library file (dylib).",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                 "-shared",
+                "-Wall",
+                "-g",
+                "-I${workspaceFolder}/dependencies/include",
+                "-L${workspaceFolder}/dependencies/library/mac",
+
+                "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
+                "${workspaceFolder}/Engine/*.cpp",
+                 "${workspaceFolder}/Engine/*.c",
+                "-o",
+                "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
+                  
+                "-DKEXPORT",
+                
+                "-framework",
+                "OpenGL",
+                "-framework",
+                "Cocoa",
+                "-framework",
+                "IOKit",
+                "-framework",
+                "CoreVideo",
+                "-framework",
+                "CoreFoundation",
+                "-rpath",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++"
+        }
+    ]
+}
