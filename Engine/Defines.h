@@ -1,3 +1,7 @@
+// If you are building the DLL project on the command line,
+// use the /D compiler option to define the MATHDLLWIN32_EXPORTS symbol.
+#pragma once
+
 #ifdef ENGINEDLL_EXPORTS
 #define ENGINE_API __declspec(dllexport)
 #else

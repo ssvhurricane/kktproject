@@ -2,20 +2,18 @@
 #include <iostream>
 #include "di.hpp"
 
-typedef void (__cdecl * PrintDebugMessage)();
-typedef void (__cdecl * InitialEngine)();
-typedef void (__cdecl * StartEngine)();
-typedef Engine::_Context::EngineContextInstaller*(__cdecl * GetEngineContext)();
-
+//typedef Engine::_Context::EngineContextInstaller* (__cdecl *EngineContextInstaller)();
 int main()
 {
-    Engine::PrintDebugMessage("KKTEngine Message!");
+    Engine::KKTEngine* engine = new Engine::KKTEngine();
 
-    Engine::InitialEngine();
+    engine->PrintDebugMessage("KKTEngine Message!");
 
-    Engine::StartEngine();
+    engine->InitialEngine();
 
-    auto resValue = Engine::GetEngineContext();
+    engine->StartEngine();
+
+   // engine->GetContext();
   
     return 0;
 }

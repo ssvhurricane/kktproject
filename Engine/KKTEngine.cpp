@@ -23,19 +23,25 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "{\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
+KKTEngine::KKTEngine()
+  {
 
- void PrintDebugMessage(std::string str)
+
+  }
+
+ void KKTEngine::PrintDebugMessage(std::string str)
  {
      std::cout<< "KKTEngine.dll, print start message!: "<< str << std::endl;
  }
 
- void InitialEngine()
+ void KKTEngine::InitialEngine()
  {
      //TODO: 
      std::cout<< "KKTEngine.dll initialize!"<< std::endl;
+     //_engineContextInstaller = new EngineContextInstaller();
  }
 
- void StartEngine()
+ void KKTEngine::StartEngine()
  {
      //TODO:
      std::cout<< "KKTEngine.dll start!"<< std::endl;
@@ -179,11 +185,11 @@ const char *fragmentShaderSource = "#version 330 core\n"
 
  }
 
-
- EngineContextInstaller* GetEngineContext()
- {
-     return NULL;
- }
+ 
+EngineContextInstaller* GetContext()
+{
+    return NULL;
+}
 
  // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------

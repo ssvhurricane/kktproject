@@ -25,7 +25,8 @@
                 "-o", 
                 "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.exe",
                 
-               // "-DKIMPORT",
+               // "-DKIMPORT",    
+                "-DENGINEDLL_EXPORTS",
                 "-Wno-deprecated"
             ],
             "options": {

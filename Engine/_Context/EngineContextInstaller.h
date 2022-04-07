@@ -11,22 +11,23 @@
 namespace Engine {
 namespace _Context {
 
-class EngineContextInstaller 
+class  EngineContextInstaller 
 {
 private:
 
   // core::injector<ver::config, core::pool_t<>> _injector;
 
-   virtual void InstallBindings();
+  void InstallBindings();
 
 public: 
 
    EngineContextInstaller ();
 
-   virtual ~EngineContextInstaller ();
+   ~EngineContextInstaller ();
 
-   virtual void CreateContext();
+  void CreateContext();
 };
+
 
 } // namespace _Context
 } // namespace Engine
