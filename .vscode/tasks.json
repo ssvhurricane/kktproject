@@ -110,6 +110,7 @@
                 "${workspaceFolder}/bin/linux_os/KKTEngineDemo",
 
                 //"-DKIMPORT",
+                "-fdeclspec",
                 "-Wno-deprecated"
             ],
             "options": {
@@ -148,7 +149,7 @@
                 "${workspaceFolder}/bin/linux_os/KKTEngine.so",
                   
                 "-DENGINEDLL_EXPORTS",
-
+                "-fdeclspec",
                 "-fPIC",
                 "-lglfw3",
                 "-ldl",
