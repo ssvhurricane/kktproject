@@ -25,25 +25,26 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "}\n\0";
 
 
- void PrintDebugMessage(std::string str)
+ void KKTEngine::PrintDebugMessage(std::string str)
  {
      std::cout<< "KKTEngine.dll: "<< str << std::endl;
  }
 
- void  InitialEngine()
+ void  KKTEngine::InitialEngine()
  {
      std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
-     //_context =  new EngineContextInstaller();
+
+     _context =  new EngineContextInstaller();
  }
  
-IContextInstaller*  GetContext()
+IContextInstaller*  KKTEngine::GetContext()
 { 
     std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
 
     return _context;
 }
 
- void StartEngine()
+ void KKTEngine::StartEngine()
  {
      std::cout<< "KKTEngine.dll: Start!"<< std::endl;
 

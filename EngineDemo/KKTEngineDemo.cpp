@@ -2,15 +2,17 @@
 #include <iostream>
 #include "di.hpp"
 
-//#pragma comment(lib,"KKTEngine.lib")
-
 int main()
 {
-    Engine::InitialEngine(); 
-    
-    IContextInstaller* engineContext = Engine::GetContext();
+    Engine::KKTEngine* gameEngine = new Engine::KKTEngine();
 
-    Engine::StartEngine();
+    gameEngine->InitialEngine();
+    
+    IContextInstaller* engineContext = gameEngine->GetContext();
+
+    engineContext->GetSystem(); //TODO: 
+    
+    gameEngine->StartEngine();
   
     return 0;
 }

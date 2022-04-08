@@ -3,17 +3,30 @@
 namespace Engine {
 namespace _Context {
 
-EngineContextInstaller::EngineContextInstaller(){}
+EngineContextInstaller::EngineContextInstaller()
+{
+    CreateContext();
+}
+
 void EngineContextInstaller::InstallBindings()
 {  
-   //  _injector = di::make_injector();
+    // _injector = di::make_injector();
 
-    // _injector.create<LogSystem::LogSystem>();
+    // _injector.create<LogSystem::LogSystem>(); 
+    
+    std::cout<< "Install Bindings Method!"<< std::endl;
 }
 
 void EngineContextInstaller::CreateContext()
 {
+      std::cout<< "Create Context Method!"<< std::endl;
+
     InstallBindings();
+}
+
+void EngineContextInstaller::GetSystem()
+{
+      std::cout<< "Get System Method!"<< std::endl;
 }
 
 } // namespace _context

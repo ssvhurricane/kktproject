@@ -54,9 +54,12 @@
                 "-I${workspaceFolder}\\dependencies\\include", 
                 "-L${workspaceFolder}\\dependencies\\library",
                 
-                "${workspaceFolder}\\dependencies\\library\\glfw3.lib", 
+                "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
+
+                "${workspaceFolder}\\Engine\\_Context\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
+                
                 "-o", 
                 "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.dll",
                 
@@ -136,6 +139,8 @@
                 "-L${workspaceFolder}/dependencies/library",
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
+
+                "${workspaceFolder}/Engine/_Context/*.cpp",
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
 
@@ -223,8 +228,11 @@
                 "-L${workspaceFolder}/dependencies/library/mac",
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
+
+                "${workspaceFolder}/Engine/_Context/*.cpp",
                 "${workspaceFolder}/Engine/*.cpp",
-                 "${workspaceFolder}/Engine/*.c",
+                "${workspaceFolder}/Engine/*.c",
+
                 "-o",
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
                   
