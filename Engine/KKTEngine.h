@@ -4,7 +4,7 @@
 #pragma once
 #include <iostream>
 #include <string>
-#include "Defines.h"
+#include "_Context/Base/Defines.h"
 #include "_Context/EngineContextInstaller.h"
 
 using namespace Engine::_Context;
@@ -25,6 +25,6 @@ public:
  ENGINE_API void __cdecl StartEngine();
 };
 
-} // namespace engine
+} // namespace Engine
 
 #endif //  ENGINE_KKTENGINE_H_
