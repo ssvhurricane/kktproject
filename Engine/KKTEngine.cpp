@@ -23,28 +23,30 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "{\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
-KKTEngine::KKTEngine()
-  {
 
 
-  }
-
- void KKTEngine::PrintDebugMessage(std::string str)
+ void PrintDebugMessage(std::string str)
  {
-     std::cout<< "KKTEngine.dll, print start message!: "<< str << std::endl;
+     std::cout<< "KKTEngine.dll: "<< str << std::endl;
  }
 
- void KKTEngine::InitialEngine()
+ void  InitialEngine()
  {
-     //TODO: 
-     std::cout<< "KKTEngine.dll initialize!"<< std::endl;
-     //_engineContextInstaller = new EngineContextInstaller();
+     std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
+     //_context =  new EngineContextInstaller();
  }
+ 
+IContextInstaller*  GetContext()
+{ 
+    std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
 
- void KKTEngine::StartEngine()
+    return _context;
+}
+
+ void StartEngine()
  {
-     //TODO:
-     std::cout<< "KKTEngine.dll start!"<< std::endl;
+     std::cout<< "KKTEngine.dll: Start!"<< std::endl;
+
     // glfw: initialize and configure
     // ------------------------------
     glfwInit();
@@ -186,11 +188,6 @@ KKTEngine::KKTEngine()
  }
 
  
-EngineContextInstaller* GetContext()
-{
-    return NULL;
-}
-
  // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow *window)

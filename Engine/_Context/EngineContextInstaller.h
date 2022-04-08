@@ -8,22 +8,20 @@
 //namespace core = boost::ext::di::v1_2_0::core;
 //namespace ver = boost::ext::di::v1_2_0;
 
+#include "IContextInstaller.h"
+
 namespace Engine {
 namespace _Context {
 
-class  EngineContextInstaller 
+class EngineContextInstaller: public IContextInstaller
 {
 private:
 
-  // core::injector<ver::config, core::pool_t<>> _injector;
-
-  void InstallBindings();
+    // core::injector<ver::config, core::pool_t<>> _injector;
 
 public: 
-
-   EngineContextInstaller ();
-
-   ~EngineContextInstaller ();
+ EngineContextInstaller();
+  void InstallBindings();
 
   void CreateContext();
 };

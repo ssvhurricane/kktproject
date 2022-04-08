@@ -2,18 +2,15 @@
 #include <iostream>
 #include "di.hpp"
 
-//typedef Engine::_Context::EngineContextInstaller* (__cdecl *EngineContextInstaller)();
+//#pragma comment(lib,"KKTEngine.lib")
+
 int main()
 {
-    Engine::KKTEngine* engine = new Engine::KKTEngine();
+    Engine::InitialEngine(); 
+    
+    IContextInstaller* engineContext = Engine::GetContext();
 
-    engine->PrintDebugMessage("KKTEngine Message!");
-
-    engine->InitialEngine();
-
-    engine->StartEngine();
-
-   // engine->GetContext();
+    Engine::StartEngine();
   
     return 0;
 }

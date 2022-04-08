@@ -25,8 +25,7 @@
                 "-o", 
                 "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.exe",
                 
-               // "-DKIMPORT",    
-                "-DENGINEDLL_EXPORTS",
+               // "-DKIMPORT",  
                 "-Wno-deprecated"
             ],
             "options": {
@@ -52,17 +51,16 @@
                 "-Wall",
                 "-g",
 
-                "-I${workspaceFolder}\\dependencies\\include",
+                "-I${workspaceFolder}\\dependencies\\include", 
                 "-L${workspaceFolder}\\dependencies\\library",
-              
+                
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib", 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
                 "-o", 
                 "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.dll",
-               
-              //  "-DKEXPORT",
-               "-DENGINEDLL_EXPORTS",
+                
+                "-DENGINEDLL_EXPORTS",
 
                 "-lwinmm",
                 "-lgdi32",
@@ -108,7 +106,7 @@
                 "-o",
                 "${workspaceFolder}/bin/linux_os/KKTEngineDemo",
 
-                "-DKIMPORT",
+                //"-DKIMPORT",
                 "-Wno-deprecated"
             ],
             "options": {
@@ -133,8 +131,10 @@
                  "-shared",
                 "-Wall",
                 "-g",
+
                 "-I${workspaceFolder}/dependencies/include",
                 "-L${workspaceFolder}/dependencies/library",
+
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
@@ -142,7 +142,8 @@
                 "-o",
                 "${workspaceFolder}/bin/linux_os/KKTEngine.so",
                   
-                "-DKEXPORT",
+                "-DENGINEDLL_EXPORTS",
+
                 "-fPIC",
                 "-lglfw3",
                 "-ldl",
@@ -191,7 +192,7 @@
                 "-o",
                 "${workspaceFolder}/bin/mac_os/KKTEngineDemo",
 
-                "-DKIMPORT",
+                //"-DKIMPORT",
                 
                 "-Wno-deprecated"
             ],
@@ -217,6 +218,7 @@
                  "-shared",
                 "-Wall",
                 "-g",
+
                 "-I${workspaceFolder}/dependencies/include",
                 "-L${workspaceFolder}/dependencies/library/mac",
 
@@ -226,7 +228,7 @@
                 "-o",
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
                   
-                "-DKEXPORT",
+                "-DENGINEDLL_EXPORTS",
                 
                 "-framework",
                 "OpenGL",

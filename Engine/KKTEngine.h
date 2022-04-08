@@ -5,27 +5,27 @@
 #include <iostream>
 #include <string>
 #include "Defines.h"
+
+//#include "_Context/IContextInstaller.h"
 #include "_Context/EngineContextInstaller.h"
+
 #include "CoreLayer/InittializeSystem/InittializeSystem.h"
+
 
 using namespace Engine::_Context;
 
 namespace Engine {
 
-class ENGINE_API KKTEngine
-{
-private:
-     EngineContextInstaller* _engineContextInstaller;
-public:
- KKTEngine();
+IContextInstaller* _context;
 
- void __cdecl PrintDebugMessage(std::string str);
+extern "C" {
+    ENGINE_API void __cdecl PrintDebugMessage(std::string str);
 
- void __cdecl InitialEngine();
+    ENGINE_API void __cdecl InitialEngine();
+    
+    ENGINE_API IContextInstaller* __cdecl GetContext();
 
- void __cdecl StartEngine();
- 
- EngineContextInstaller* __cdecl GetContext();
+    ENGINE_API void __cdecl StartEngine();
 };
 
 } // namespace engine
