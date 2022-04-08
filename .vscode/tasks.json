@@ -199,7 +199,7 @@
                 "${workspaceFolder}/bin/mac_os/KKTEngineDemo",
 
                 //"-DKIMPORT",
-                
+                "-fdeclspec",
                 "-Wno-deprecated"
             ],
             "options": {
@@ -238,7 +238,7 @@
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
                   
                 "-DENGINEDLL_EXPORTS",
-                
+                "-fdeclspec",
                 "-framework",
                 "OpenGL",
                 "-framework",
