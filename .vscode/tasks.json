@@ -56,7 +56,10 @@
                 
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
 
-                "${workspaceFolder}\\Engine\\_Context\\*.cpp",
+                "${workspaceFolder}\\Engine\\_Context\\*.cpp", // Context Folder.
+                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp", // CoreLayer/LogSystem/ Folder.
+                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
                 
@@ -141,7 +144,10 @@
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
 
-                "${workspaceFolder}/Engine/_Context/*.cpp",
+                "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
 
@@ -230,7 +236,10 @@
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
 
-                "${workspaceFolder}/Engine/_Context/*.cpp",
+                "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+                
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/*.c",
 

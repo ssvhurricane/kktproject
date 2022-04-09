@@ -1,12 +1,14 @@
 #ifndef ENGINE_CONTEXT_INSTALLER_H_
 #define ENGINE_CONTEXT_INSTALLER_H_
+#pragma once
+
 #include <iostream>
 #include "Base/IContextInstaller.h"
 
 namespace Engine {
 namespace _Context {
 
-class EngineContextInstaller: public IContextInstaller
+class EngineContextInstaller : public IContextInstaller
 {
 private:
 
