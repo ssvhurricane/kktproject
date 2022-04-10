@@ -1,7 +1,7 @@
 #include "LogSystem.h"
 
 namespace Engine {
-namespace LogSystem{
+namespace LogSystem {
 
 LogSystem::LogSystem(){}
 

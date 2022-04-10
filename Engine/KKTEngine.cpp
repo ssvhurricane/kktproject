@@ -24,25 +24,27 @@ const char *fragmentShaderSource = "#version 330 core\n"
     "   FragColor = vec4(1.0f, 0.5f, 0.2f, 1.0f);\n"
     "}\n\0";
 
+ void  KKTEngine::InitialEngine()
+ {
+      std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
 
+     _system = new Engine::InitializeSystem::InitializeSystem();
+
+     _system->Initialize();
+   
+     _context = dynamic_cast<Engine::InitializeSystem::InitializeSystem*>(_system)->GetContext();
+ }
+ 
  void KKTEngine::PrintDebugMessage(std::string str)
  {
      std::cout<< "KKTEngine.dll: "<< str << std::endl;
  }
-
- void  KKTEngine::InitialEngine()
- {
-     std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
-     // This call InitializeSystem()-> Create Context and create all System. This System and LogSystem then first start
-     // new InitializeSystem() -> new EngineContextInstaller->Systems->next, first(for example), LogSystem
-     _context =  new  Engine::_Context::EngineContextInstaller();
- }
  
  Engine::_Context::IContextInstaller*  KKTEngine::GetContext()
 { 
-    std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
+     std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
 
-    return _context;
+     return _context;
 }
 
  void KKTEngine::StartEngine()

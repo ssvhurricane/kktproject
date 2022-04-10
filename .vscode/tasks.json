@@ -60,6 +60,7 @@
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp", // Context Folder.
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp", // CoreLayer/LogSystem/ Folder.
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", // CoreLayer/InitializeSystem/ Folder.
 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
@@ -149,7 +150,8 @@
 
                 "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", // CoreLayer/InitializeSystem/ Folder.
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
@@ -243,6 +245,7 @@
                 "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", // CoreLayer/InitializeSystem/ Folder.
                 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/*.c",

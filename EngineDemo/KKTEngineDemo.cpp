@@ -12,16 +12,19 @@ int main()
     
     Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
 
-    auto logSystem = new Engine::LogSystem::LogSystem();
+    Engine::LogSystem::LogSystem* logSystem = nullptr;
+    engineContext->GetSystem(logSystem);
 
-    engineContext->GetSystem(logSystem); //TODO: 
+    if(logSystem)
+    { 
+         logSystem->Initialize();
 
-    logSystem->Initialize();
+         logSystem->ShowLog("Item",  
+             Engine::LogSystem::ELogType::Message,
+             "LogMessage!",
+             Engine::LogSystem::ELogOutputLocationType::All);
+    }
 
-    logSystem->ShowLog("Item",  
-        Engine::LogSystem::ELogType::Message,
-         "LogMessage!",
-          Engine::LogSystem::ELogOutputLocationType::All);
 
     gameEngine->StartEngine();
   
