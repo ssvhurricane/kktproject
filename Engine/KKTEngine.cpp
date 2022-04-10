@@ -33,11 +33,12 @@ const char *fragmentShaderSource = "#version 330 core\n"
  void  KKTEngine::InitialEngine()
  {
      std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
-
-     _context =  new EngineContextInstaller();
+     // This call InitializeSystem()-> Create Context and create all System. This System and LogSystem then first start
+     // new InitializeSystem() -> new EngineContextInstaller->Systems->next, first(for example), LogSystem
+     _context =  new  Engine::_Context::EngineContextInstaller();
  }
  
-IContextInstaller*  KKTEngine::GetContext()
+ Engine::_Context::IContextInstaller*  KKTEngine::GetContext()
 { 
     std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
 

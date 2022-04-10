@@ -1,5 +1,3 @@
-#ifndef ENGINE_LOG_SYSTEM_H_
-#define ENGINE_LOG_SYSTEM_H_
 #pragma once
 
 #include <iostream>
@@ -8,11 +6,12 @@
 #include "Base/ELogLayer.h"
 #include "Base/LogMessageData.h"
 #include "../../_Context/Base/ISystem.h"
+#include "../../_Context/Base/Defines.h"
 
 namespace Engine {
 namespace LogSystem{
 
-class LogSystem : public _Context::ISystem
+class ENGINE_API LogSystem : public _Context::ISystem
 {
 private:
 // TODO:
@@ -24,7 +23,9 @@ private:
 
 public:
 
-    explicit LogSystem();
+  LogSystem();
+
+    void Initialize();
 
     void ShowLog(std::string itemName,
             ELogType logType,
@@ -34,6 +35,3 @@ public:
 
 } // namespace Engine
 } // namespace LogSystem
-
-
-#endif  // ENGINE_LOG_SYSTEM_H_

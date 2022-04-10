@@ -24,9 +24,18 @@ void EngineContextInstaller::CreateContext()
     InstallBindings();
 }
 
-void EngineContextInstaller::GetSystem()
+void EngineContextInstaller::GetSystem(ISystem* system)
 {
-      std::cout<< "Get System Method!"<< std::endl;
+    std::cout<< "Get System Method!"<< std::endl;
+
+    if (system)
+    {
+        std::cout<< "Bind System!"<< std::endl;
+ // TODO:
+    }
+    else 
+        system = nullptr;
+     
 }
 
 } // namespace _context

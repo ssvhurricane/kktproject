@@ -1,9 +1,8 @@
-#ifndef ENGINE_CONTEXT_INSTALLER_H_
-#define ENGINE_CONTEXT_INSTALLER_H_
 #pragma once
 
 #include <iostream>
 #include "Base/IContextInstaller.h"
+#include "../CoreLayer/LogSystem/LogSystem.h"
 
 namespace Engine {
 namespace _Context {
@@ -20,12 +19,9 @@ public:
 
     EngineContextInstaller();
 
-    void GetSystem();
+    void GetSystem(ISystem*);
 };
 
 
 } // namespace _Context
 } // namespace Engine
-
-
-#endif  // ENGINE_CONTEXT_INSTALLER_H_
