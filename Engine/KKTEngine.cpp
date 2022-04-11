@@ -28,11 +28,11 @@ const char *fragmentShaderSource = "#version 330 core\n"
  {
       std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
 
-     _system = new Engine::InitializeSystem::InitializeSystem();
+     _initializeSystem = new Engine::InitializeSystem::InitializeSystem();
 
-     _system->Initialize();
+     _initializeSystem->Initialize();
    
-     _context = dynamic_cast<Engine::InitializeSystem::InitializeSystem*>(_system)->GetContext();
+     _mainContext = dynamic_cast<Engine::InitializeSystem::InitializeSystem*>(_initializeSystem)->GetContext();
  }
  
  void KKTEngine::PrintDebugMessage(std::string str)
@@ -44,7 +44,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
 { 
      std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
 
-     return _context;
+     return _mainContext;
 }
 
  void KKTEngine::StartEngine()
@@ -191,8 +191,7 @@ const char *fragmentShaderSource = "#version 330 core\n"
 
  }
 
- 
- // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
+// process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly
 // ---------------------------------------------------------------------------------------------------------
 void processInput(GLFWwindow *window)
 {

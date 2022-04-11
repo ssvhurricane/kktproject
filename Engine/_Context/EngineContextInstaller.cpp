@@ -10,10 +10,8 @@ EngineContextInstaller::EngineContextInstaller()
 
 void EngineContextInstaller::InstallBindings()
 {  
-    // _injector = di::make_injector();
-
-    // _injector.create<LogSystem::LogSystem>(); 
-    
+    // This add new LogSysyem
+    // etc Systems, order matters.
     std::cout<< "Install Bindings Method!"<< std::endl;
 }
 

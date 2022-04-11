@@ -6,13 +6,14 @@
 
 int main()
 {
-    Engine::KKTEngine* gameEngine = new Engine::KKTEngine();
+    Engine::KKTEngine* gameEngine = Engine::KKTEngine::InstancePtr();
 
     gameEngine->InitialEngine();
     
     Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
 
     Engine::LogSystem::LogSystem* logSystem = nullptr;
+
     engineContext->GetSystem(logSystem);
 
     if(logSystem)
@@ -24,7 +25,6 @@ int main()
              "LogMessage!",
              Engine::LogSystem::ELogOutputLocationType::All);
     }
-
 
     gameEngine->StartEngine();
   
