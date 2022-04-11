@@ -1,8 +1,12 @@
+// This is non Context System (you can't use distanced services here).
 #pragma once
 
 #include <iostream>
+#include <map>
+#include <algorithm>
+
 #include "Base/IContextInstaller.h"
-#include "../CoreLayer/LogSystem/LogSystem.h"
+#include "../CoreLayer/LogSystem/LogSystem.h" // This place for add system headers, then use all.
 
 namespace Engine {
 namespace _Context {
@@ -10,6 +14,8 @@ namespace _Context {
 class EngineContextInstaller : public IContextInstaller
 {
 private:
+
+    std::map<ESystemType, ISystem*> _systems;
 
     void InstallBindings();
 
@@ -19,7 +25,7 @@ public:
 
     EngineContextInstaller();
 
-    void GetSystem(ISystem*);
+    ISystem* GetSystem(ESystemType);
 };
 
 

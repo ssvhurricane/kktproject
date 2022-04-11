@@ -12,6 +12,10 @@ void EngineContextInstaller::InstallBindings()
 {  
     // This add new LogSysyem
     // etc Systems, order matters.
+
+    // 1. Add LogSystem.
+    _systems.emplace(ESystemType::LogSystem, new Engine::LogSystem::LogSystem);
+
     std::cout<< "Install Bindings Method!"<< std::endl;
 }
 
@@ -22,17 +26,11 @@ void EngineContextInstaller::CreateContext()
     InstallBindings();
 }
 
-void EngineContextInstaller::GetSystem(ISystem* system)
+ISystem* EngineContextInstaller::GetSystem(ESystemType eSystemType)
 {
     std::cout<< "Get System Method!"<< std::endl;
 
-    if (!system)
-    {
-        std::cout<< "Bind System!"<< std::endl;
- // TODO:
-    }
-    else 
-        system = nullptr;
+    return _systems[eSystemType];
 }
 
 } // namespace _context

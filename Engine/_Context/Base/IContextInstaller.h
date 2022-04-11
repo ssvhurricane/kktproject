@@ -1,13 +1,14 @@
 #pragma once
 
 #include "ISystem.h"
+#include "ESystemType.h"
 
 namespace Engine {
 namespace _Context {
 
 struct IContextInstaller 
 { 
-    virtual void GetSystem(ISystem*) = 0;
+    virtual ISystem* GetSystem(ESystemType) = 0;
 };
 
 } // namespace _Context

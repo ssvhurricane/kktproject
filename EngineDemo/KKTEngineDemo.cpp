@@ -1,7 +1,6 @@
 #include <KKTEngine.h>
-#include <LogSystem.h>
-#include <Base/ELogType.h>
 #include <iostream>
+#include <typeinfo>
 #include "di.hpp"
 
 int main()
@@ -11,14 +10,13 @@ int main()
     gameEngine->InitialEngine();
     
     Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
-
-    Engine::LogSystem::LogSystem* logSystem = nullptr;
-
-    engineContext->GetSystem(logSystem);
+  
+    auto logSystem 
+    = dynamic_cast<Engine::LogSystem::LogSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::LogSystem));
 
     if(logSystem)
     { 
-         logSystem->Initialize();
+         logSystem->Initialize(); 
 
          logSystem->ShowLog("Item",  
              Engine::LogSystem::ELogType::Message,
