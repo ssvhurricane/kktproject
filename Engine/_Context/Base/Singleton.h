@@ -20,8 +20,8 @@ protected:
     static T mSingleton;
 
 private:
-    Singleton(Singleton const&){}
-    Singleton & operator = (Singleton const&){}
+    Singleton(Singleton const&);
+    Singleton & operator = (Singleton const&);
 };
 
 template<typename T>

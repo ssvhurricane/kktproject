@@ -18,11 +18,15 @@ int main()
     { 
          logSystem->Initialize(); 
 
-         logSystem->ShowLog("Item",  
+         logSystem->ShowLog("[LogSystemTest]",  
              Engine::LogSystem::ELogType::Message,
              "LogMessage!",
              Engine::LogSystem::ELogOutputLocationType::All);
     }
+
+    auto rendersystem =  dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::RenderSystem));
+
+    rendersystem->DemoRender();
 
     gameEngine->StartEngine();
   

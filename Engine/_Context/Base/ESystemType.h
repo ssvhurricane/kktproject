@@ -5,14 +5,17 @@ namespace _Context {
 
 enum ESystemType 
 {
-    // PlatformSpecificLayer.
-    FileSystem,
-    GraphicShellSystem,
-    NetworkSystem,
-    PhysicsAndCollisionsShellSystem,
+    // - PlatformSpecificLayer.
+    //FileSystem,
+    //GraphicShellSystem,
+    //NetworkSystem,
+    //PhysicsAndCollisionsShellSystem,
 
     // CoreLayer.
-    LogSystem
+    LogSystem,
+
+    // Rendering Layer.
+    RenderSystem
 
 };
 

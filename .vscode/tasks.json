@@ -16,7 +16,7 @@
                 "-I${workspaceFolder}\\dependencies\\include\\boost",
 
                 // Add engine headers. 
-                "-I${workspaceFolder}\\Engine",
+                "-I${workspaceFolder}\\Engine", 
 
                 // Add cpp, lib.
                 "${workspaceFolder}\\bin\\windows_os\\KKTEngine.lib",
@@ -55,10 +55,12 @@
                 
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
 
-                "${workspaceFolder}\\Engine\\_Context\\*.cpp", // Context Folder.
-                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp", // CoreLayer/LogSystem/ Folder.
+                // Add .cpp systems.
+                "${workspaceFolder}\\Engine\\_Context\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
-                "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", // CoreLayer/InitializeSystem/ Folder.
+                "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
+                "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
@@ -144,10 +146,12 @@
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
 
-                "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
+                // Add .cpp systems.
+                "${workspaceFolder}/Engine/_Context/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", // CoreLayer/InitializeSystem/ Folder.
+                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
+                "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
@@ -235,12 +239,14 @@
                 "-L${workspaceFolder}/dependencies/library/mac",
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-
-                "${workspaceFolder}/Engine/_Context/*.cpp", // Context Folder.
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", // CoreLayer/LogSystem/ Folder.
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", // CoreLayer/InitializeSystem/ Folder.
                 
+                // Add .cpp systems.
+                "${workspaceFolder}/Engine/_Context/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
+                "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/*.c",
 

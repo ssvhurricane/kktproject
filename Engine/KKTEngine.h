@@ -13,7 +13,7 @@
 #include "CoreLayer/InitializeSystem/InitializeSystem.h"
 
 namespace Engine {
-class KKTEngine : public Singleton<KKTEngine>
+class ENGINE_API KKTEngine : public Singleton<KKTEngine>
 {
 private:
 
@@ -25,13 +25,13 @@ private:
    
 public:
 
-    ENGINE_API void __cdecl InitialEngine(); 
+     void __cdecl InitialEngine(); 
 
-    ENGINE_API void __cdecl PrintDebugMessage(std::string str);
+     void __cdecl PrintDebugMessage(std::string str);
     
-    ENGINE_API Engine::_Context::IContextInstaller* __cdecl GetContext();
+     Engine::_Context::IContextInstaller* __cdecl GetContext();
 
-    ENGINE_API void __cdecl StartEngine();
+     void __cdecl StartEngine();
 };
 
 } // namespace Engine
