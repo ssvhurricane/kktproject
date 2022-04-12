@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include <map>
-#include <algorithm>
 
 #include "Base/IContextInstaller.h"
 #include "../CoreLayer/LogSystem/LogSystem.h" // This place for add system headers, then use all.
