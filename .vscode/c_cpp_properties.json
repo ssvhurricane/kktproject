@@ -9,7 +9,7 @@
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "KEXPORT"
+                "DENGINEDLL_EXPORTS"
             ],
             "compilerPath": "/usr/bin/clang++",
             "cStandard": "c17",
@@ -25,7 +25,7 @@
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "KEXPORT"
+                "DENGINEDLL_EXPORTS"
             ],
             "compilerPath": "C:\\Program Files\\LLVM\bin\\clang++.exe",
             "cStandard": "c17",
@@ -41,12 +41,12 @@
                 "_DEBUG",
                 "UNICODE",
                 "_UNICODE",
-                "KEXPORT"
+                "DENGINEDLL_EXPORTS"
             ],
             "compilerPath": "/usr/bin/clang++",
             "cStandard": "c17",
             "cppStandard": "c++17",
-            "intelliSenseMode": "linux-clang-x64"
+            "intelliSenseMode": "macos-clang-x64"
         }
     ],
     "version": 4
