@@ -22,6 +22,9 @@ void EngineContextInstaller::InstallBindings()
     // 3. Add WorldSystem. 
     _systems.emplace(ESystemType::WorldSystem, new Engine::WorldSystem::WorldSystem);
 
+    // 4. Add SceneSystem.
+    _systems.emplace(ESystemType::SceneSystem, new Engine::SceneSystem::SceneSystem);
+
     std::cout<< "Install Bindings Method!"<< std::endl;
 }
 

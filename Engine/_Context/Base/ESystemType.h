@@ -18,7 +18,8 @@ enum ESystemType
     RenderSystem,
 
     // World Layer.
-    WorldSystem
+    WorldSystem,
+    SceneSystem
 
 };
 

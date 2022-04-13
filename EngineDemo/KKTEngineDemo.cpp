@@ -34,8 +34,14 @@ int main()
     auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(engineContext
                                                             ->GetSystem(Engine::_Context::ESystemType::WorldSystem));
 
-
     worldSystem->CreateWorld();
+
+    // SceneSystem. 
+    auto sceneSystem = dynamic_cast<Engine::SceneSystem::SceneSystem*>(engineContext
+                                                            ->GetSystem(Engine::_Context::ESystemType::SceneSystem));
+                                        
+    
+    sceneSystem->CreateScene();
     
     // Start Engine(Runtime).
     gameEngine->StartEngine();
