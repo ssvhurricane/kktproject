@@ -1,0 +1,5 @@
+enum EHolderType
+{
+    Window,
+    Canvas
+};

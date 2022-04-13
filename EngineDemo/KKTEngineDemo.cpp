@@ -1,11 +1,10 @@
 #include <KKTEngine.h>
 #include <iostream>
-#include <typeinfo>
 #include "di.hpp"
 
 int main()
 {
-    Engine::KKTEngine* gameEngine = Engine::KKTEngine::InstancePtr();
+    Engine::KKTEngine* gameEngine = Engine::KKTEngine::InstancePtr(); // Create Engine.
 
     gameEngine->InitialEngine();
     

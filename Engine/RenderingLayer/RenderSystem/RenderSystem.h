@@ -22,5 +22,6 @@ public:
 
     void DemoRender();
 }; 
+
 } // namespace RenderSystem
 } // namespace Engine
