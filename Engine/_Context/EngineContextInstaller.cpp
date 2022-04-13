@@ -25,12 +25,15 @@ void EngineContextInstaller::InstallBindings()
     // 4. Add SceneSystem.
     _systems.emplace(ESystemType::SceneSystem, new Engine::SceneSystem::SceneSystem);
 
+    // 5. Add ObjectSystem.
+    _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
+
     std::cout<< "Install Bindings Method!"<< std::endl;
 }
 
 void EngineContextInstaller::CreateContext()
 {
-      std::cout<< "Create Context Method!"<< std::endl;
+    std::cout<< "Create Context Method!"<< std::endl;
 
     InstallBindings();
 }

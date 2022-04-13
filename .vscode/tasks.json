@@ -63,6 +63,7 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
@@ -156,6 +157,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/SceneSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
@@ -252,6 +254,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/SceneSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/*.c",

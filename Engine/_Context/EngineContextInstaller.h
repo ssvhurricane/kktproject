@@ -9,6 +9,7 @@
 #include "../RenderingLayer/RenderSystem/RenderSystem.h"
 #include "../WorldLayer/WorldSystem/WorldSystem.h"
 #include "../WorldLayer/SceneSystem/SceneSystem.h"
+#include "../WorldLayer/ObjectSystem/ObjectSystem.h"
 
 namespace Engine {
 namespace _Context {

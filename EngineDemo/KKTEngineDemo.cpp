@@ -42,7 +42,14 @@ int main()
                                         
     
     sceneSystem->CreateScene();
+
+    // ObjectSystem. 
+    auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(engineContext
+                                                            ->GetSystem(Engine::_Context::ESystemType::ObjectSystem));
+                                        
     
+    objectSystem->CreateObject();
+
     // Start Engine(Runtime).
     gameEngine->StartEngine();
   

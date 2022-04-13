@@ -27,5 +27,5 @@ public:
     IScene* GetScene(ESceneType);
 };
 
-} // namespace WorldSystem
+} // namespace SceneSystem
 } // namespace Engine
