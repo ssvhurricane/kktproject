@@ -4,7 +4,7 @@
 
 namespace Engine {
 
- void  KKTEngine::InitialEngine()
+ void KKTEngine::InitialEngine()
  {
       std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
 

@@ -20,7 +20,7 @@ public:
 
     void Initialize();
 
-    void DemoRender();
+    int DemoRender();
 }; 
 
 } // namespace RenderSystem

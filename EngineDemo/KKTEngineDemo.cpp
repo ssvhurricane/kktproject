@@ -10,6 +10,7 @@ int main()
     
     Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
   
+   // LogSystem.
     auto logSystem 
     = dynamic_cast<Engine::LogSystem::LogSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::LogSystem));
 
@@ -23,10 +24,20 @@ int main()
              Engine::LogSystem::ELogOutputLocationType::All);
     }
 
-    auto rendersystem =  dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::RenderSystem));
+    // RenderSystem.
+    auto renderSystem =  dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext
+                                                            ->GetSystem(Engine::_Context::ESystemType::RenderSystem));
 
-    rendersystem->DemoRender();
+    renderSystem->DemoRender();
 
+    // WorldSystem. 
+    auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(engineContext
+                                                            ->GetSystem(Engine::_Context::ESystemType::WorldSystem));
+
+
+    worldSystem->CreateWorld();
+    
+    // Start Engine(Runtime).
     gameEngine->StartEngine();
   
     return 0;

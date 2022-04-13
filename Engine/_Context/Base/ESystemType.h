@@ -15,7 +15,10 @@ enum ESystemType
     LogSystem,
 
     // Rendering Layer.
-    RenderSystem
+    RenderSystem,
+
+    // World Layer.
+    WorldSystem
 
 };
 

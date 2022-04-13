@@ -38,7 +38,7 @@ void RenderSystem::Initialize()
     // TODO:
 }
 
-void RenderSystem::DemoRender()
+int RenderSystem::DemoRender()
 {
    dynamic_cast<Engine::LogSystem::LogSystem*>
    (Engine::KKTEngine::InstancePtr()
@@ -67,7 +67,7 @@ void RenderSystem::DemoRender()
     {
         std::cout << "Failed to create GLFW window" << std::endl;
         glfwTerminate();
-        return;
+        return -1;
     }
     glfwMakeContextCurrent(window);
     glfwSetFramebufferSizeCallback(window, framebuffer_size_callback);
@@ -77,7 +77,7 @@ void RenderSystem::DemoRender()
     if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
     {
         std::cout << "Failed to initialize GLAD" << std::endl;
-        return;
+        return -1;
     }
 
 
@@ -186,6 +186,8 @@ void RenderSystem::DemoRender()
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
     glfwTerminate();
+
+    return 0;
 }
 
 // process all input: query GLFW whether relevant keys are pressed/released this frame and react accordingly

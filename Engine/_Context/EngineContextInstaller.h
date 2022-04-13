@@ -7,6 +7,7 @@
 #include "Base/IContextInstaller.h"
 #include "../CoreLayer/LogSystem/LogSystem.h" // This place for add system headers, then use all.
 #include "../RenderingLayer/RenderSystem/RenderSystem.h"
+#include "../WorldLayer/WorldSystem/WorldSystem.h"
 
 namespace Engine {
 namespace _Context {
