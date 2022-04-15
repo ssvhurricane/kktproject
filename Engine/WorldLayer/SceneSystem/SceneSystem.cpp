@@ -15,7 +15,15 @@ void SceneSystem::Initialize()
    
 void SceneSystem::CreateSceneByName(std::string name, ESceneType eSceneType)
 {
-    // TODO:
+    // TODO: 
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog("[WorldSystem]",  
+                                            Engine::LogSystem::ELogType::Message,
+                                            "CreateScene: " + name,
+                                             Engine::LogSystem::ELogOutputLocationType::All);
 }
 
 IScene* SceneSystem::GetSceneByName(std::string)

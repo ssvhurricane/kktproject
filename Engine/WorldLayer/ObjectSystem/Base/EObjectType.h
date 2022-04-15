@@ -3,7 +3,11 @@
 namespace Engine {
 namespace ObjectSystem {
 
-enum EObjectType {};
+enum EObjectType 
+{
+    BasicObject,
+    NetworkObject
+};
 
 } // namespace ObjectSystem
 } // namespace Engine

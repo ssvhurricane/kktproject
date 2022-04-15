@@ -16,16 +16,19 @@ void BasicScene::Initialize(std::string, ESceneType)
 int BasicScene::GetId()
 {
     // TODO:
+    return -1;
 }
 
 ESceneType BasicScene::GetType()
 {
     // TODO:
+    return ESceneType::BasicScene;
 }
 
 std::string BasicScene::GetName()
 {
     // TODO:
+    return "";
 }     
         
 void BasicScene::SetOwner(WorldSystem::IWorld*)
@@ -36,11 +39,15 @@ void BasicScene::SetOwner(WorldSystem::IWorld*)
 WorldSystem::IWorld* BasicScene::GetOwner()
 {
     // TODO:
+    return NULL;
 }
 
 std::vector<ObjectSystem::IObject*> BasicScene::GetCurrentOBjects()
 {
     // TODO:
+    std::vector<ObjectSystem::IObject*> innerVector;
+
+    return innerVector;
 }
 
 void BasicScene::AddObjectOnScene(std::vector<ObjectSystem::IObject*>)

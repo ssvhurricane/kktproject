@@ -1,6 +1,7 @@
 #pragma once
 
-#include "vector"
+#include <string>
+#include <vector>
 
 #include "../../KKTEngine.h"
 #include "../../_Context/Base/ISystem.h"
@@ -15,17 +16,19 @@ class ENGINE_API ObjectSystem : public _Context::ISystem
 {
 private: 
 
-   std::vector<IObject*> _objects;
+    std::vector<IObject*> _objects;
 
 public:
 
     ObjectSystem();
 
     void Initialize();
+   
+    void CreateObjectByName(std::string name, EObjectType eObjectType = EObjectType::BasicObject);
 
-    void CreateObject();
+    IObject* GetObjectByName(std::string);
 
-    IObject* GetObject(EObjectType);
+    int GetObjectId(std::string);
 };
 
 } // namespace ObjectSystem

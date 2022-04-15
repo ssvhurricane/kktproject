@@ -57,17 +57,28 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp",
+                
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
+
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\ARWorld\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\BasicWorld\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\VRWorld\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\*.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\Scenes\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\*.cpp", 
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectFactorySystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 "${workspaceFolder}\\Engine\\*.c",
@@ -155,17 +166,28 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
+
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
+
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/ARWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/BasicWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/VRWorld/*.cpp",
+               
                 "${workspaceFolder}/Engine/WorldLayer/SceneSystem/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/SceneSystem/Scenes/*.cpp",
+                
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp", 
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectFactorySystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/glad.c",
@@ -256,17 +278,28 @@
                 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
+                
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
+
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/ARWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/BasicWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/VRWorld/*.cpp",
+
                 "${workspaceFolder}/Engine/WorldLayer/SceneSystem/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/SceneSystem/Scenes/*.cpp",
+                
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/*.cpp", 
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectFactorySystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
                 "${workspaceFolder}/Engine/*.c",

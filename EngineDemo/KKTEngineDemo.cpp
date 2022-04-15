@@ -48,7 +48,7 @@ int main()
                                                             ->GetSystem(Engine::_Context::ESystemType::ObjectSystem));
                                         
     
-    objectSystem->CreateObject();
+    objectSystem->CreateObjectByName("GameObject");
 
     // Start Engine(Runtime).
     gameEngine->StartEngine();
