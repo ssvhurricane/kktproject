@@ -1,6 +1,7 @@
 #pragma once
 
 #include <map>
+#include <string>
 
 #include "../../KKTEngine.h"
 #include "../../_Context/Base/ISystem.h"
@@ -15,7 +16,7 @@ class ENGINE_API WorldSystem : public _Context::ISystem
 {
 private: 
 
-    std::map<EWorldType, IWorld*> _worlds;
+    std::map<std::string, IWorld*> _worlds;
 
 public:
 
@@ -23,9 +24,13 @@ public:
 
     void Initialize();
 
-    void CreateWorld();
+    void CreateWorldByName(std::string name, EWorldType eWorldType = EWorldType::BasicWorld);
 
-    IWorld* GetWorld(EWorldType);
+    IWorld* GetWorldByName(std::string);
+
+    int GetWorldId(std::string);
+
+    IWorld* GetCurrentWorld();
 };
 
 } // namespace WorldSystem

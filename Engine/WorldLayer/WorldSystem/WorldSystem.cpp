@@ -13,7 +13,7 @@ void  WorldSystem::Initialize()
     // TODO:
 }
 
-void  WorldSystem::CreateWorld()
+void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
 {
     // TODO:
     
@@ -23,11 +23,21 @@ void  WorldSystem::CreateWorld()
                                 ->GetSystem(Engine::_Context::ESystemType::LogSystem))
                                 ->ShowLog("[WorldSystem]",  
                                             Engine::LogSystem::ELogType::Message,
-                                            "CreateWorld!",
+                                            "CreateWorld: " + name,
                                              Engine::LogSystem::ELogOutputLocationType::All);
 }
 
-IWorld*  WorldSystem::GetWorld(EWorldType)
+IWorld* WorldSystem::GetWorldByName(std::string name)
+{
+    // TODO:
+} 
+
+int GetWorldId(std::string)
+{
+    // TODO:
+}
+
+IWorld* GetCurrentWorld()
 {
     // TODO:
 }

@@ -5,7 +5,10 @@ namespace WorldSystem {
 
 enum EWorldType
 {
-    Default
+    BasicWorld,
+    VRWorld,
+    ARWorld,
+    AppWorld
 };
 
 }
