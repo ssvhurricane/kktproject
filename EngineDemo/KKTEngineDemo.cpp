@@ -41,7 +41,7 @@ int main()
                                                             ->GetSystem(Engine::_Context::ESystemType::SceneSystem));
                                         
     
-    sceneSystem->CreateScene();
+    sceneSystem->CreateSceneByName("MainScene");
 
     // ObjectSystem. 
     auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(engineContext

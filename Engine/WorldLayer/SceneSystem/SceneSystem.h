@@ -1,6 +1,6 @@
 #pragma once
 
-#include "vector"
+#include "map"
 
 #include "../../KKTEngine.h"
 #include "../../_Context/Base/ISystem.h"
@@ -15,16 +15,21 @@ class ENGINE_API SceneSystem : public _Context::ISystem
 {
 private: 
 
-   std::vector<IScene*> _scenes;
+   std::map<ESceneType, IScene*> _scenes;
 
 public:
+
     SceneSystem();
 
     void Initialize();
+   
+    void CreateSceneByName(std::string name, ESceneType eSceneType = ESceneType::BasicScene);
 
-    void CreateScene();
+    IScene* GetSceneByName(std::string);
 
-    IScene* GetScene(ESceneType);
+    int GetSceneId(std::string);
+
+    IScene* GetCurrentScene();
 };
 
 } // namespace SceneSystem

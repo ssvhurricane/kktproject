@@ -31,6 +31,8 @@ const char *fragmentShaderSource = "#version 330 core\n"
 RenderSystem::RenderSystem()
 {
     // TODO:
+
+    _renderSystem = nullptr; 
 }
 
 void RenderSystem::Initialize()

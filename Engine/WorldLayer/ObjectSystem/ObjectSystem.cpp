@@ -20,7 +20,10 @@ void ObjectSystem::CreateObject()
                                              Engine::LogSystem::ELogOutputLocationType::All);
 }
 
-IObject* ObjectSystem::GetObject(EObjectType eObjectType){}
+IObject* ObjectSystem::GetObject(EObjectType eObjectType)
+{
+    return NULL;
+}
 
 }
 }

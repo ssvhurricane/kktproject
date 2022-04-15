@@ -3,7 +3,10 @@
 namespace Engine {
 namespace SceneSystem {
 
-enum ESceneType {};
+enum ESceneType 
+{
+    BasicScene
+};
 
 } // namespace SceneSystem
 } // namespace Engine

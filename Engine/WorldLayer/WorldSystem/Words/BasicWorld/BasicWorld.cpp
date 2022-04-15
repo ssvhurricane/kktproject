@@ -6,6 +6,12 @@ namespace WorldSystem {
 BasicWorld::BasicWorld()
 {
     // TODO:
+    _id = 1;
+
+    _name = "";
+
+    _type = EWorldType::BasicWorld;
+
 }
 
 void BasicWorld::Initialize(std::string name, EWorldType eWorldType, EWorldMode eWorldName)
@@ -31,16 +37,19 @@ void BasicWorld::ReStart()
 int BasicWorld::GetId()
 {
     // TODO:
+    return -1;
 }
 
 EWorldType BasicWorld::GetType()
 {
     // TODO:
+    return EWorldType::BasicWorld;
 }
 
 std::string BasicWorld::GetName()
 {
     // TODO:
+    return "";
 }
 
 void BasicWorld::SetCurrentMode(EWorldMode eWorldMode)
@@ -51,6 +60,7 @@ void BasicWorld::SetCurrentMode(EWorldMode eWorldMode)
 EWorldMode BasicWorld::GetCurrentMode()
 {
     // TODO:
+    return EWorldMode::Combine;
 }
 
 } // namespace WorldSystem

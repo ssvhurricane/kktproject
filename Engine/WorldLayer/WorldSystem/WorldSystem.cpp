@@ -30,16 +30,19 @@ void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
 IWorld* WorldSystem::GetWorldByName(std::string name)
 {
     // TODO:
+    return NULL;
 } 
 
 int GetWorldId(std::string)
 {
     // TODO:
+    return -1;
 }
 
 IWorld* GetCurrentWorld()
 {
     // TODO:
+    return NULL;
 }
 
 } // namespace WorldSystem

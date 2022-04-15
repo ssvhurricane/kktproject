@@ -6,7 +6,8 @@ namespace WorldSystem {
 enum EWorldMode
 {
     Editable,
-    Playable
+    Playable,
+    Combine
 };
 
 } // namespace WorldSystem
