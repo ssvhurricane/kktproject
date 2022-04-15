@@ -8,7 +8,7 @@ BasicWorld::BasicWorld()
     // TODO:
 }
 
-void BasicWorld::Initialize(std::string, EWorldType)
+void BasicWorld::Initialize(std::string name, EWorldType eWorldType, EWorldMode eWorldName)
 {
     // TODO:
 }
@@ -43,5 +43,15 @@ std::string BasicWorld::GetName()
     // TODO:
 }
 
+void BasicWorld::SetCurrentMode(EWorldMode eWorldMode)
+{
+    // TODO:
 }
+
+EWorldMode BasicWorld::GetCurrentMode()
+{
+    // TODO:
 }
+
+} // namespace WorldSystem
+} // namespace Engine

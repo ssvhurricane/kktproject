@@ -3,12 +3,10 @@
 namespace Engine {
 namespace WorldSystem {
 
-enum EWorldType
+enum EWorldMode
 {
-    BasicWorld,
-    VRWorld,
-    ARWorld,
-    AppWorld
+    Editable,
+    Playable
 };
 
 } // namespace WorldSystem

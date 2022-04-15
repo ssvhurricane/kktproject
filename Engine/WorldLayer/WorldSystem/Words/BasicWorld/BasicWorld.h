@@ -4,6 +4,7 @@
 #include "../../../_Context/Base/ISystem.h"
 #include "../../../_Context/Base/Defines.h"
 #include "../Base/EWorldType.h"
+#include "../Base/EWorldMode.h"
 #include "../Base/IWorld.h"
 
 namespace Engine {
@@ -23,7 +24,7 @@ public:
 
     BasicWorld();
 
-    void Initialize(std::string, EWorldType);
+    void Initialize(std::string, EWorldType, EWorldMode);
 
     void StartSimulate();
 
@@ -37,6 +38,9 @@ public:
 
     std::string GetName();
 
+    void SetCurrentMode(EWorldMode);
+
+    EWorldMode GetCurrentMode();
 };
 
 } // namespace WorldSystem
