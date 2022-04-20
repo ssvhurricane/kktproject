@@ -11,6 +11,7 @@
 #include "_Context/Base/Defines.h"
 #include "_Context/Base/IContextInstaller.h"
 #include "CoreLayer/InitializeSystem/InitializeSystem.h"
+#include "CoreLayer/StartSystem/StartSystem.h"
 
 namespace Engine {
 class ENGINE_API KKTEngine : public Singleton<KKTEngine>
@@ -21,8 +22,8 @@ private:
 
     Engine::_Context::ISystem* _initializeSystem; 
     
-    // Engine::_Context::ISystem* _startSystem; // TODO (game runtime)
-   
+    Engine::_Context::ISystem* _startSystem;
+    
 public:
 
      void __cdecl InitialEngine(); 

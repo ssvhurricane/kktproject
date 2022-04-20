@@ -29,7 +29,11 @@ namespace Engine {
 
  void KKTEngine::StartEngine()
  {
-     std::cout<< "KKTEngine.dll: Start!"<< std::endl;
+     std::cout<< "KKTEngine.dll: Start!"<< std::endl; 
+     
+     _startSystem = new Engine::StartSystem::StartSystem();
+
+     _startSystem->Initialize();
  }
 
  } // namespace engine 
