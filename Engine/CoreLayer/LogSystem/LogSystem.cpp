@@ -3,11 +3,14 @@
 namespace Engine {
 namespace LogSystem {
 
-LogSystem::LogSystem(){}
+LogSystem::LogSystem()
+{
+     std::cout << "[EngineLayer] -> [LogSystem] -> [Create LogSystem.]"<< std::endl;
+}
 
  void LogSystem::Initialize()
  {
-        std::cout << "LogSystem Initialize!" << std::endl;
+     // TODO:
  }
 
  void LogSystem::MessageProcess(LogMessageData logMessageData, ELogOutputLocationType logOutputLocationType)
@@ -25,13 +28,45 @@ LogSystem::LogSystem(){}
       //TODO:
  }
  
-  void LogSystem::ShowLog(std::string itemName,
+  void LogSystem::ShowLog(ELogLayer layerName, 
+            std::string itemName,
             ELogType logType,
             std::string message,
             ELogOutputLocationType logOutputLocationType)
   {
-      // TODO:
-      std::cout << "[Log] -> " << "["<< message  << "]" << std::endl;
+      // TODO: Ref//
+
+      switch (layerName)
+      {
+
+      case ELogLayer::Editor:
+      {
+            std::cout << "[EditorLayer] -> "<< "[" << itemName << "] -> " << "["<< message  << "]" << std::endl;
+
+           break;
+
+      }
+
+      case ELogLayer::Engine:
+      {
+            std::cout << "[EngineLayer] -> "<< "[" << itemName << "] -> " <<  "["<< message  << "]" << std::endl;
+
+           break;
+
+      } 
+      
+      case ELogLayer::Game:
+      {
+            std::cout << "[GameLayer] -> "<< "[" << itemName << "] -> " << "["<< message  << "]" << std::endl;
+
+           break;
+
+      }
+      
+      default:
+           break;
+      }
+     
   }
 
 } // namespace Engine

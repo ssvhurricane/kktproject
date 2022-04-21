@@ -5,12 +5,29 @@ namespace WorldSystem {
 
 WorldSystem::WorldSystem()
 {
-    // TODO:
+    /*
+   dynamic_cast<Engine::LogSystem::LogSystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "Create WorldSystem.",
+                                        Engine::LogSystem::ELogOutputLocationType::All);*/
 }
 
 void  WorldSystem::Initialize()
 {
-    // TODO:
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "Initialize.",
+                                        Engine::LogSystem::ELogOutputLocationType::All);
 }
 
 void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
@@ -21,10 +38,11 @@ void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(Engine::_Context::ESystemType::LogSystem))
-                                ->ShowLog("[WorldSystem]",  
-                                            Engine::LogSystem::ELogType::Message,
-                                            "CreateWorld: " + name,
-                                             Engine::LogSystem::ELogOutputLocationType::All);
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "CreateWorld: " + name,
+                                        Engine::LogSystem::ELogOutputLocationType::All);
 }
 
 IWorld* WorldSystem::GetWorldByName(std::string name)

@@ -11,7 +11,9 @@ namespace InitializeSystem {
 class ENGINE_API InitializeSystem : public _Context::ISystem
 {
 private:
+
     Engine::_Context::IContextInstaller* _context;
+
 public:
     InitializeSystem();
 

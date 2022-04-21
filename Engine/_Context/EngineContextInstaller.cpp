@@ -5,6 +5,8 @@ namespace _Context {
 
 EngineContextInstaller::EngineContextInstaller()
 {
+    std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Create Installer.]" << std::endl;
+
     CreateContext();
 }
 
@@ -12,6 +14,8 @@ void EngineContextInstaller::InstallBindings()
 {  
     // This add new LogSysyem
     // etc Systems, order matters.
+
+     std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings start proccess...]" << std::endl;
 
     // 1. Add LogSystem.
     _systems.emplace(ESystemType::LogSystem, new Engine::LogSystem::LogSystem);
@@ -28,20 +32,16 @@ void EngineContextInstaller::InstallBindings()
     // 5. Add ObjectSystem.
     _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
 
-    std::cout<< "Install Bindings Method!"<< std::endl;
+     std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
 }
 
 void EngineContextInstaller::CreateContext()
 {
-    std::cout<< "Create Context Method!"<< std::endl;
-
     InstallBindings();
 }
 
 ISystem* EngineContextInstaller::GetSystem(ESystemType eSystemType)
 {
-    std::cout<< "Get System Method!"<< std::endl;
-
     return _systems[eSystemType];
 }
 

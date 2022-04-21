@@ -30,9 +30,18 @@ const char *fragmentShaderSource = "#version 330 core\n"
 
 RenderSystem::RenderSystem()
 {
-    // TODO:
-
     _renderSystem = nullptr; 
+
+/*
+     dynamic_cast<Engine::LogSystem::LogSystem*>
+    (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "Create RenderSystem.",
+                                        Engine::LogSystem::ELogOutputLocationType::All);*/
 }
 
 void RenderSystem::Initialize()
@@ -46,10 +55,11 @@ int RenderSystem::DemoRender()
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(Engine::_Context::ESystemType::LogSystem))
-                                ->ShowLog("[RenderSystem]",  
-                                            Engine::LogSystem::ELogType::Message,
-                                            "DemoRender!",
-                                             Engine::LogSystem::ELogOutputLocationType::All);
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "DemoRender.",
+                                        Engine::LogSystem::ELogOutputLocationType::All);
 
      // glfw: initialize and configure
     // ------------------------------

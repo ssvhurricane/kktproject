@@ -23,11 +23,11 @@ private:
 
 public:
 
-  LogSystem();
+    LogSystem();
 
     void Initialize();
 
-    void ShowLog(std::string itemName,
+    void ShowLog(ELogLayer layerName, std::string itemName,
             ELogType logType,
             std::string message,
             ELogOutputLocationType logOutputLocationType = ELogOutputLocationType::Console);

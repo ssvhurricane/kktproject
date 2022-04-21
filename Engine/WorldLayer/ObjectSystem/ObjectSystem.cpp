@@ -5,7 +5,16 @@ namespace ObjectSystem {
 
 ObjectSystem::ObjectSystem()
 {
-    // TODO:
+    /*
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "Create ObjectSystem.",
+                                         Engine::LogSystem::ELogOutputLocationType::All);*/
 }
 
 void ObjectSystem::Initialize()
@@ -20,10 +29,11 @@ void ObjectSystem::CreateObjectByName(std::string name, EObjectType)
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(Engine::_Context::ESystemType::LogSystem))
-                                ->ShowLog("[ObjectSystem]",  
-                                            Engine::LogSystem::ELogType::Message,
-                                            "CreateObject: " + name,
-                                             Engine::LogSystem::ELogOutputLocationType::All);
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "CreateObject: " + name,
+                                         Engine::LogSystem::ELogOutputLocationType::All);
 
 }
 

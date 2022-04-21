@@ -5,7 +5,16 @@ namespace SceneSystem {
 
 SceneSystem::SceneSystem()
 {
-    // TODO:
+    /*
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "Create SceneSystem.",
+                                         Engine::LogSystem::ELogOutputLocationType::All);*/
 }
 
 void SceneSystem::Initialize()
@@ -20,10 +29,11 @@ void SceneSystem::CreateSceneByName(std::string name, ESceneType eSceneType)
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(Engine::_Context::ESystemType::LogSystem))
-                                ->ShowLog("[WorldSystem]",  
-                                            Engine::LogSystem::ELogType::Message,
-                                            "CreateScene: " + name,
-                                             Engine::LogSystem::ELogOutputLocationType::All);
+                                ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "CreateScene: " + name,
+                                         Engine::LogSystem::ELogOutputLocationType::All);
 }
 
 IScene* SceneSystem::GetSceneByName(std::string)

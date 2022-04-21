@@ -18,7 +18,8 @@ int main()
     { 
          logSystem->Initialize(); 
 
-         logSystem->ShowLog("[LogSystemTest]",  
+         logSystem->ShowLog(Engine::LogSystem::ELogLayer::Game, 
+             "Game",  
              Engine::LogSystem::ELogType::Message,
              "LogMessage!",
              Engine::LogSystem::ELogOutputLocationType::All);

@@ -11,7 +11,8 @@ namespace StartSystem {
 class ENGINE_API StartSystem : public _Context::ISystem
 {
 private:
-   // TODO:
+
+
 public:
 
     StartSystem();

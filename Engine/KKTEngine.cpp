@@ -6,7 +6,7 @@ namespace Engine {
 
  void KKTEngine::InitialEngine()
  {
-      std::cout<< "KKTEngine.dll: Initialize!"<< std::endl;
+      std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Initialize...]" << std::endl;
 
      _initializeSystem = new Engine::InitializeSystem::InitializeSystem();
 
@@ -17,20 +17,18 @@ namespace Engine {
  
  void KKTEngine::PrintDebugMessage(std::string str)
  {
-     std::cout<< "KKTEngine.dll: "<< str << std::endl;
+     std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [" << str << "]" << std::endl;
  }
  
  Engine::_Context::IContextInstaller*  KKTEngine::GetContext()
 { 
-     std::cout<< "KKTEngine.dll: Get context!"<< std::endl;
-
      return _mainContext;
 }
 
  void KKTEngine::StartEngine()
- {
-     std::cout<< "KKTEngine.dll: Start!"<< std::endl; 
-     
+ { 
+     std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Start.]"<< std::endl;
+
      _startSystem = new Engine::StartSystem::StartSystem();
 
      _startSystem->Initialize();
