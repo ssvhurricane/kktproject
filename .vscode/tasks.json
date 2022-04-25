@@ -63,6 +63,9 @@
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
 
+                "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\WebglRenderSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
@@ -172,6 +175,9 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
 
+                "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
@@ -283,7 +289,10 @@
                 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
-
+                
+                "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 

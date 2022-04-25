@@ -49,8 +49,61 @@ void RenderSystem::Initialize()
     // TODO:
 }
 
-int RenderSystem::DemoRender()
+void RenderSystem::Configurate(ERenderSystemType eRennderSystemType, ERenderMode eRenderMode)
 {
+    switch (eRennderSystemType)
+    {
+    case ERenderSystemType::OpenGL:
+    {
+
+        break;
+    }
+    case ERenderSystemType::WebGL:
+    {
+        
+        break;
+    } 
+    case ERenderSystemType::Vulkan:
+    {
+        
+        break;
+    }
+    
+    default:
+        break;
+    }
+
+    switch (eRenderMode)
+    {
+    case ERenderMode::Edit:
+    {
+        // TODO:
+
+        break;
+    }
+    case ERenderMode::Game:
+    {
+        // TODO:
+
+        break;
+    } 
+    case ERenderMode::Custom:
+    {
+        // TODO:
+
+        break;
+    }
+    
+    default:
+        break;
+    }
+}
+
+int RenderSystem::Render(bool bDemoMode)
+{
+    if(bDemoMode)
+    {
+
    dynamic_cast<Engine::LogSystem::LogSystem*>
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
@@ -58,7 +111,7 @@ int RenderSystem::DemoRender()
                                 ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
                                         typeid(this).name(),  
                                         Engine::LogSystem::ELogType::Message,
-                                        "DemoRender.",
+                                        "Rendering.",
                                         Engine::LogSystem::ELogOutputLocationType::All);
 
      // glfw: initialize and configure
@@ -199,6 +252,7 @@ int RenderSystem::DemoRender()
     // ------------------------------------------------------------------
     glfwTerminate();
 
+    }
     return 0;
 }
 

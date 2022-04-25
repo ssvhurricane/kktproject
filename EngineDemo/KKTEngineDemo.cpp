@@ -4,6 +4,7 @@
 
 int main()
 {
+    // Create and Init GameEngine.
     Engine::KKTEngine* gameEngine = Engine::KKTEngine::InstancePtr(); // Create Engine.
 
     gameEngine->InitialEngine();
@@ -25,11 +26,14 @@ int main()
              Engine::LogSystem::ELogOutputLocationType::All);
     }
 
+    // Example for EditMode.
     // RenderSystem.
-    auto renderSystem =  dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext
+    auto renderSystem = dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext
                                                             ->GetSystem(Engine::_Context::ESystemType::RenderSystem));
 
-    renderSystem->DemoRender();
+    renderSystem->Configurate(Engine::RenderSystem::ERenderSystemType::OpenGL, Engine::RenderSystem::ERenderMode::Edit);
+
+    renderSystem->Render(true);
 
     // WorldSystem. 
     auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(engineContext
@@ -53,6 +57,8 @@ int main()
 
     // Start Engine(Runtime).
     gameEngine->StartEngine();
+
+    // Example For GameMode.
   
     return 0;
 }
