@@ -11,7 +11,7 @@ int main()
     
     Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
   
-   // LogSystem.
+   // Example, LogSystem.
     auto logSystem 
     = dynamic_cast<Engine::LogSystem::LogSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::LogSystem));
 
@@ -58,7 +58,8 @@ int main()
     // Start Engine(Runtime).
     gameEngine->StartEngine();
 
-    // Example For GameMode.
-  
+    // Example For GameMode, etc.
+    // ...
+    
     return 0;
 }
