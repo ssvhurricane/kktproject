@@ -28,11 +28,11 @@
  * ===============================================================*/
 /* This are some code examples to provide a small overview of what can be
  * done with this library. To try out an example uncomment the defines */
-/*#define INCLUDE_ALL */
+#define INCLUDE_ALL 
 /*#define INCLUDE_STYLE */
 /*#define INCLUDE_CALCULATOR */
 /*#define INCLUDE_CANVAS */
-#define INCLUDE_OVERVIEW
+/*#define INCLUDE_OVERVIEW*/
 /*#define INCLUDE_NODE_EDITOR */
 
 #ifdef INCLUDE_ALL
@@ -44,19 +44,19 @@
 #endif
 
 #ifdef INCLUDE_STYLE
-  #include "NKCommon/style.c"
+   #include "NKCommon/style.c"
 #endif
 #ifdef INCLUDE_CALCULATOR
- // #include "NKCommon/calculator.c"
+   #include "NKCommon/calculator.c"
 #endif
 #ifdef INCLUDE_CANVAS
-//  #include "NKCommon/canvas.c"
+   #include "NKCommon/canvas.c"
 #endif
 #ifdef INCLUDE_OVERVIEW
- // #include "NKCommon/overview.c"
+   #include "NKCommon/overview.c"
 #endif
 #ifdef INCLUDE_NODE_EDITOR
- // #include "NKCommon/node_editor.c"
+   #include "NKCommon/node_editor.c"
 #endif
 
 /* ===============================================================
@@ -119,10 +119,10 @@ int main()
     /*nk_style_set_font(ctx, &droid->handle);*/}
 
     #ifdef INCLUDE_STYLE
-    /*set_style(ctx, THEME_WHITE);*/
-    /*set_style(ctx, THEME_RED);*/
-    /*set_style(ctx, THEME_BLUE);*/
-    /*set_style(ctx, THEME_DARK);*/
+    set_style(ctx, THEME_WHITE);
+    set_style(ctx, THEME_RED);
+    set_style(ctx, THEME_BLUE);
+    set_style(ctx, THEME_DARK);
     #endif
 
     bg.r = 0.10f, bg.g = 0.18f, bg.b = 0.24f, bg.a = 1.0f;
@@ -169,16 +169,16 @@ int main()
 
         /* -------------- EXAMPLES ---------------- */
         #ifdef INCLUDE_CALCULATOR
-         // calculator(ctx);
+          calculator(ctx);
         #endif
         #ifdef INCLUDE_CANVAS
-        // canvas(ctx);
+          canvas(ctx);
         #endif
         #ifdef INCLUDE_OVERVIEW
-         // overview(ctx);
+           overview(ctx);
         #endif
         #ifdef INCLUDE_NODE_EDITOR
-         // node_editor(ctx);
+           node_editor(ctx);
         #endif
         /* ----------------------------------------- */
 
