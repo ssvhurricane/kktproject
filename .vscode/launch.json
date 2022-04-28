@@ -8,7 +8,7 @@
             "name": "(Windows) - Сборка и отладка активного файла",
             "type": "cppvsdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/windows_os/KKTUI.exe",
+            "program": "${workspaceFolder}/bin/windows_os/KKTEngineDemo.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/bin/",

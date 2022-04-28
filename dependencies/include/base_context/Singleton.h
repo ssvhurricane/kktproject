@@ -1,4 +1,4 @@
-namespace Engine {
+#pragma once
 
 template<typename T>
 class Singleton
@@ -27,4 +27,3 @@ private:
 template<typename T>
 T Singleton<T>::mSingleton = T();
 
-} // namespace Engine

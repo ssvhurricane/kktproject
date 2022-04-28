@@ -1,6 +1,10 @@
 #include <KKTEngine.h>
 #include <iostream>
-#include "di.hpp"
+
+#include "boost/di.hpp"
+
+#include "base_context/IContextInstaller.h"
+#include "base_context/ESystemType.h"
 
 int main()
 {
@@ -9,11 +13,11 @@ int main()
 
     gameEngine->InitialEngine();
     
-    Engine::_Context::IContextInstaller* engineContext = gameEngine->GetContext();
+    IContextInstaller* engineContext = gameEngine->GetContext();
   
    // Example, LogSystem.
     auto logSystem 
-    = dynamic_cast<Engine::LogSystem::LogSystem*>(engineContext->GetSystem(Engine::_Context::ESystemType::LogSystem));
+    = dynamic_cast<Engine::LogSystem::LogSystem*>(engineContext->GetSystem(ESystemType::LogSystem));
 
     if(logSystem)
     { 
@@ -29,7 +33,7 @@ int main()
     // Example for EditMode.
     // RenderSystem.
     auto renderSystem = dynamic_cast<Engine::RenderSystem::RenderSystem*>(engineContext
-                                                            ->GetSystem(Engine::_Context::ESystemType::RenderSystem));
+                                                            ->GetSystem(ESystemType::RenderSystem));
 
     renderSystem->Configurate(Engine::RenderSystem::ERenderSystemType::OpenGL, Engine::RenderSystem::ERenderMode::Edit);
 
@@ -37,20 +41,20 @@ int main()
 
     // WorldSystem. 
     auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(engineContext
-                                                            ->GetSystem(Engine::_Context::ESystemType::WorldSystem));
+                                                            ->GetSystem(ESystemType::WorldSystem));
 
     worldSystem->CreateWorldByName("GameWorld");
 
     // SceneSystem. 
     auto sceneSystem = dynamic_cast<Engine::SceneSystem::SceneSystem*>(engineContext
-                                                            ->GetSystem(Engine::_Context::ESystemType::SceneSystem));
+                                                            ->GetSystem(ESystemType::SceneSystem));
                                         
     
     sceneSystem->CreateSceneByName("MainScene");
 
     // ObjectSystem. 
     auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(engineContext
-                                                            ->GetSystem(Engine::_Context::ESystemType::ObjectSystem));
+                                                            ->GetSystem(ESystemType::ObjectSystem));
                                         
     
     objectSystem->CreateObjectByName("GameObject");

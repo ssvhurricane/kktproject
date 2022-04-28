@@ -13,7 +13,7 @@ void InitializeSystem::Initialize()
      std::cout<< "[EngineLayer] -> [" << typeid(this).name() <<  "] -> [Initialize...]" << std::endl;
 }
 
-Engine::_Context::IContextInstaller* InitializeSystem::GetContext()
+IContextInstaller* InitializeSystem::GetContext()
 {
     _context = new Engine::_Context::EngineContextInstaller();
 

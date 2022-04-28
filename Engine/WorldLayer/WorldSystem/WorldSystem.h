@@ -4,15 +4,17 @@
 #include <string>
 
 #include "../../KKTEngine.h"
-#include "../../_Context/Base/ISystem.h"
-#include "../../_Context/Base/Defines.h"
+
+#include "base_context/ISystem.h"
+#include "base_context/Defines.h"
+
 #include "Base/EWorldType.h"
 #include "Base/IWorld.h"
 
 namespace Engine {
 namespace WorldSystem {
 
-class ENGINE_API WorldSystem : public _Context::ISystem
+class ENGINE_API WorldSystem : public ISystem
 {
 private: 
 

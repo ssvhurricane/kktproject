@@ -1,6 +1,4 @@
 #include "KKTEngine.h"
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
 
 namespace Engine {
 
@@ -20,7 +18,7 @@ namespace Engine {
      std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [" << str << "]" << std::endl;
  }
  
- Engine::_Context::IContextInstaller*  KKTEngine::GetContext()
+IContextInstaller* KKTEngine::GetContext()
 { 
      return _mainContext;
 }

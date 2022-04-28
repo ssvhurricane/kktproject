@@ -3,15 +3,17 @@
 #include "map"
 
 #include "../../KKTEngine.h"
-#include "../../_Context/Base/ISystem.h"
-#include "../../_Context/Base/Defines.h"
+
+#include "base_context/ISystem.h"
+#include "base_context/Defines.h"
+
 #include "Base/ESceneType.h"
 #include "Base/IScene.h"
 
 namespace Engine {
 namespace SceneSystem {
 
-class ENGINE_API SceneSystem : public _Context::ISystem
+class ENGINE_API SceneSystem : public ISystem
 {
 private: 
 

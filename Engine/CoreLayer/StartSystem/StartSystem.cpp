@@ -8,7 +8,7 @@ StartSystem::StartSystem()
     dynamic_cast<Engine::LogSystem::LogSystem*>
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
-                                ->GetSystem(Engine::_Context::ESystemType::LogSystem))
+                                ->GetSystem(ESystemType::LogSystem))
                                 ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
                                         typeid(this).name(),  
                                         Engine::LogSystem::ELogType::Message,
@@ -21,7 +21,7 @@ void StartSystem::Initialize()
     dynamic_cast<Engine::WorldSystem::WorldSystem*>
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
-                                ->GetSystem(Engine::_Context::ESystemType::WorldSystem))->Initialize();
+                                ->GetSystem(ESystemType::WorldSystem))->Initialize();
 
 }
 

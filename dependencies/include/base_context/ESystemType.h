@@ -1,8 +1,5 @@
 #pragma once
 
-namespace Engine {
-namespace _Context {
-
 enum ESystemType 
 {
     // - PlatformSpecificLayer.
@@ -24,5 +21,3 @@ enum ESystemType
 
 };
 
-} // namespace Engine
-} // namespace _Context

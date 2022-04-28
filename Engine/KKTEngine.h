@@ -8,9 +8,11 @@
 
 #include <iostream>
 #include <string>
-#include "_Context/Base/Singleton.h"
-#include "_Context/Base/Defines.h"
-#include "_Context/Base/IContextInstaller.h"
+
+#include "base_context/Singleton.h"
+#include "base_context/Defines.h"
+#include "base_context/IContextInstaller.h"
+
 #include "CoreLayer/InitializeSystem/InitializeSystem.h"
 #include "CoreLayer/StartSystem/StartSystem.h"
 
@@ -19,11 +21,11 @@ class ENGINE_API KKTEngine : public Singleton<KKTEngine>
 {
 private:
 
-    Engine::_Context::IContextInstaller* _mainContext; // Main Context (Use engine or app)
+    IContextInstaller* _mainContext; // Main Context (Use engine or app)
 
-    Engine::_Context::ISystem* _initializeSystem; 
+    ISystem* _initializeSystem; 
     
-    Engine::_Context::ISystem* _startSystem;
+    ISystem* _startSystem;
     
 public:
 
@@ -31,7 +33,7 @@ public:
 
      void __cdecl PrintDebugMessage(std::string str);
     
-     Engine::_Context::IContextInstaller* __cdecl GetContext();
+     IContextInstaller* __cdecl GetContext();
 
      void __cdecl StartEngine();
 };

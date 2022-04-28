@@ -2,13 +2,14 @@
 #pragma once
 
 #include "../../KKTEngine.h"
-#include "../../_Context/Base/ISystem.h"
-#include "../../_Context/Base/Defines.h"
+
+#include "base_context/ISystem.h"
+#include "base_context/Defines.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {
 
-class ENGINE_API OpenglRenderSystem : public _Context::ISystem
+class ENGINE_API OpenglRenderSystem : public ISystem
 {
 private:
     // TODO:

@@ -13,7 +13,7 @@
                 "-g",
 
                 // Add dependencies headers.
-                "-I${workspaceFolder}\\dependencies\\include\\boost",
+                "-I${workspaceFolder}\\dependencies\\include",
 
                 // Add engine headers. 
                 "-I${workspaceFolder}\\Engine", 
@@ -167,7 +167,7 @@
                 "-g",
 
                  // Add dependencies headers.
-                "-I${workspaceFolder}/dependencies/include/boost",
+                "-I${workspaceFolder}/dependencies/include",
 
                  // Add engine headers. 
                 "-I${workspaceFolder}/Engine",
@@ -329,7 +329,7 @@
                 "-g",
 
                 // Add dependencies headers.
-                "-I${workspaceFolder}/dependencies/include/boost",
+                "-I${workspaceFolder}/dependencies/include",
 
                 // Add engine headers.
                 "-I${workspaceFolder}/Engine",

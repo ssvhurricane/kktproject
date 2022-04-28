@@ -1,8 +1,10 @@
 #pragma once
 
 #include "../../KKTEngine.h"
-#include "../../_Context/Base/ISystem.h"
-#include "../../_Context/Base/Defines.h"
+
+#include "base_context/ISystem.h"
+#include "base_context/Defines.h"
+
 #include "../Base/IRenderSystem.h"
 #include "../Base/ERenderSystemType.h"
 #include "../Base/ERenderMode.h"
@@ -14,7 +16,7 @@
 namespace Engine {
 namespace RenderSystem {
 
-class ENGINE_API RenderSystem : public _Context::ISystem
+class ENGINE_API RenderSystem : public ISystem
 {
 private:
 
