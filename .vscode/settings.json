@@ -60,6 +60,8 @@
         "string_view": "cpp",
         "numbers": "cpp",
         "cinttypes": "cpp",
-        "map": "cpp"
+        "map": "cpp",
+        "style.c": "cpp",
+        "string.h": "c"
     }
 }
