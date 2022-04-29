@@ -2,12 +2,7 @@
 
 enum ESystemType 
 {
-    // - PlatformSpecificLayer.
-    //FileSystem,
-    //GraphicShellSystem,
-    //NetworkSystem,
-    //PhysicsAndCollisionsShellSystem,
-
+    //-------- Engine --------//
     // CoreLayer.
     LogSystem,
 
@@ -17,7 +12,12 @@ enum ESystemType
     // World Layer.
     WorldSystem,
     SceneSystem,
-    ObjectSystem
+    ObjectSystem,
 
+    //-------- UI --------//
+    // UI Layer.
+    UISystem
+
+    //-------- Editor --------//
 };
 

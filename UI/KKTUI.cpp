@@ -12,6 +12,7 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include <stbimage/stb_image.h>
 #include  <nuklear/nuklear.h>
 #include "../dependencies/include/nuklear/nuklear_glfw_gl3.h"
 
@@ -41,6 +42,7 @@
   #define INCLUDE_CANVAS
   #define INCLUDE_OVERVIEW
   #define INCLUDE_NODE_EDITOR
+  #define INCLUDE_FILE_BROWSER
 #endif
 
 #ifdef INCLUDE_STYLE
@@ -57,6 +59,9 @@
 #endif
 #ifdef INCLUDE_NODE_EDITOR
    #include "NKCommon/node_editor.c"
+#endif
+#ifdef INCLUDE_FILE_BROWSER
+   #include "NKCommon/file_browser.c"
 #endif
 
 /* ===============================================================
@@ -169,16 +174,21 @@ int main()
 
         /* -------------- EXAMPLES ---------------- */
         #ifdef INCLUDE_CALCULATOR
-          calculator(ctx);
+           calculator(ctx);
         #endif
         #ifdef INCLUDE_CANVAS
-          canvas(ctx);
+           canvas(ctx);
         #endif
         #ifdef INCLUDE_OVERVIEW
            overview(ctx);
         #endif
         #ifdef INCLUDE_NODE_EDITOR
            node_editor(ctx);
+        #endif
+        #ifdef INCLUDE_NODE_EDITOR
+            //struct file_browser *browser;
+            //struct media* media;
+           // file_browser_init(browser, media);
         #endif
         /* ----------------------------------------- */
 

@@ -1,12 +1,12 @@
 #include <string.h> // strcpy, strlen
+#include <dirent/dirent.h>
 
 #ifdef __unix__
-#include <dirent.h>
 #include <unistd.h>
 #endif
 
 #ifndef _WIN32
-# include <pwd.h>
+//
 #endif
 
 struct icons {
