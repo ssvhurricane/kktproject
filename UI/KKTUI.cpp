@@ -185,7 +185,7 @@ int main()
         #ifdef INCLUDE_NODE_EDITOR
            node_editor(ctx);
         #endif
-        #ifdef INCLUDE_NODE_EDITOR
+        #ifdef INCLUDE_FILE_BROWSER
             //struct file_browser *browser;
             //struct media* media;
            // file_browser_init(browser, media);
