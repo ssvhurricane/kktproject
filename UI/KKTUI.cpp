@@ -61,7 +61,7 @@
    #include "NKCommon/node_editor.c"
 #endif
 #ifdef INCLUDE_FILE_BROWSER
-   #include "NKCommon/file_browser.c"
+  // #include "NKCommon/file_browser.c"
 #endif
 
 /* ===============================================================
