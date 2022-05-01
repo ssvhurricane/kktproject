@@ -45,7 +45,7 @@
             "name": "(Mac) - Сборка и отладка активного файла",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/bin/mac_os/KKTUI",
+            "program": "${workspaceFolder}/bin/mac_os/KKTEngineDemo",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

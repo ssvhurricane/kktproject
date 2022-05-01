@@ -13,8 +13,11 @@
 
 namespace Engine {
 namespace ObjectSystem {
-
+#if defined _WIN32
 class ENGINE_API ObjectSystem : public ISystem
+#elif defined __APPLE__  || defined __linux__
+class ObjectSystem : public ISystem
+#endif
 {
 private: 
 

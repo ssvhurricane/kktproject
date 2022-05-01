@@ -8,8 +8,11 @@
 
 namespace Engine {
 namespace OpenglRenderSystem {
-
+#if defined _WIN32
 class ENGINE_API OpenglRenderSystem : public ISystem
+#elif defined __APPLE__  || defined __linux__
+class OpenglRenderSystem : public ISystem
+#endif
 {
 private:
     // TODO:

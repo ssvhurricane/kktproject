@@ -15,8 +15,11 @@
 
 namespace Engine {
 namespace RenderSystem {
-
+#if defined _WIN32
 class ENGINE_API RenderSystem : public ISystem
+#elif defined __APPLE__  || defined __linux__
+class RenderSystem : public ISystem
+#endif
 {
 private:
 

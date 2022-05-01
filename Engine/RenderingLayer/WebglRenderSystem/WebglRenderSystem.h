@@ -8,8 +8,11 @@
 
 namespace Engine {
 namespace WebglRenderSystem {
-
+#if defined _WIN32
 class ENGINE_API WebglRenderSystem : public ISystem
+#elif defined __APPLE__  || defined __linux__
+class WebglRenderSystem : public ISystem
+#endif
 {
 private:
     // TODO:

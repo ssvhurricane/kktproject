@@ -17,7 +17,11 @@
 #include "CoreLayer/StartSystem/StartSystem.h"
 
 namespace Engine {
+#if defined _WIN32
 class ENGINE_API KKTEngine : public Singleton<KKTEngine>
+#elif defined __APPLE__  || defined __linux__
+class KKTEngine : public Singleton<KKTEngine>
+#endif
 {
 private:
 
@@ -28,14 +32,28 @@ private:
     ISystem* _startSystem;
     
 public:
+#if defined _WIN32
 
-     void __cdecl InitialEngine(); 
+    void __cdecl InitialEngine(); 
 
      void __cdecl PrintDebugMessage(std::string str);
     
      IContextInstaller* __cdecl GetContext();
 
      void __cdecl StartEngine();
+
+#elif defined __APPLE__  || defined __linux__
+
+    void  InitialEngine(); 
+
+     void PrintDebugMessage(std::string str);
+    
+     IContextInstaller*  GetContext();
+
+     void StartEngine();
+     
+#endif 
+     
 };
 
 } // namespace Engine

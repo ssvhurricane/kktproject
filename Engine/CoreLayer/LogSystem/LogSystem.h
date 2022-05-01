@@ -12,8 +12,11 @@
 
 namespace Engine {
 namespace LogSystem{
-
+#if defined _WIN32
 class ENGINE_API LogSystem : public ISystem
+#elif defined __APPLE__  || defined __linux__
+class LogSystem : public ISystem
+#endif
 {
 private:
 // TODO:
