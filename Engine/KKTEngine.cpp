@@ -1,5 +1,4 @@
 #include "KKTEngine.h"
-#include "KKTUI.h"
 
 namespace Engine {
 
@@ -31,12 +30,6 @@ IContextInstaller* KKTEngine::GetContext()
      _startSystem = new Engine::StartSystem::StartSystem();
 
      _startSystem->Initialize();
-
-    // Temp::Create and Init UI.
-    UI::KKTUI* gameUI = UI::KKTUI::InstancePtr(); // Create UI.
-
-    gameUI->InitialUI();
-
  }
 
  } // namespace engine 

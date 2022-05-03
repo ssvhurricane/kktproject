@@ -252,6 +252,13 @@ int RenderSystem::Render(bool bDemoMode)
     // ------------------------------------------------------------------
     glfwTerminate();
 
+    // Temp::Create and Init UI.
+    UI::KKTUI* gameUI = UI::KKTUI::InstancePtr(); // Create UI.
+    
+    gameUI->InitialUI();
+    auto uiSystem = dynamic_cast<UI::UISystem::UISystem*>(gameUI->GetContext()->GetSystem(ESystemType::UISystem));
+
+    uiSystem->DemoRender();
     }
     return 0;
 }

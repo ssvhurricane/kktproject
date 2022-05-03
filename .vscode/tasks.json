@@ -131,6 +131,11 @@
 
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
                 
+                   
+                // Add .cpp systems.
+                "${workspaceFolder}\\UI\\_Context\\*.cpp", 
+                "${workspaceFolder}\\UI\\_System\\UISystem\\*.cpp", 
+
                 "${workspaceFolder}\\UI\\*.cpp",
                 "${workspaceFolder}\\UI\\*.c",
 
@@ -289,10 +294,14 @@
 
                 // Add dependencies headers. 
                 "-I${workspaceFolder}/dependencies/include",
-                "-L${workspaceFolder}/dependencies/library",
+                "-L${workspaceFolder}/dependencies/library", // TODO ref
 
-                "${workspaceFolder}/dependencies/library/libglfw3.a",
+                "${workspaceFolder}/dependencies/library/libglfw3.a", // TODO del
                 
+                // Add .cpp systems.
+                "${workspaceFolder}/UI/_Context/*.cpp", 
+                "${workspaceFolder}/UI/_System/UISystem/*.cpp", 
+
                 "${workspaceFolder}/UI/*.cpp",
                 "${workspaceFolder}/UI/*.c",
 
@@ -461,6 +470,7 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}/UI/_Context/*.cpp", 
+                "${workspaceFolder}/UI/_System/UISystem/*.cpp", 
 
                 "${workspaceFolder}/UI/*.cpp",
                 "${workspaceFolder}/UI/*.c",

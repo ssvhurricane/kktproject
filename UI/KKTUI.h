@@ -9,7 +9,7 @@
 
 #include "base_context/Singleton.h"
 #include "base_context/Defines.h"
-#include "base_context/IContextInstaller.h"
+#include "_Context/UIContextInstaller.h"
 
 namespace UI {
 #if defined _WIN32
@@ -20,7 +20,7 @@ class KKTUI : public Singleton<KKTUI>
 {
 private:
 
-    //IContextInstaller* _mainContext; // Main Context (Use engine or app)
+    UI::_Context::UIContextInstaller* _mainContext; // Main Context (Use engine or app)
     
 public:
 #if defined _WIN32
