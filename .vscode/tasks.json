@@ -51,10 +51,13 @@
                 "-g",
 
                 "-I${workspaceFolder}\\dependencies\\include", 
+                "-I${workspaceFolder}\\UI",
                 "-L${workspaceFolder}\\dependencies\\library",
                 
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
 
+                "${workspaceFolder}\\bin\\windows_os\\KKTUI.lib",
+                
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
@@ -112,13 +115,13 @@
             "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""
         },
         { 
-            // Be DLL (Feature)
             "type": "cppbuild",
             "label": "(Windows) -> UI -> build UI active file (exe).",
             "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
             "args": [
                 "-std=c++17",
                 "-fdiagnostics-color=always",
+                "-shared",
                 "-Wall",
                 "-g",
 
@@ -132,8 +135,10 @@
                 "${workspaceFolder}\\UI\\*.c",
 
                 "-o", 
-                "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.exe",
-            
+                "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.dll",
+                
+                "-DUIDLL_EXPORTS",
+
                 "-lwinmm",
                 "-lgdi32",
                 "-lopengl32",
@@ -206,9 +211,12 @@
                 "-g",
 
                 "-I${workspaceFolder}/dependencies/include",
+                "-I${workspaceFolder}/UI",
                 "-L${workspaceFolder}/dependencies/library",
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
+
+                "${workspaceFolder}/bin/linux_os/KKTUI.so",
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
@@ -269,13 +277,13 @@
             "detail": "compiler: /usr/bin/clang++"
         },
          { 
-            // Be DLL (Feature)
             "type": "cppbuild",
             "label": "(Linux) -> UI -> build dynamic UI library file ().",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
                 "-fdiagnostics-color=always",
+                 "-shared",
                 "-Wall",
                 "-g",
 
@@ -288,9 +296,10 @@
                 "${workspaceFolder}/UI/*.cpp",
                 "${workspaceFolder}/UI/*.c",
 
-                "-o", 
-                "${workspaceFolder}/bin/linux_os/KKTUI",
-            
+                "-o",
+                "${workspaceFolder}/bin/linux_os/KKTUI.so",
+                  
+                "-DUIDLL_EXPORTS",
                 "-fdeclspec",
                 "-fPIC",
                 "-lglfw3",
@@ -365,11 +374,14 @@
                 "-Wall",
                 "-g",
 
-                "-I${workspaceFolder}/dependencies/include",
+                "-I${workspaceFolder}/dependencies/include", 
+                "-I${workspaceFolder}/UI",
                 "-L${workspaceFolder}/dependencies/library/mac",
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-                
+            
+                "${workspaceFolder}/bin/mac_os/KKTUI.dylib",
+
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
@@ -431,28 +443,32 @@
             "detail": "compiler: /usr/bin/clang++"
         },
         { 
-            // Be DLL (Feature)
             "type": "cppbuild",
             "label": "(Mac) -> UI -> build dynamic UI library file (dylib).",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
                 "-fdiagnostics-color=always",
+                 "-shared",
                 "-Wall",
                 "-g",
 
                 // Add dependencies headers. 
                 "-I${workspaceFolder}/dependencies/include",
-                "-L${workspaceFolder}/dependencies/library",
+                "-L${workspaceFolder}/dependencies/library", // TODO Ref DEL
 
-                "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-                
+                "${workspaceFolder}/dependencies/library/mac/libglfw3.a", // TODO DEL, 
+
+                // Add .cpp systems.
+                "${workspaceFolder}/UI/_Context/*.cpp", 
+
                 "${workspaceFolder}/UI/*.cpp",
                 "${workspaceFolder}/UI/*.c",
 
-                "-o", 
-                "${workspaceFolder}/bin/mac_os/KKTUI",
-            
+                "-o",
+                "${workspaceFolder}/bin/mac_os/KKTUI.dylib",
+                  
+                "-DUIDLL_EXPORTS",
                 "-fdeclspec",
                 "-framework",
                 "OpenGL",

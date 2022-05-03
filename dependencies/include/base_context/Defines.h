@@ -7,3 +7,9 @@
 #else
 #define ENGINE_API __declspec(dllimport)
 #endif // ENGINEDLL_EXPORTS
+
+#ifdef UIDLL_EXPORTS
+#define UI_API __declspec(dllexport)
+#else
+#define UI_API __declspec(dllimport)
+#endif // UIDLL_EXPORTS

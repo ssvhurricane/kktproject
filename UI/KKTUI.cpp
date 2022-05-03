@@ -1,3 +1,5 @@
+#include "KKTUI.h"
+
 #define NK_INCLUDE_FIXED_TYPES
 #define NK_INCLUDE_STANDARD_IO
 #define NK_INCLUDE_STANDARD_VARARGS
@@ -72,8 +74,10 @@
 static void error_callback(int e, const char *d)
 {printf("Error %d: %s\n", e, d);}
 
-int main()
-{ /* Platform */
+namespace UI {
+
+void KKTUI::InitialUI()
+{/* Platform */
 
     struct nk_glfw glfw = {0};
     static GLFWwindow *win;
@@ -104,7 +108,7 @@ int main()
     {
         fprintf(stderr, "Failed to setup GLAD\n");
        
-        return -1;
+        return;
     }
 
     ctx = nk_glfw3_init(&glfw, win, NK_GLFW3_INSTALL_CALLBACKS);
@@ -209,6 +213,16 @@ int main()
     nk_glfw3_shutdown(&glfw);
     glfwTerminate();
 
-    return 0;
-   
 }
+
+void KKTUI::PrintDebugMessage(std::string str)
+{
+
+}
+    
+IContextInstaller* KKTUI::GetContext()
+{
+    return NULL;
+} 
+
+} // namespace UI
