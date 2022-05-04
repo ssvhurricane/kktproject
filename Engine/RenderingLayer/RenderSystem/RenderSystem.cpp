@@ -215,8 +215,14 @@ int RenderSystem::Render(bool bDemoMode)
 
 
     // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-
+    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  
+    
+    // Temp::Create and Init UI.
+    auto gameUI = dynamic_cast<Engine::UISystem::UISystem*>
+   (Engine::KKTEngine::InstancePtr()
+                                ->GetContext()
+                                ->GetSystem(ESystemType::UISystem));
+    
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
@@ -235,11 +241,15 @@ int RenderSystem::Render(bool bDemoMode)
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         glDrawArrays(GL_TRIANGLES, 0, 3);
         // glBindVertexArray(0); // no need to unbind it every time 
+        
+        glfwPollEvents();
+        gameUI->CreateContext("", window);
+       
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
-        glfwPollEvents();
+        
     }
 
     // optional: de-allocate all resources once they've outlived their purpose:
@@ -247,18 +257,13 @@ int RenderSystem::Render(bool bDemoMode)
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
     glDeleteProgram(shaderProgram);
+     
 
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
     glfwTerminate();
 
-    // Temp::Create and Init UI.
-    UI::KKTUI* gameUI = UI::KKTUI::InstancePtr(); // Create UI.
     
-    gameUI->InitialUI();
-    auto uiSystem = dynamic_cast<UI::UISystem::UISystem*>(gameUI->GetContext()->GetSystem(ESystemType::UISystem));
-
-    uiSystem->DemoRender();
     }
     return 0;
 }

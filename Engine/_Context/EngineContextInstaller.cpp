@@ -20,16 +20,19 @@ void EngineContextInstaller::InstallBindings()
     // 1. Add LogSystem.
     _systems.emplace(ESystemType::LogSystem, new Engine::LogSystem::LogSystem);
 
-    // 2. Add RenderSystem.
+    // 2. Add UISystem.
+    _systems.emplace(ESystemType::UISystem, new Engine::UISystem::UISystem);
+
+    // 3. Add RenderSystem.
     _systems.emplace(ESystemType::RenderSystem, new Engine::RenderSystem::RenderSystem);
 
-    // 3. Add WorldSystem. 
+    // 4. Add WorldSystem. 
     _systems.emplace(ESystemType::WorldSystem, new Engine::WorldSystem::WorldSystem);
 
-    // 4. Add SceneSystem.
+    // 5. Add SceneSystem.
     _systems.emplace(ESystemType::SceneSystem, new Engine::SceneSystem::SceneSystem);
 
-    // 5. Add ObjectSystem.
+    // 6. Add ObjectSystem.
     _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
 
      std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;

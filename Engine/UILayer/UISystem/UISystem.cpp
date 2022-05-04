@@ -10,8 +10,7 @@
 #define NK_GLFW_GL3_IMPLEMENTATION
 #define NK_KEYSTATE_BASED_INPUT
 
-#include <glad/glad.h>
-#include <GLFW/glfw3.h>
+
 
 #include <stbimage/stb_image.h>
 #include <nuklear/nuklear.h>
@@ -47,33 +46,25 @@
 #endif
 
 #ifdef INCLUDE_STYLE
-   #include "../../NKCommon/style.c"
+   #include "../NKCommon/style.c"
 #endif
 #ifdef INCLUDE_CALCULATOR
-   #include "../../NKCommon/calculator.c"
+   #include "../NKCommon/calculator.c"
 #endif
 #ifdef INCLUDE_CANVAS
-   #include "../../NKCommon/canvas.c"
+   #include "../NKCommon/canvas.c"
 #endif
 #ifdef INCLUDE_OVERVIEW
-   #include "../../NKCommon/overview.c"
+   #include "../NKCommon/overview.c"
 #endif
 #ifdef INCLUDE_NODE_EDITOR
-   #include "../../NKCommon/node_editor.c"
+   #include "../NKCommon/node_editor.c"
 #endif
 #ifdef INCLUDE_FILE_BROWSER
   // #include "NKCommon/file_browser.c"
 #endif
 
-/* ===============================================================
- *
- *                          DEMO
- *
- * ===============================================================*/
-static void error_callback(int e, const char *d)
-{printf("Error %d: %s\n", e, d);}
-
-namespace UI {
+namespace Engine {
 namespace UISystem {
 
 UISystem::UISystem()
@@ -86,54 +77,15 @@ void UISystem::Initialize()
 
 }
 
-void UISystem::CreateContext(std::string name/*, GLFWwindow *window*/)
+void UISystem::CreateContext(std::string name, GLFWwindow *window)
 {
-  
+   struct nk_glfw glfw = {0};
 
-   //_uiContexts.emplace(name, window);
-
-}
-
-void UISystem::GetContextByName(std::string name)
-{
-
-}
-
-void UISystem::DemoRender()
-{
-      struct nk_glfw glfw = {0};
-    static GLFWwindow *win;
-    int width = 0, height = 0;
     struct nk_context *ctx;
     struct nk_colorf bg;
 
-    /* GLFW */
-    glfwSetErrorCallback(error_callback);
-    if (!glfwInit()) {
-        fprintf(stdout, "[GFLW] failed to init!\n");
-        exit(1);
-    }
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
-    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
-    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
-#ifdef __APPLE__
-    glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
-#endif
-    win = glfwCreateWindow(WINDOW_WIDTH, WINDOW_HEIGHT, "Demo", NULL, NULL);
-    glfwMakeContextCurrent(win);
-    glfwGetWindowSize(win, &width, &height);
 
-    /* OpenGL */
-   // glViewport(0, 0, WINDOW_WIDTH, WINDOW_HEIGHT);
-
-    if (!gladLoadGLLoader((GLADloadproc)glfwGetProcAddress))
-    {
-        fprintf(stderr, "Failed to setup GLAD\n");
-       
-        return;
-    }
-
-    ctx = nk_glfw3_init(&glfw, win, NK_GLFW3_INSTALL_CALLBACKS);
+    ctx = nk_glfw3_init(&glfw, window, NK_GLFW3_INSTALL_CALLBACKS);
     /* Load Fonts: if none of these are loaded a default font will be used  */
     /* Load Cursor: if you uncomment cursor loading please hide the cursor */
     {
@@ -157,14 +109,11 @@ void UISystem::DemoRender()
     #endif
 
     bg.r = 0.10f, bg.g = 0.18f, bg.b = 0.24f, bg.a = 1.0f;
-    while (!glfwWindowShouldClose(win))
-    {
-        /* Input */
-        glfwPollEvents();
-        nk_glfw3_new_frame(&glfw);
+  
+    nk_glfw3_new_frame(&glfw);
 
         /* GUI */
-        if (nk_begin(ctx, "Demo", nk_rect(50, 50, 230, 250),
+   if (nk_begin(ctx, "Demo", nk_rect(50, 50, 230, 250),
             NK_WINDOW_BORDER|NK_WINDOW_MOVABLE|NK_WINDOW_SCALABLE|
             NK_WINDOW_MINIMIZABLE|NK_WINDOW_TITLE))
         {
@@ -196,7 +145,7 @@ void UISystem::DemoRender()
                 nk_combo_end(ctx);
             }
         }
-        nk_end(ctx);
+   nk_end(ctx);
 
         /* -------------- EXAMPLES ---------------- */
         #ifdef INCLUDE_CALCULATOR
@@ -216,26 +165,26 @@ void UISystem::DemoRender()
             //struct media* media;
            // file_browser_init(browser, media);
         #endif
-        /* ----------------------------------------- */
-
-        /* Draw */
-        glfwGetWindowSize(win, &width, &height);
-        glViewport(0, 0, width, height);
-        glClear(GL_COLOR_BUFFER_BIT);
-        glClearColor(bg.r, bg.g, bg.b, bg.a);
-        /* IMPORTANT: `nk_glfw_render` modifies some global OpenGL state
-         * with blending, scissor, face culling, depth test and viewport and
-         * defaults everything back into a default state.
-         * Make sure to either a.) save and restore or b.) reset your own state after
-         * rendering the UI. */
-        nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
-        glfwSwapBuffers(win);
-    }
+     
+    nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
+   
 
     nk_glfw3_shutdown(&glfw);
-    glfwTerminate();
+  
+   //_uiContexts.emplace(name, window);
+
+}
+
+void UISystem::GetContextByName(std::string name)
+{
+
+}
+
+void UISystem::DemoRender()
+{
+    
 }
 
 
 } // namespace UISystem
-} // namespace UI
+} // namespace Engine

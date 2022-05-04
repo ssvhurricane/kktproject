@@ -6,7 +6,11 @@
 #include "base_context/ISystem.h"
 #include "base_context/Defines.h"
 
-namespace UI {
+
+#include <glad/glad.h>
+#include <GLFW/glfw3.h>
+
+namespace Engine {
 namespace UISystem {
 #if defined _WIN32
 class ENGINE_API UISystem : public ISystem
@@ -30,7 +34,7 @@ public:
 
     void Initialize();
 
-    void CreateContext(std::string name/*, GLFWwindow *window*/);
+    void CreateContext(std::string name, GLFWwindow *window);
 
     void GetContextByName(std::string name);
 
@@ -38,4 +42,4 @@ public:
 };
 
 } // namespace UISystem
-} // namespace UI
+} // namespace Engine
