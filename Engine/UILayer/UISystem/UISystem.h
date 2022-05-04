@@ -21,13 +21,6 @@ class UISystem : public ISystem
 private:
 
     //std::map<std::string, nk_context*> _uiContexts;
-
-    //struct nk_glfw glfw = {0};
-
-   // struct nk_context *ctx; // TODO Ref.
-
-   // int width = 0, height = 0;
-
 public:
 
     UISystem();

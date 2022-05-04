@@ -42,7 +42,6 @@
   #define INCLUDE_CANVAS
   #define INCLUDE_OVERVIEW
   #define INCLUDE_NODE_EDITOR
-  #define INCLUDE_FILE_BROWSER
 #endif
 
 #ifdef INCLUDE_STYLE
@@ -59,9 +58,6 @@
 #endif
 #ifdef INCLUDE_NODE_EDITOR
    #include "../NKCommon/node_editor.c"
-#endif
-#ifdef INCLUDE_FILE_BROWSER
-  // #include "NKCommon/file_browser.c"
 #endif
 
 namespace Engine {
@@ -160,12 +156,7 @@ void UISystem::CreateContext(std::string name, GLFWwindow *window)
         #ifdef INCLUDE_NODE_EDITOR
            node_editor(ctx);
         #endif
-        #ifdef INCLUDE_FILE_BROWSER
-            //struct file_browser *browser;
-            //struct media* media;
-           // file_browser_init(browser, media);
-        #endif
-     
+       
     nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
    
 
