@@ -1,3 +1,4 @@
+// Singleton for objects.
 #pragma once
 
 template<typename T>

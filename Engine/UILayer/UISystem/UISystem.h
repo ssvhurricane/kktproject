@@ -1,5 +1,4 @@
 #pragma once
-
 #include <string>
 #include <map>
 
@@ -20,7 +19,8 @@ class UISystem : public ISystem
 {
 private:
 
-    //std::map<std::string, nk_context*> _uiContexts;
+   // std::map<std::string, nk_context*> _uiContexts;
+   
 public:
 
     UISystem();
@@ -32,6 +32,8 @@ public:
     void GetContextByName(std::string name);
 
     void DemoRender();
+
+    void Clear();
 };
 
 } // namespace UISystem

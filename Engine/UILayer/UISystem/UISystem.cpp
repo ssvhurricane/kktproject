@@ -11,8 +11,7 @@
 #define NK_KEYSTATE_BASED_INPUT
 
 
-
-#include <stbimage/stb_image.h>
+//#include <stbimage/stb_image.h>
 #include <nuklear/nuklear.h>
 #include <nuklear/nuklear_glfw_gl3.h>
 
@@ -60,27 +59,26 @@
    #include "../NKCommon/node_editor.c"
 #endif
 
+struct nk_glfw glfw = {0};
+
+struct nk_context *ctx;
+
 namespace Engine {
 namespace UISystem {
 
 UISystem::UISystem()
 {
-
+   // TODO:
 }
 
 void UISystem::Initialize()
 {
-
+   // TODO:
 }
 
 void UISystem::CreateContext(std::string name, GLFWwindow *window)
 {
-   struct nk_glfw glfw = {0};
-
-    struct nk_context *ctx;
-    struct nk_colorf bg;
-
-
+  
     ctx = nk_glfw3_init(&glfw, window, NK_GLFW3_INSTALL_CALLBACKS);
     /* Load Fonts: if none of these are loaded a default font will be used  */
     /* Load Cursor: if you uncomment cursor loading please hide the cursor */
@@ -103,6 +101,20 @@ void UISystem::CreateContext(std::string name, GLFWwindow *window)
     set_style(ctx, THEME_BLUE);
     set_style(ctx, THEME_DARK);
     #endif
+  
+  
+   //_uiContexts.emplace(name, window);
+
+}
+
+void UISystem::GetContextByName(std::string name)
+{
+
+}
+
+void UISystem::DemoRender()
+{
+     struct nk_colorf bg;
 
     bg.r = 0.10f, bg.g = 0.18f, bg.b = 0.24f, bg.a = 1.0f;
   
@@ -160,22 +172,13 @@ void UISystem::CreateContext(std::string name, GLFWwindow *window)
     nk_glfw3_render(&glfw, NK_ANTI_ALIASING_ON, MAX_VERTEX_BUFFER, MAX_ELEMENT_BUFFER);
    
 
-    nk_glfw3_shutdown(&glfw);
-  
-   //_uiContexts.emplace(name, window);
-
 }
 
-void UISystem::GetContextByName(std::string name)
-{
+void UISystem::Clear()
+{  
+   
+   nk_glfw3_shutdown(&glfw);
 
 }
-
-void UISystem::DemoRender()
-{
-    
-}
-
-
 } // namespace UISystem
 } // namespace Engine

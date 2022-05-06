@@ -212,27 +212,31 @@ int RenderSystem::Render(bool bDemoMode)
     // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
     // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
     glBindVertexArray(0); 
-
+ 
 
     // uncomment this call to draw in wireframe polygons.
-    //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  
-    
+   // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  
+   
     // Temp::Create and Init UI.
     auto gameUI = dynamic_cast<Engine::UISystem::UISystem*>
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(ESystemType::UISystem));
-    
+  
+    gameUI->CreateContext("", window);
+
     // render loop
     // -----------
     while (!glfwWindowShouldClose(window))
     {
         // input
         // -----
-        processInput(window);
+       // processInput(window);
 
         // render
         // ------
+        //glfwGetWindowSize(window, SCR_WIDTH, SCR_HEIGHT);
+        glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
@@ -240,11 +244,11 @@ int RenderSystem::Render(bool bDemoMode)
         glUseProgram(shaderProgram);
         glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
         glDrawArrays(GL_TRIANGLES, 0, 3);
-        // glBindVertexArray(0); // no need to unbind it every time 
+        glBindVertexArray(0); // no need to unbind it every time 
         
         glfwPollEvents();
-        gameUI->CreateContext("", window);
-       
+        
+        gameUI->DemoRender();
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
@@ -258,9 +262,10 @@ int RenderSystem::Render(bool bDemoMode)
     glDeleteBuffers(1, &VBO);
     glDeleteProgram(shaderProgram);
      
-
+    gameUI->Clear();
     // glfw: terminate, clearing all previously allocated GLFW resources.
     // ------------------------------------------------------------------
+   
     glfwTerminate();
 
     
