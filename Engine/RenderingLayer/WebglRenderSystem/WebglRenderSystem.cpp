@@ -7,6 +7,11 @@ WebglRenderSystem::WebglRenderSystem()
 {
     // TODO:
 }
+int WebglRenderSystem::Render(bool bDemoMode)
+{
+    // TODO::
+    return -1;
+}
 
 void WebglRenderSystem::Initialize()
 {

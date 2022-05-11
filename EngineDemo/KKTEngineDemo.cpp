@@ -57,7 +57,9 @@ int main()
                                                             ->GetSystem(ESystemType::ObjectSystem));
                                         
     
-    objectSystem->CreateObjectByName("GameObject");
+    objectSystem->CreateObjectByName("BaseGameObject");
+
+    objectSystem->CreateObjectByName("UIGameObject", Engine::ObjectSystem::EObjectType::UIObject);
 
     // Start Engine(Runtime).
     gameEngine->StartEngine();

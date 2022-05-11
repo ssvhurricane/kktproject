@@ -1,13 +1,15 @@
 #pragma once
 
+#include "base_context/ISystem.h"
+
 #include "ERenderSystemType.h"
 
 namespace Engine {
 namespace RenderSystem {
 
-struct IRenderSystem 
+struct IRenderSystem : public ISystem
 { 
-    virtual IRenderSystem* GetSystem(ERenderSystemType) = 0;
+    virtual int Render(bool bDemoMode) = 0;
 };
 
 } // namespace _Context

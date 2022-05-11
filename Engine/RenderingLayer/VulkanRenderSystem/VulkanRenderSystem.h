@@ -3,15 +3,17 @@
 
 #include "../../KKTEngine.h"
 
-#include "base_context/ISystem.h"
+#include "../Base/IRenderSystem.h"
+#include "../Base/ERenderSystemType.h"
+
 #include "base_context/Defines.h"
 
 namespace Engine {
 namespace VulkanRenderSystem {
 #if defined _WIN32
-class ENGINE_API VulkanRenderSystem : public ISystem
+class ENGINE_API VulkanRenderSystem : public RenderSystem::IRenderSystem
 #elif defined __APPLE__  || defined __linux__
-class VulkanRenderSystem : public ISystem
+class VulkanRenderSystem : public RenderSystem::IRenderSystem
 #endif
 {
 private:
@@ -19,6 +21,8 @@ private:
 public:
 
     VulkanRenderSystem();
+
+    int Render(bool bDemoMode);
 
     void Initialize();
 }; 

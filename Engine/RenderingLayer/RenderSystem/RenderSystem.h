@@ -25,6 +25,8 @@ private:
 
     IRenderSystem* _renderSystem;
 
+    void DemoRender();
+
 public:
 
     RenderSystem();
@@ -33,7 +35,10 @@ public:
 
     void Configurate(ERenderSystemType eRennderSystemType, ERenderMode eRenderMode);
 
-    int Render(bool bDemoMode = false);
+    void Render(bool bDemoMode = false);
+
+    void UpdateRender();
+
 }; 
 
 } // namespace RenderSystem

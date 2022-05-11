@@ -3,15 +3,16 @@
 
 #include "../../KKTEngine.h"
 
-#include "base_context/ISystem.h"
+#include "../Base/IRenderSystem.h"
+#include "../Base/ERenderSystemType.h"
 #include "base_context/Defines.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {
 #if defined _WIN32
-class ENGINE_API OpenglRenderSystem : public ISystem
+class ENGINE_API OpenglRenderSystem : public RenderSystem::IRenderSystem
 #elif defined __APPLE__  || defined __linux__
-class OpenglRenderSystem : public ISystem
+class OpenglRenderSystem : public RenderSystem::IRenderSystem
 #endif
 {
 private:
@@ -20,8 +21,10 @@ public:
 
     OpenglRenderSystem();
 
+    int Render(bool bDemoMode);
+
     void Initialize();
 }; 
 
-} // namespace  OpenglRenderSystem
+} // namespace OpenglRenderSystem
 } // namespace Engine
