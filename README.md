@@ -1,10 +1,10 @@
 //--------------------------------------------------------------------------------
-KktEngine(Engine) - core.
+KKTEngine(Engine) - core.
 
 Main features:
     - cross-platform engine;
     - can be a library;
-    - support Linux, Mac, Windows, Android, Ios.
+    - support Linux, Mac, Windows, Browser, Mobile(feature).
 
 Build Project:
     - create folder(root) 
@@ -23,10 +23,8 @@ Run and Debug Project:
     - F5, Ctrl+F5.
 
 //---------------------------------------------------------------------------------
-Kkteditor(Editor) - game editror.
+KKTEditor(Editor) - game editor.
 
 //---------------------------------------------------------------------------------
-KktEngineDemo - demo (debug) project.
+KKTEngineDemo - demo (debug) project.
 
-//---------------------------------------------------------------------------------
-KktUI(UI) - universal ui system for editor and engine.

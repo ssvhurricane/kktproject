@@ -19,18 +19,35 @@ private:
 
     EObjectType _type;
 
+    std::vector<IComponent*> _components;
+
 public:
 
     BasicObject();
 
-    void Initialize(std::string, EObjectType);
+    void Initialize(std::string name, EObjectType type);
 
     int GetId();
 
     EObjectType GetType();
 
     std::string GetName();
-   
+
+    void AddComponent(IComponent* component);
+
+    IComponent* GetComponentById(int id);
+
+    IComponent* GetComponentByName(std::string name);
+
+    void RemoveComponentById(int id);
+
+    void RemoveComponentByName(std::string name);
+
+    bool HasComponent(IComponent* component);
+
+    std::vector<IComponent*> GetAllComponents();
+
+    void RemoveAllComponents();
     
 };
 
