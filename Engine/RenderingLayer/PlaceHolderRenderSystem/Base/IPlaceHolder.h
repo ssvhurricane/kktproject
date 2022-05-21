@@ -6,6 +6,7 @@ namespace PlaceHolderRenderSystem {
 struct IPlaceHolder
 {
     //TODO:
+    void GetOwner();
 };
 
 } // namespace PlaceHolderRenderSystem
