@@ -1,12 +1,12 @@
-#include "PlaceHolderRenderSystem.h"
+#pragma once
 
 namespace Engine {
 namespace PlaceHolderRenderSystem {
 
-PlaceHolderRenderSystem::PlaceHolderRenderSystem()
+struct IPlaceHolder
 {
-    // TODO:
-}
+    //TODO:
+};
 
 } // namespace PlaceHolderRenderSystem
 } // namespace Engine

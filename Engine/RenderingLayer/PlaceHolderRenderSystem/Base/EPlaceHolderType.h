@@ -1,12 +1,10 @@
-#include "PlaceHolderRenderSystem.h"
-
 namespace Engine {
 namespace PlaceHolderRenderSystem {
 
-PlaceHolderRenderSystem::PlaceHolderRenderSystem()
+enum EPlaceHolderType
 {
-    // TODO:
-}
-
+    Window,
+    Place
+};
 } // namespace PlaceHolderRenderSystem
 } // namespace Engine

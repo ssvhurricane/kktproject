@@ -66,6 +66,7 @@
 
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\*.cpp", 
 
+                "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\*.c",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\WebglRenderSystem\\*.cpp",
@@ -181,6 +182,7 @@
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
 
+                "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.c",
                 "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
@@ -297,7 +299,8 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
-                
+
+                "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.c",
                 "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
