@@ -1,4 +1,3 @@
-//--------------------------------------------------------------------------------
 KktEngine(Engine) - core.
 
 Main features:
@@ -22,11 +21,6 @@ Run and Debug Project:
     - add breakpoint;
     - F5, Ctrl+F5.
 
-//---------------------------------------------------------------------------------
-Kkteditor(Editor) - game editror.
+Kkteditor(Editor) - game editor.
 
-//---------------------------------------------------------------------------------
 KktEngineDemo - demo (debug) project.
-
-//---------------------------------------------------------------------------------
-KktUI(UI) - universal ui system for editor and engine.
