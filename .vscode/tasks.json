@@ -4,6 +4,89 @@
         // Windows Tasks.
         {
             "type": "cppbuild",
+            "label": "(Browser) -> engine_demo -> build active file (html).",
+            "command": "C:\\emsdk\\upstream\\emscripten\\emcc",
+            "args": [
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+                
+                // Add dependencies headers.
+                "-I${workspaceFolder}\\dependencies\\include",
+                "-L${workspaceFolder}\\dependencies\\library",
+                "-L${workspaceFolder}\\dependencies\\library\\glfw3.lib",
+
+                  // Add engine headers. 
+                "-I${workspaceFolder}\\Engine",
+
+                // Engine
+                // Add .cpp systems.
+                "${workspaceFolder}\\Engine\\_Context\\EngineContextInstaller.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\InitializeSystem.cpp", 
+                "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\StartSystem.cpp", 
+                
+                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\LogSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\LogMessageData.cpp",
+
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\UISystem.cpp", 
+
+                "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\PlaceHolderRenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\OpenglRenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\OpenglRenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\WebglRenderSystem\\WebglRenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\VulkanRenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\RenderSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\WorldSystem.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\AppWorld.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\ARWorld\\ARWorld.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\BasicWorld\\BasicWorld.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\VRWorld\\VRWorld.cpp",
+
+                "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\SceneSystem.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\Scenes\\BasicScene.cpp",
+
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectSystem.cpp", 
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectFactorySystem\\ObjectFactorySystem.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\ObjectPoolSystem.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\BasicObject.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\NetworkObject.cpp",
+
+                "${workspaceFolder}\\Engine\\KKTEngine.cpp",
+
+               
+                "${workspaceFolder}\\EngineDemo\\KKTEngineDemo.cpp",
+               
+                "-s",
+                "WASM=1",
+                
+                "-o", 
+                "${workspaceFolder}\\bin\\browser\\${fileBasenameNoExtension}.html",
+                "-DENGINEDLL_EXPORTS",
+
+              // "-lwinmm",
+               // "-lgdi32",
+               // "-lopengl32",
+               // "-lshell32",
+              //  "-luser32",
+                "-lglfw3",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+            /*,
+            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""*/
+        },
+        {
+            "type": "cppbuild",
             "label": "(Windows) -> engine_demo -> build active file (exe).",
             "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
             "args": [
