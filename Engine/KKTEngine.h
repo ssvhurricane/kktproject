@@ -17,10 +17,18 @@
 #include "CoreLayer/StartSystem/StartSystem.h"
 
 namespace Engine {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API KKTEngine : public Singleton<KKTEngine>
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__  
 class KKTEngine : public Singleton<KKTEngine>
+#endif
+#ifdef __linux__
+class KKTEngine : public Singleton<KKTEngine>
+#endif
+#ifdef __EMSCRIPTEN__
+class KKTEngine : public Singleton<KKTEngine>
+#endif
 #endif
 {
 private:
@@ -32,17 +40,18 @@ private:
     ISystem* _startSystem;
     
 public:
-#if defined _WIN32
+#ifdef _WIN32
 
     void __cdecl InitialEngine(); 
 
-     void __cdecl PrintDebugMessage(std::string str);
+    void __cdecl PrintDebugMessage(std::string str);
     
-     IContextInstaller* __cdecl GetContext();
+    IContextInstaller* __cdecl GetContext();
 
-     void __cdecl StartEngine();
+    void __cdecl StartEngine();
 
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ 
 
     void  InitialEngine(); 
 
@@ -51,7 +60,27 @@ public:
      IContextInstaller*  GetContext();
 
      void StartEngine();
-     
+#endif   
+#ifdef __linux__
+
+    void  InitialEngine(); 
+
+     void PrintDebugMessage(std::string str);
+    
+     IContextInstaller*  GetContext();
+
+     void StartEngine();
+#endif 
+#ifdef __EMSCRIPTEN__
+
+    void  InitialEngine(); 
+
+     void PrintDebugMessage(std::string str);
+    
+     IContextInstaller*  GetContext();
+
+     void StartEngine();
+#endif 
 #endif 
      
 };

@@ -9,10 +9,18 @@
 
 namespace Engine {
 namespace OpenglRenderSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API OpenglRenderSystem : public RenderSystem::IRenderSystem
-#elif defined __APPLE__  || defined __linux__
+#else 
+#ifdef __APPLE__ 
 class OpenglRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef __linux__
+class OpenglRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef __EMSCRIPTEN__
+class OpenglRenderSystem : public RenderSystem::IRenderSystem
+#endif
 #endif
 {
 private:

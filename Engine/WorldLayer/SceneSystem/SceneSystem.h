@@ -12,10 +12,18 @@
 
 namespace Engine {
 namespace SceneSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API SceneSystem : public ISystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ 
 class SceneSystem : public ISystem
+#endif
+#ifdef __linux__
+class SceneSystem : public ISystem
+#endif
+#ifdef __EMSCRIPTEN__
+class SceneSystem : public ISystem
+#endif
 #endif
 {
 private: 

@@ -8,21 +8,30 @@
 
 #include "base_context/Defines.h"
 
+
 namespace Engine {
 namespace WebglRenderSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API WebglRenderSystem : public RenderSystem::IRenderSystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ // TODO:DEBUG
 class WebglRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef  __linux__ 
+class WebglRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef __EMSCRIPTEN__
+class WebglRenderSystem : public RenderSystem::IRenderSystem
+#endif
 #endif
 {
 private:
     // TODO:
 public:
 
-    WebglRenderSystem();
+   WebglRenderSystem();
 
-    int Render(bool bDemoMode);
+   int Render(bool bDemoMode);
 
     void Initialize();
 }; 

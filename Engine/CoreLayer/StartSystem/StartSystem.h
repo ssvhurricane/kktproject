@@ -8,10 +8,18 @@
 
 namespace Engine {
 namespace StartSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API StartSystem : public ISystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ 
 class StartSystem : public ISystem
+#endif
+#ifdef __linux__
+class StartSystem : public ISystem
+#endif
+#ifdef __EMSCRIPTEN__
+class StartSystem : public ISystem
+#endif
 #endif
 {
 private:

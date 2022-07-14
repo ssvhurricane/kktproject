@@ -102,11 +102,16 @@ struct nk_glfw_vertex {
     nk_byte col[4];
 };
 
+#ifdef __EMSCRIPTEN__
+  #define NK_SHADER_VERSION "#version 100\n"
+#else
 #ifdef __APPLE__
   #define NK_SHADER_VERSION "#version 150\n"
 #else
   #define NK_SHADER_VERSION "#version 300 es\n"
 #endif
+#endif
+
 
 NK_API void
 nk_glfw3_device_create(struct nk_glfw* glfw)
@@ -115,11 +120,19 @@ nk_glfw3_device_create(struct nk_glfw* glfw)
     static const GLchar *vertex_shader =
         NK_SHADER_VERSION
         "uniform mat4 ProjMtx;\n"
+#ifdef __EMSCRIPTEN__
+        "attribute vec2 Position;\n"
+        "attribute vec2 TexCoord;\n"
+        "attribute vec4 Color;\n"
+        "varying vec2 Frag_UV;\n"
+        "varying vec4 Frag_Color;\n"
+#else
         "in vec2 Position;\n"
         "in vec2 TexCoord;\n"
         "in vec4 Color;\n"
         "out vec2 Frag_UV;\n"
         "out vec4 Frag_Color;\n"
+#endif
         "void main() {\n"
         "   Frag_UV = TexCoord;\n"
         "   Frag_Color = Color;\n"
@@ -129,11 +142,20 @@ nk_glfw3_device_create(struct nk_glfw* glfw)
         NK_SHADER_VERSION
         "precision mediump float;\n"
         "uniform sampler2D Texture;\n"
+#ifdef __EMSCRIPTEN__
+        "varying vec2 Frag_UV;\n"
+        "varying vec4 Frag_Color;\n"
+#else
         "in vec2 Frag_UV;\n"
         "in vec4 Frag_Color;\n"
         "out vec4 Out_Color;\n"
+#endif
         "void main(){\n"
+#ifdef __EMSCRIPTEN__
+        "   gl_FragColor = Frag_Color * texture2D(Texture, Frag_UV);\n"
+#else
         "   Out_Color = Frag_Color * texture(Texture, Frag_UV.st);\n"
+#endif
         "}\n";
 
     struct nk_glfw_device *dev = &glfw->ogl;
@@ -188,7 +210,9 @@ nk_glfw3_device_create(struct nk_glfw* glfw)
     glBindTexture(GL_TEXTURE_2D, 0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+#ifndef __EMSCRIPTEN__
     glBindVertexArray(0);
+#endif
 }
 
 NK_INTERN void
@@ -261,8 +285,13 @@ nk_glfw3_render(struct nk_glfw* glfw, enum nk_anti_aliasing AA, int max_vertex_b
         glBufferData(GL_ELEMENT_ARRAY_BUFFER, max_element_buffer, NULL, GL_STREAM_DRAW);
 
         /* load draw vertices & elements directly into vertex + element buffer */
+ #ifndef __EMSCRIPTEN__
         vertices = glMapBuffer(GL_ARRAY_BUFFER, GL_WRITE_ONLY);
         elements = glMapBuffer(GL_ELEMENT_ARRAY_BUFFER, GL_WRITE_ONLY);
+#else
+        vertices = malloc((size_t)max_vertex_buffer);
+        elements = malloc((size_t)max_element_buffer);
+#endif
         {
             /* fill convert configuration */
             struct nk_convert_config config;
@@ -289,8 +318,15 @@ nk_glfw3_render(struct nk_glfw* glfw, enum nk_anti_aliasing AA, int max_vertex_b
             nk_buffer_init_fixed(&ebuf, elements, (size_t)max_element_buffer);
             nk_convert(&glfw->ctx, &dev->cmds, &vbuf, &ebuf, &config);
         }
+#ifdef __EMSCRIPTEN__
+        glBufferSubData(GL_ARRAY_BUFFER, 0, (size_t)max_vertex_buffer, vertices);
+        glBufferSubData(GL_ELEMENT_ARRAY_BUFFER, 0, (size_t)max_element_buffer, elements);
+        free(vertices);
+        free(elements);
+#else
         glUnmapBuffer(GL_ARRAY_BUFFER);
         glUnmapBuffer(GL_ELEMENT_ARRAY_BUFFER);
+#endif
 
         /* iterate over and execute each draw command */
         nk_draw_foreach(cmd, &glfw->ctx, &dev->cmds)
@@ -313,7 +349,9 @@ nk_glfw3_render(struct nk_glfw* glfw, enum nk_anti_aliasing AA, int max_vertex_b
     glUseProgram(0);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+#ifndef __EMSCRIPTEN__
     glBindVertexArray(0);
+#endif
     glDisable(GL_BLEND);
     glDisable(GL_SCISSOR_TEST);
 }

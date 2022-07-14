@@ -13,10 +13,18 @@
 
 namespace Engine {
 namespace WorldSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API WorldSystem : public ISystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__  
 class WorldSystem : public ISystem
+#endif
+#ifdef  __linux__
+class WorldSystem : public ISystem
+#endif
+#ifdef __EMSCRIPTEN__
+class WorldSystem : public ISystem
+#endif
 #endif
 {
 private: 

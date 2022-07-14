@@ -25,6 +25,11 @@ private:
     Singleton & operator = (Singleton const&);
 };
 
+#ifdef __EMSCRIPTEN__
+template<typename T>
+T Singleton<T>::mSingleton;
+#else
 template<typename T>
 T Singleton<T>::mSingleton = T();
+#endif
 

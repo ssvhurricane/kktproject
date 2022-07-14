@@ -9,10 +9,18 @@
 namespace Engine {
 namespace InitializeSystem {
 
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API InitializeSystem : public ISystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__  
 class InitializeSystem : public ISystem
+#endif
+#ifdef  __linux__
+class InitializeSystem : public ISystem
+#endif
+#ifdef  __EMSCRIPTEN__
+class InitializeSystem : public ISystem
+#endif
 #endif
 {
 private:

@@ -11,10 +11,18 @@
 
 namespace Engine {
 namespace UISystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API UISystem : public ISystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ 
 class UISystem : public ISystem
+#endif
+#ifdef  __linux__
+class UISystem : public ISystem
+#endif
+#ifdef __EMSCRIPTEN__
+class UISystem : public ISystem
+#endif
 #endif
 {
 private:

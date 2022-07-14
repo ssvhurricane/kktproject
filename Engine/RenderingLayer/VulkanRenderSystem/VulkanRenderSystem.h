@@ -10,10 +10,18 @@
 
 namespace Engine {
 namespace VulkanRenderSystem {
-#if defined _WIN32
+#ifdef _WIN32
 class ENGINE_API VulkanRenderSystem : public RenderSystem::IRenderSystem
-#elif defined __APPLE__  || defined __linux__
+#else
+#ifdef __APPLE__ 
 class VulkanRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef __linux__
+class VulkanRenderSystem : public RenderSystem::IRenderSystem
+#endif
+#ifdef __EMSCRIPTEN__
+class VulkanRenderSystem : public RenderSystem::IRenderSystem
+#endif
 #endif
 {
 private:
