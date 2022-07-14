@@ -13,6 +13,7 @@
                 
                 // Add dependencies headers.
                 "-I${workspaceFolder}\\dependencies\\include",
+                "-I$C:\\emsdk\\upstream\\emscripten\\system\\include", // emscripten folder.
                 "-L${workspaceFolder}\\dependencies\\library",
                 "-L${workspaceFolder}\\dependencies\\library\\glfw3.lib",
 
@@ -53,20 +54,16 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\NetworkObject.cpp",
 
                 "${workspaceFolder}\\Engine\\KKTEngine.cpp",
-
                
                 "${workspaceFolder}\\EngineDemo\\KKTEngineDemo.cpp",
                
                 "-s",
                 "USE_WEBGL2=1",
-
                 "-s",
                 "USE_GLFW=3",
-
                 "-s",
                 "WASM=1",
 
-                
                 "-o", 
                 "${workspaceFolder}\\bin\\browser\\${fileBasenameNoExtension}.html",
                 "-DENGINEDLL_EXPORTS",
