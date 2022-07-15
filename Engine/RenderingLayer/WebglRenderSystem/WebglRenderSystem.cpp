@@ -95,7 +95,7 @@ int PreRender(void)
         exit(EXIT_FAILURE);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 2);
     glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 0);
-    auto window = glfwCreateWindow(640, 480, "Simple example", NULL, NULL);
+    auto window = glfwCreateWindow(800, 600, "[KKTEditor: ver.1.0.0] -> [KKTEngine: ver. 1.0.0] -> [ProjectName: MyProject]", NULL, NULL);
     if (!window)
     {
         glfwTerminate();
