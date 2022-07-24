@@ -68,11 +68,6 @@
                 "${workspaceFolder}\\bin\\browser\\${fileBasenameNoExtension}.html",
                 "-DENGINEDLL_EXPORTS",
 
-              // "-lwinmm",
-               // "-lgdi32",
-               // "-lopengl32",
-               // "-lshell32",
-              //  "-luser32",
                 "-lglfw3",
                 "-Wno-deprecated"
             ],
@@ -86,8 +81,6 @@
                 "kind": "build",
                 "isDefault": true
             }
-            /*,
-            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""*/
         },
         {
             "type": "cppbuild",
@@ -388,18 +381,10 @@
                 "-s",
                 "WASM=1",
 
-
-              // "-experimental-wasm-threads",
-
                 "-o", 
                 "${workspaceFolder}/bin/browser/${fileBasenameNoExtension}.html",
                 "-DENGINEDLL_EXPORTS",
-  
-              // "-lwinmm",
-               // "-lgdi32",
-               // "-lopengl32",
-               // "-lshell32",
-              //  "-luser32",
+             
                 "-lglfw3",
                 "-Wno-deprecated"
             ],
@@ -413,8 +398,6 @@
                 "kind": "build",
                 "isDefault": true
             }
-            /*,
-            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""*/
         },
         {
             "type": "cppbuild",
