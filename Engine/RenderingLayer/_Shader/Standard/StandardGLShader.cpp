@@ -1,13 +1,10 @@
-#pragma once
+// TODO: Standard GL Shader Type.
+
+#include "StandardGLShader.h"
 
 namespace Engine {
 namespace RenderSystem {
 
-enum EShaderType
-{
-    Standard, 
-    PBR
-};
 
 } // namespace RenderSystem
 } // namespace Engine

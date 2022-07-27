@@ -3,10 +3,12 @@
 namespace Engine {
 namespace RenderSystem {
 
-enum EShaderType
+enum EShaderRenderType
 {
-    Standard, 
-    PBR
+    OpenGL, 
+    WebGL,
+    OpenGLES,
+    Vulkan
 };
 
 } // namespace RenderSystem

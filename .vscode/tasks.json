@@ -37,6 +37,7 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\WebglRenderSystem\\WebglRenderSystem.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\VulkanRenderSystem.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\RenderSystem.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\StandardGLShader.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\WorldSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\AppWorld.cpp",
@@ -152,6 +153,7 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\WebglRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\*.cpp",
@@ -268,6 +270,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
@@ -352,6 +355,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/WebglRenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/VulkanRenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/RenderSystem.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/StandardGLShader.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
@@ -470,6 +474,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/WebglRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
