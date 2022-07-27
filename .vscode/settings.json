@@ -88,6 +88,8 @@
         "ratio": "cpp",
         "sstream": "cpp",
         "variant": "cpp",
-        "__functional_base": "cpp"
+        "__functional_base": "cpp",
+        "list": "cpp",
+        "xhash": "cpp"
     }
 }
