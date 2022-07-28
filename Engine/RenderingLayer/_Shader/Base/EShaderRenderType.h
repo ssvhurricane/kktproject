@@ -5,10 +5,10 @@ namespace RenderSystem {
 
 enum EShaderRenderType
 {
-    OpenGL, 
-    WebGL,
-    OpenGLES,
-    Vulkan
+    OpenGLShader, 
+    WebGLShader,
+    OpenGLESShader,
+    VulkanShader
 };
 
 } // namespace RenderSystem
