@@ -68,9 +68,18 @@ int OpenglRenderSystem::Render(bool bDemoMode)
         return -1;
     }
 
-    Engine::RenderSystem::StandardGLShader shader(
+#ifdef _WIN32  // TODOREf
+Engine::RenderSystem::StandardGLShader shader(
         "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
         "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
+
+#else 
+#ifdef __APPLE__ 
+Engine::RenderSystem::StandardGLShader shader(
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
+#endif
+#endif
    
 
     // Указание вершин (и буфера(ов)) и настройка вершинных атрибутов
