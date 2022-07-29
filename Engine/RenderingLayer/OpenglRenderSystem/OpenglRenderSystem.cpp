@@ -68,19 +68,23 @@ int OpenglRenderSystem::Render(bool bDemoMode)
         return -1;
     }
 
-#ifdef _WIN32  // TODOREf
+#ifdef _WIN32 // TOD REF:
 Engine::RenderSystem::StandardGLShader shader(
         "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
         "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
-
 #else 
 #ifdef __APPLE__ 
 Engine::RenderSystem::StandardGLShader shader(
         "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
         "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
 #endif
+#ifdef __linux__
+Engine::RenderSystem::StandardGLShader shader( "", ""); 
 #endif
-   
+#ifdef __EMSCRIPTEN__
+Engine::RenderSystem::StandardGLShader shader("","");
+#endif
+#endif
 
     // Указание вершин (и буфера(ов)) и настройка вершинных атрибутов
     float vertices[] = {

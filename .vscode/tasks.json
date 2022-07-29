@@ -73,7 +73,7 @@
                 "${workspaceFolder}\\bin\\browser\\${fileBasenameNoExtension}.html",
                
                 "--preload-file",
-                " ${workspaceFolder}\\EngineDemo\\Content@/Content",
+                " ${workspaceFolder}\\EngineDemo\\Content@/Content", //For shaders preorety use --embed
                 
                 "--use-preload-plugins",
 
@@ -401,7 +401,7 @@
                 "${workspaceFolder}/bin/browser/${fileBasenameNoExtension}.html",
  
                 "--preload-file",
-                " ${workspaceFolder}/EngineDemo/Content@/Content",
+                " ${workspaceFolder}/EngineDemo/Content@/Content",//For shaders preorety use --embed
                 
                 "--use-preload-plugins",
 
