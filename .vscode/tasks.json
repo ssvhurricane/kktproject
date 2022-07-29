@@ -64,9 +64,19 @@
                 "USE_GLFW=3",
                 "-s",
                 "WASM=1",
+                "-s",
+                "USE_SDL=2",
+                "-s",
+                "USE_SDL_IMAGE=2",
 
                 "-o", 
                 "${workspaceFolder}\\bin\\browser\\${fileBasenameNoExtension}.html",
+               
+                "--preload-file",
+                " ${workspaceFolder}\\EngineDemo\\Content@/Content",
+                
+                "--use-preload-plugins",
+
                 "-DENGINEDLL_EXPORTS",
 
                 "-lglfw3",
@@ -373,20 +383,28 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/NetworkObject.cpp",
 
                 "${workspaceFolder}/Engine/KKTEngine.cpp",
-
                
                 "${workspaceFolder}/EngineDemo/KKTEngineDemo.cpp",
+
                 "-s",
                 "USE_WEBGL2=1",
-
                 "-s",
                 "USE_GLFW=3",
-
                 "-s",
                 "WASM=1",
+                "-s",
+                "USE_SDL=2",
+                "-s",
+                "USE_SDL_IMAGE=2",
 
                 "-o", 
                 "${workspaceFolder}/bin/browser/${fileBasenameNoExtension}.html",
+ 
+                "--preload-file",
+                " ${workspaceFolder}/EngineDemo/Content@/Content",
+                
+                "--use-preload-plugins",
+
                 "-DENGINEDLL_EXPORTS",
              
                 "-lglfw3",

@@ -5,67 +5,67 @@
 namespace Engine {
 namespace RenderSystem {
 
-StandardGLShader::StandardGLShader(const char* vertexPath, const char* fragmentPath, EShaderRenderType shaderRenderType)
+StandardGLShader::StandardGLShader(const char* vertexPath, const char* fragmentPath)
 { 
     const char* vShaderCode;
     const char * fShaderCode;
-
-    switch (shaderRenderType)
-    {
-        case Engine::RenderSystem::EShaderRenderType::OpenGLShader:
-        {
-            std::string vertexCode;
-            std::string fragmentCode;
-            std::ifstream vShaderFile;
-            std::ifstream fShaderFile;
+    
+    std::string vertexCode;
+    std::string fragmentCode;
+    std::ifstream vShaderFile;
+    std::ifstream fShaderFile;
 		
-            // Убеждаемся, что объекты ifstream могут выбросить исключение
-            vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
-            fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+    // Убеждаемся, что объекты ifstream могут выбросить исключение
+    vShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
+    fShaderFile.exceptions (std::ifstream::failbit | std::ifstream::badbit);
 
-            try 
-            {
-                // Открываем файлы
-                vShaderFile.open(vertexPath);
-                fShaderFile.open(fragmentPath);
-                std::stringstream vShaderStream, fShaderStream;
+    try 
+    {
+    // Открываем файлы
+    vShaderFile.open(vertexPath);
+    fShaderFile.open(fragmentPath);
+    std::stringstream vShaderStream, fShaderStream;
 			
-                // Считываем содержимое файловых буферов в потоки 
-                vShaderStream << vShaderFile.rdbuf();
-                fShaderStream << fShaderFile.rdbuf();
+    // Считываем содержимое файловых буферов в потоки 
+    vShaderStream << vShaderFile.rdbuf();
+    fShaderStream << fShaderFile.rdbuf();
 			
-                // Закрываем файлы
-                 vShaderFile.close();
-                fShaderFile.close();
+    // Закрываем файлы
+    vShaderFile.close();
+    fShaderFile.close();
 			
-                // Конвертируем данные из потока в строковые переменные
-                vertexCode   = vShaderStream.str();
-                fragmentCode = fShaderStream.str();
-            }
-             catch (std::ifstream::failure& e)
-             {
-                 std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
-             }
-        
-            vShaderCode = vertexCode.c_str();
-            fShaderCode = fragmentCode.c_str();
-            
-            break;
-        }
-        case Engine::RenderSystem::EShaderRenderType::WebGLShader:
-        {
-            vShaderCode = vertexPath;
-            fShaderCode = fragmentPath;
-            break;
-        }
+    // Конвертируем данные из потока в строковые переменные
+    vertexCode   = vShaderStream.str();
+    fragmentCode = fShaderStream.str();
+    }
+    catch (std::ifstream::failure& e)
+    {
+        std::cout << "ERROR::SHADER::FILE_NOT_SUCCESFULLY_READ" << std::endl;
+    }
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+                (Engine::KKTEngine::InstancePtr()
+                                  ->GetContext()
+                                  ->GetSystem(ESystemType::LogSystem))
+                                  ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "VertexCode: " + vertexCode,
+                                        Engine::LogSystem::ELogOutputLocationType::All);
 
-        case Engine::RenderSystem::EShaderRenderType::OpenGLESShader:
-        {
-            break;
-        } 
-        default:
-            break;
-    } 
+    vShaderCode = vertexCode.c_str();
+
+    dynamic_cast<Engine::LogSystem::LogSystem*>
+                (Engine::KKTEngine::InstancePtr()
+                                   ->GetContext()
+                                   ->GetSystem(ESystemType::LogSystem))
+                                   ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                        typeid(this).name(),  
+                                        Engine::LogSystem::ELogType::Message,
+                                        "FragmentCode: " + fragmentCode,
+                                        Engine::LogSystem::ELogOutputLocationType::All);
+
+    fShaderCode = fragmentCode.c_str();
+    
 		
     // Этап №2: Компилируем шейдеры
     unsigned int vertex, fragment;

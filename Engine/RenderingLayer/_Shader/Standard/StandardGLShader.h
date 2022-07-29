@@ -5,11 +5,12 @@
 
 #include "../../../KKTEngine.h"
 #include "../../Base/IShader.h"
-#include "../Base/EShaderRenderType.h"
+#include "../../../CoreLayer/LogSystem/LogSystem.h"
 
 #include <fstream>
 #include <sstream>
 #include <iostream>
+#include <stdio.h>
 
 namespace Engine {
 namespace RenderSystem {
@@ -24,7 +25,7 @@ private:
 
 public:
 
-    StandardGLShader(const char* vertexPath, const char* fragmentPath, EShaderRenderType shaderRenderType = EShaderRenderType::OpenGLShader);
+    StandardGLShader(const char* vertexPath, const char* fragmentPath);
    
     void Use();
 

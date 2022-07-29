@@ -13,7 +13,6 @@
 #include <GLFW/glfw3.h>
 
 #include "../_Shader/Standard/StandardGLShader.h"
-#include "../_Shader/Base/EShaderRenderType.h"
 
 namespace Engine {
 namespace WebglRenderSystem {
@@ -34,24 +33,6 @@ WebglRenderSystem::WebglRenderSystem()
 {
    SCR_WIDTH = 800;
    SCR_HEIGHT = 600;
-
-   vertexShaderSource =(char*) "#version 100\n"
-    "attribute vec3 aPos;\n"
-    "attribute vec3 aColor;\n"
-    "varying vec3 ourColor;\n"
-    "void main()\n"
-    "{\n"
-    "    gl_Position = vec4(aPos, 1.0);\n"
-    "    ourColor = aColor;\n"
-    "}\0";
-    
-   fragmentShaderSource = (char*)"#version 100\n"
-    "precision mediump float;\n"
-    "varying vec3 ourColor;\n"
-    "void main()\n"
-    "{\n"
-    "    gl_FragColor = vec4(ourColor, 1.0);\n"
-    "}\n\0";
 }
 
 int PreRender(void)
@@ -88,7 +69,9 @@ int PreRender(void)
     }
     glfwSwapInterval(1);
 
-    Engine::RenderSystem::StandardGLShader shader(vertexShaderSource, fragmentShaderSource, Engine::RenderSystem::EShaderRenderType::WebGLShader); 
+    Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample1/ShaderExample1_webgl.vs",
+                                                            "Content/Shaders/ShaderExample1/ShaderExample1_webgl.fs" ); 
+        
         
    // Указание вершин (и буфера(ов)) и настройка вершинных атрибутов
     float vertices[] = {
