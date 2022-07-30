@@ -38,6 +38,9 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\VulkanRenderSystem.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\RenderSystem.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\StandardGLShader.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture1D.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture2D.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture3D.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\WorldSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\AppWorld.cpp",
@@ -164,6 +167,7 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\VulkanRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\*.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\*.cpp",
@@ -281,6 +285,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
@@ -366,6 +371,9 @@
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/VulkanRenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/RenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/StandardGLShader.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture1D.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture2D.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture3D.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
@@ -493,6 +501,7 @@
                 "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
