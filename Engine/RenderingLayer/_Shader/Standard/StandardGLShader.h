@@ -19,11 +19,11 @@ class StandardGLShader : public IShader
     // TODO:
 private:
 
-    unsigned int ID;
-
     void CheckCompileErrors(unsigned int shader, std::string type);
 
-public:
+public: 
+
+    unsigned int ID; // TODO
 
     StandardGLShader(const char* vertexPath, const char* fragmentPath);
    

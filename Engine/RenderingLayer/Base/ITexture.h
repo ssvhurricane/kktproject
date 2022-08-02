@@ -10,8 +10,11 @@ namespace RenderSystem {
 
 struct ITexture
 { 
-   virtual unsigned char* LoadTexture(const char* fileName, int width, int height, int nrChannels) = 0;
-   virtual void UnloadTexture(char* texture) = 0;
+   virtual void PrepareTexture(unsigned int& texture) = 0;
+
+   virtual unsigned char* LoadTexture(const char* fileName, int width, int height, int nrChannels,  bool isUseAlphaChl = false) = 0;
+
+   virtual void UnloadTexture(void* texture) = 0;
 };
 
 } // namespace _Context

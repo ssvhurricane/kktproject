@@ -7,7 +7,7 @@ enum ELogType
 {
     Message,
     Warning, 
-    Erorr
+    Error
 };
 
 } // namespace Engine

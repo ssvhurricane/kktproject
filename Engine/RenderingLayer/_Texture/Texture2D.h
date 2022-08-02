@@ -7,9 +7,6 @@
 
 #include <glad/glad.h>
 
-#define STB_IMAGE_IMPLEMENTATION
-#include "stbimage/stb_image.h"
-
 namespace Engine {
 namespace RenderSystem {
 class Texture2D : public ITexture
@@ -20,9 +17,11 @@ public:
 
     Texture2D(ETextureType eTextureType, ETextureOverlayMode eTextureOverlayMode);
 
-    unsigned char* LoadTexture(const char* fileName, int width, int height, int nrChannels);
+    void PrepareTexture(unsigned int& texture);
 
-    void UnloadTexture(char* texture);
+    unsigned char* LoadTexture(const char* fileName, int width, int height, int nrChannels,  bool isUseAlphaChl = false);
+
+    void UnloadTexture(void* texture);
 };
 
 } // namespace RenderSystem

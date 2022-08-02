@@ -7,7 +7,8 @@ enum ELogLayer
 {
     Engine,
     Editor,
-    Game
+    Game,
+    Render
 };
 
 } // namespace Engine

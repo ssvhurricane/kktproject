@@ -4,6 +4,7 @@
 #include <GLFW/glfw3.h>
 
 #include "../_Shader/Standard/StandardGLShader.h"
+#include "../_Texture/Texture2D.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {
@@ -70,13 +71,13 @@ int OpenglRenderSystem::Render(bool bDemoMode)
 
 #ifdef _WIN32 // TOD REF:
 Engine::RenderSystem::StandardGLShader shader(
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
+        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.vs", 
+        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.fs"); 
 #else 
 #ifdef __APPLE__ 
 Engine::RenderSystem::StandardGLShader shader(
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.vs", 
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample1/ShaderExample1.fs"); 
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.vs", 
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.fs"); 
 #endif
 #ifdef __linux__
 Engine::RenderSystem::StandardGLShader shader( "", ""); 
@@ -86,46 +87,105 @@ Engine::RenderSystem::StandardGLShader shader("","");
 #endif
 #endif
 
-    // Указание вершин (и буфера(ов)) и настройка вершинных атрибутов
+   // Указание вершин (и буфера(ов)) и настройка вершинных атрибутов
     float vertices[] = {
-         // координаты       // цвета
-         0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f,  // нижняя правая вершина
-        -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f,  // нижняя левая вершина
-         0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f   // верхняя вершина
+         // координаты        // цвета            // текстурные координаты
+         0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f, // верхняя правая вершина
+         0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f, // нижняя правая вершина
+        -0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f, // нижняя левая вершина
+        -0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f  // верхняя левая вершина 
+    };
+    unsigned int indices[] = {
+        0, 1, 3, // первый треугольник
+        1, 2, 3  // второй треугольник
     };
 
-    unsigned int VBO, VAO;
+    unsigned int VBO, VAO, EBO;
     glGenVertexArrays(1, &VAO);
     glGenBuffers(1, &VBO);
+    glGenBuffers(1, &EBO);
 
-    // Сначала связываем объект вершинного массива, затем связываем и устанавливаем вершинный буфер(ы), и затем конфигурируем вершинный атрибут(ы)
     glBindVertexArray(VAO);
 
     glBindBuffer(GL_ARRAY_BUFFER, VBO);
     glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
 
-    // Координатные артибуты
-    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)0);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+    glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
+
+    // Координатные атрибуты
+    glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
     glEnableVertexAttribArray(0);
 	
     // Цветовые атрибуты
-    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 6 * sizeof(float), (void*)(3 * sizeof(float)));
+    glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3 * sizeof(float)));
     glEnableVertexAttribArray(1);
+	
+    // Атрибуты текстурных координат
+    glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(6 * sizeof(float)));
+    glEnableVertexAttribArray(2);
 
-    // You can unbind the VAO afterwards so other VAO calls won't accidentally modify this VAO, but this rarely happens. Modifying other
-    // VAOs requires a call to glBindVertexArray anyways so we generally don't unbind VAOs (nor VBOs) when it's not directly necessary.
-    glBindVertexArray(0); 
- 
-
-    // uncomment this call to draw in wireframe polygons.
-   // glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);  
+    // Загрузка и создание текстуры
+    int width, height, nrChannels;
+    unsigned char* data;
    
+    // texture1.
+    unsigned int texture1;
+	Engine::RenderSystem::Texture2D texture2D_1(Engine::RenderSystem::ETextureType::Tex2D, Engine::RenderSystem::ETextureOverlayMode::REPEAT);
+                                                       
+    texture2D_1.PrepareTexture(texture1);
+
+#ifdef _WIN32 // TOD REF:
+    data = texture2D_1.LoadTexture("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg", width, height, nrChannels);
+#else 
+#ifdef __APPLE__ 
+    data = texture2D_1.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
+#endif
+#ifdef __linux__
+   // TODO:
+#endif
+#ifdef __EMSCRIPTEN__
+    // TODO:
+#endif
+#endif
+  
+    texture2D_1.UnloadTexture(data);
+
+    // tex2.
+    unsigned int texture2; 
+    Engine::RenderSystem::Texture2D texture2D_2(Engine::RenderSystem::ETextureType::Tex2D, Engine::RenderSystem::ETextureOverlayMode::REPEAT);
+
+    texture2D_2.PrepareTexture(texture2);
+
+#ifdef _WIN32 // TOD REF:
+    data = texture2D_2.LoadTexture("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
+#else 
+#ifdef __APPLE__ 
+    data = texture2D_2.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
+#endif
+#ifdef __linux__
+    
+#endif
+#ifdef __EMSCRIPTEN__
+    
+#endif
+#endif
+  
+    texture2D_2.UnloadTexture(data);
+
+    // Указываем OpenGL, какой сэмплер к какому текстурному блоку принадлежит (это нужно сделать единожды) 
+    shader.Use(); // не забудьте активировать шейдер перед настройкой uniform-переменных!  
+    // Устанавливаем вручную…
+    glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
+    // …или с помощью шейдерного класса
+    shader.SetInt("texture2", 1); 
+
     // Temp::Create and Init UI.
     auto gameUI = dynamic_cast<Engine::UISystem::UISystem*>
    (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(ESystemType::UISystem));
-  
+ 
     gameUI->CreateContext("", window);
 
     // render loop
@@ -134,28 +194,29 @@ Engine::RenderSystem::StandardGLShader shader("","");
     {
         // input
         // -----
-       // processInput(window);
+        processInput(window);
 
-        // render
-        // ------
-        //glfwGetWindowSize(window, SCR_WIDTH, SCR_HEIGHT);
-        glViewport(0, 0, SCR_WIDTH, SCR_HEIGHT);
+       // Рендеринг
         glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        // draw our first triangle
+        // Привязка текстур к соответствующим текстурным юнитам
+        glActiveTexture(GL_TEXTURE0);
+        glBindTexture(GL_TEXTURE_2D, texture1);
+        glActiveTexture(GL_TEXTURE1);
+        glBindTexture(GL_TEXTURE_2D, texture2);
+
+        // Рендеринг ящика
         shader.Use();
-        glBindVertexArray(VAO); // seeing as we only have a single VAO there's no need to bind it every time, but we'll do so to keep things a bit more organized
-        glDrawArrays(GL_TRIANGLES, 0, 3);
-        glBindVertexArray(0); // no need to unbind it every time 
-        
-        glfwPollEvents();
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
         
         gameUI->DemoRender();
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
         glfwSwapBuffers(window);
+        glfwPollEvents();
         
     }
 
@@ -163,7 +224,7 @@ Engine::RenderSystem::StandardGLShader shader("","");
     // ------------------------------------------------------------------------
     glDeleteVertexArrays(1, &VAO);
     glDeleteBuffers(1, &VBO);
-    //glDeleteProgram(shaderProgram);
+    glDeleteBuffers(1, &EBO);
      
     gameUI->Clear();
     // glfw: terminate, clearing all previously allocated GLFW resources.

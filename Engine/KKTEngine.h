@@ -1,5 +1,5 @@
 /*
-    Dynamic Labriary.
+    Dynamic Library.
     It can be very well used in the target application, 
     it can be an editor or a game.
     Also, through it, the context is obtained directly in the engine itself.
