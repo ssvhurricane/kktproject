@@ -45,12 +45,6 @@ void RenderSystem::Configurate(ERenderSystemType eRennderSystemType, ERenderMode
 
         break;
     }
-    case ERenderSystemType::WebGL:
-    {
-         _renderSystem = dynamic_cast<WebglRenderSystem::WebglRenderSystem*>(new WebglRenderSystem::WebglRenderSystem);
-
-        break;
-    } 
     case ERenderSystemType::Vulkan:
     {
          _renderSystem = dynamic_cast<VulkanRenderSystem::VulkanRenderSystem*>(new VulkanRenderSystem::VulkanRenderSystem);

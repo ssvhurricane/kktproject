@@ -1,6 +1,15 @@
 #include "OpenglRenderSystem.h"
+#include <functional>
+#include <vector>
 
+#ifdef __EMSCRIPTEN__
+#include <emscripten.h>
+#define GL_GLEXT_PROTOTYPES
+#define EGL_EGLEXT_PROTOTYPES
+#else
 #include <glad/glad.h>
+#endif
+
 #include <GLFW/glfw3.h>
 
 #include "../_Shader/Standard/StandardGLShader.h"
@@ -17,6 +26,10 @@ unsigned int SCR_HEIGHT;
 
 char *vertexShaderSource;
 char *fragmentShaderSource;
+
+
+std::function<void()> loop;
+void main_loop() { loop(); }
 
 OpenglRenderSystem::OpenglRenderSystem()
 {
@@ -69,6 +82,8 @@ int OpenglRenderSystem::Render(bool bDemoMode)
         return -1;
     }
 
+    glfwSwapInterval(1);
+
 #ifdef _WIN32 // TOD REF:
 Engine::RenderSystem::StandardGLShader shader(
         "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.vs", 
@@ -83,7 +98,8 @@ Engine::RenderSystem::StandardGLShader shader(
 Engine::RenderSystem::StandardGLShader shader( "", ""); 
 #endif
 #ifdef __EMSCRIPTEN__
-Engine::RenderSystem::StandardGLShader shader("","");
+Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample2/ShaderExample2_webgl.vs",
+                                                            "Content/Shaders/ShaderExample2/ShaderExample2_webgl.fs" ); 
 #endif
 #endif
 
@@ -145,7 +161,7 @@ Engine::RenderSystem::StandardGLShader shader("","");
    // TODO:
 #endif
 #ifdef __EMSCRIPTEN__
-    // TODO:
+    data = texture2D_1.LoadTexture("Content/Graphics/Textures/wooden_container.jpg", width, height, nrChannels);
 #endif
 #endif
   
@@ -167,7 +183,7 @@ Engine::RenderSystem::StandardGLShader shader("","");
     
 #endif
 #ifdef __EMSCRIPTEN__
-    
+    data = texture2D_2.LoadTexture("Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
 #endif
 #endif
   
@@ -188,11 +204,8 @@ Engine::RenderSystem::StandardGLShader shader("","");
  
     gameUI->CreateContext("", window);
 
-    // render loop
-    // -----------
-    while (!glfwWindowShouldClose(window))
-    {
-        // input
+ loop = [&] {
+       // input
         // -----
         processInput(window);
 
@@ -218,7 +231,14 @@ Engine::RenderSystem::StandardGLShader shader("","");
         glfwSwapBuffers(window);
         glfwPollEvents();
         
-    }
+    };
+
+    #ifdef __EMSCRIPTEN__
+    emscripten_set_main_loop(main_loop, 0, true);
+#else
+    while (!glfwWindowShouldClose(window))
+        main_loop();
+#endif
 
     // optional: de-allocate all resources once they've outlived their purpose:
     // ------------------------------------------------------------------------

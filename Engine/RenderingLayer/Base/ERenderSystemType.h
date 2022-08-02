@@ -6,7 +6,6 @@ namespace RenderSystem {
 enum ERenderSystemType
 {
     OpenGL,
-    WebGL,
     Vulkan,
     Auto // TODO:
 };

@@ -10,7 +10,6 @@
 #include "../Base/ERenderMode.h"
 
 #include "../OpenglRenderSystem/OpenglRenderSystem.h"
-#include "../WebglRenderSystem/WebglRenderSystem.h"
 #include "../VulkanRenderSystem/VulkanRenderSystem.h"
 
 namespace Engine {
