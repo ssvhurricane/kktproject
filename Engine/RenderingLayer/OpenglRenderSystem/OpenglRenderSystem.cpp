@@ -12,6 +12,10 @@
 
 #include <GLFW/glfw3.h>
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 #include "../_Shader/Standard/StandardGLShader.h"
 #include "../_Texture/Texture2D.h"
 
@@ -86,20 +90,20 @@ int OpenglRenderSystem::Render(bool bDemoMode)
 
 #ifdef _WIN32 // TOD REF:
 Engine::RenderSystem::StandardGLShader shader(
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.vs", 
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.fs"); 
+        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs", 
+        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs"); 
 #else 
 #ifdef __APPLE__ 
 Engine::RenderSystem::StandardGLShader shader(
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.vs", 
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample2/ShaderExample2.fs"); 
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs", 
+        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs"); 
 #endif
 #ifdef __linux__
 Engine::RenderSystem::StandardGLShader shader( "", ""); 
 #endif
 #ifdef __EMSCRIPTEN__
-Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample2/ShaderExample2_webgl.vs",
-                                                            "Content/Shaders/ShaderExample2/ShaderExample2_webgl.fs" ); 
+Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample3/ShaderExample3_webgl.vs",
+                                                            "Content/Shaders/ShaderExample3/ShaderExample3_webgl.fs" ); 
 #endif
 #endif
 
@@ -189,12 +193,9 @@ Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample2/Sh
   
     texture2D_2.UnloadTexture(data);
 
-    // Указываем OpenGL, какой сэмплер к какому текстурному блоку принадлежит (это нужно сделать единожды) 
-    shader.Use(); // не забудьте активировать шейдер перед настройкой uniform-переменных!  
-    // Устанавливаем вручную…
-    glUniform1i(glGetUniformLocation(shader.ID, "texture1"), 0);
-    // …или с помощью шейдерного класса
-    shader.SetInt("texture2", 1); 
+    shader.Use();
+    shader.SetInt("texture1", 0);
+    shader.SetInt("texture2", 1);
 
     // Temp::Create and Init UI.
     auto gameUI = dynamic_cast<Engine::UISystem::UISystem*>
@@ -219,11 +220,20 @@ Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample2/Sh
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, texture2);
 
-        // Рендеринг ящика
+         // Создаем преобразование
+        glm::mat4 transform = glm::mat4(1.0f); // сначала инициализируем единичную матрицу
+        transform = glm::translate(transform, glm::vec3(0.5f, -0.5f, 0.0f));
+        transform = glm::rotate(transform, (float)glfwGetTime(), glm::vec3(0.0f, 0.0f, 1.0f));
+
+        // Получаем location uniform-переменной матрицы и настраиваем её
         shader.Use();
+        unsigned int transformLoc = glGetUniformLocation(shader.ID, "transform");
+        glUniformMatrix4fv(transformLoc, 1, GL_FALSE, glm::value_ptr(transform));
+        
+        // Рендерим ящик
         glBindVertexArray(VAO);
         glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-        
+
         gameUI->DemoRender();
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
