@@ -1,7 +1,16 @@
 #pragma once
 
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <stdio.h>
+
+
+#include "../../KKTEngine.h"
 #include "base_context/ISystem.h"
 #include "base_context/Defines.h"
+
+#include "../LogSystem/LogSystem.h"
 
 #include "../../PlatformSpecificLayer/PlatformFileSystem/PlatformFileSystem.h"
 
@@ -29,6 +38,8 @@ public:
     FileSystem();
 
     void Initialize();
+
+    std::string GetFileData(const char* filePath);
 };
 
 } // namespace FileSystem

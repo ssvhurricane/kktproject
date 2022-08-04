@@ -1,6 +1,4 @@
 #include "OpenglRenderSystem.h"
-#include <functional>
-#include <vector>
 
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
@@ -11,13 +9,6 @@
 #endif
 
 #include <GLFW/glfw3.h>
-
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <glm/gtc/type_ptr.hpp>
-
-#include "../_Shader/Standard/StandardGLShader.h"
-#include "../_Texture/Texture2D.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {
@@ -88,22 +79,26 @@ int OpenglRenderSystem::Render(bool bDemoMode)
 
     glfwSwapInterval(1);
 
+    auto fileSystem  = dynamic_cast<Engine::FileSystem::FileSystem*>(Engine::KKTEngine::InstancePtr()
+                                                                                            ->GetContext()
+                                                                                            ->GetSystem(ESystemType::FileSystem));
+                                
 #ifdef _WIN32 // TOD REF:
-Engine::RenderSystem::StandardGLShader shader(
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs", 
-        "C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs"); 
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs"),
+                                              fileSystem->GetFileData("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs")); 
+       
 #else 
 #ifdef __APPLE__ 
-Engine::RenderSystem::StandardGLShader shader(
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs", 
-        "/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs"); 
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.vs"), 
+                                              fileSystem->GetFileData("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample3/ShaderExample3.fs")); 
 #endif
 #ifdef __linux__
-Engine::RenderSystem::StandardGLShader shader( "", ""); 
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData(""), fileSystem->GetFileData("")); 
 #endif
 #ifdef __EMSCRIPTEN__
-Engine::RenderSystem::StandardGLShader shader("Content/Shaders/ShaderExample3/ShaderExample3_webgl.vs",
-                                                            "Content/Shaders/ShaderExample3/ShaderExample3_webgl.fs" ); 
+
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/Shaders/ShaderExample3/ShaderExample3_webgl.vs"), 
+                                            fileSystem->GetFileData("Content/Shaders/ShaderExample3/ShaderExample3_webgl.fs")); 
 #endif
 #endif
 

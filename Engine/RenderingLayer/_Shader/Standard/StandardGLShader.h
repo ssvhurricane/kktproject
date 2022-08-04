@@ -7,11 +7,6 @@
 #include "../../Base/IShader.h"
 #include "../../../CoreLayer/LogSystem/LogSystem.h"
 
-#include <fstream>
-#include <sstream>
-#include <iostream>
-#include <stdio.h>
-
 #include <glad/glad.h>
 #include <glm/glm.hpp>
 
@@ -28,7 +23,7 @@ public:
 
     unsigned int ID; // TODO
 
-    StandardGLShader(const char* vertexPath, const char* fragmentPath);
+    StandardGLShader(const std::string vShaderCode, const std::string fShaderCode);
    
     void Use();
 
