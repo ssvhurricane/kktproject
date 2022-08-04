@@ -23,6 +23,9 @@ void EngineContextInstaller::InstallBindings()
     // 2. Add UISystem.
     _systems.emplace(ESystemType::UISystem, new Engine::UISystem::UISystem);
 
+    // 3. Add FileSystem.
+    _systems.emplace(ESystemType::FileSystem, new Engine::FileSystem::FileSystem);
+
     // 3. Add RenderSystem.
     _systems.emplace(ESystemType::RenderSystem, new Engine::RenderSystem::RenderSystem);
 

@@ -8,6 +8,7 @@
 #include "../CoreLayer/LogSystem/LogSystem.h" // This place for add system headers, then use all.
 #include "../UILayer/UISystem/UISystem.h"
 #include "../RenderingLayer/RenderSystem/RenderSystem.h"
+#include "../CoreLayer/FileSystem/FileSystem.h"
 #include "../WorldLayer/WorldSystem/WorldSystem.h"
 #include "../WorldLayer/SceneSystem/SceneSystem.h"
 #include "../WorldLayer/ObjectSystem/ObjectSystem.h"

@@ -41,6 +41,9 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture2D.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture3D.cpp",
 
+                "${workspaceFolder}\\Engine\\PlatformSpecificLayer\\PlatformFileSystem\\PlatformFileSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\FileSystem.cpp",
+
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\WorldSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\AppWorld.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\ARWorld\\ARWorld.cpp",
@@ -167,6 +170,9 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\*.cpp",
 
+                "${workspaceFolder}\\Engine\\PlatformSpecificLayer\\PlatformFileSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\ARWorld\\*.cpp",
@@ -284,6 +290,9 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
 
+                "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/ARWorld/*.cpp",
@@ -370,6 +379,9 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture1D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture2D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture3D.cpp",
+
+                "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/PlatformFileSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
@@ -497,6 +509,9 @@
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
+
+                "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",

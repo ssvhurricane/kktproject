@@ -9,6 +9,9 @@ enum ESystemType
     // Rendering Layer.
     RenderSystem,
 
+    // FileSystem Layer
+    FileSystem,
+
     // World Layer.
     WorldSystem,
     SceneSystem,
