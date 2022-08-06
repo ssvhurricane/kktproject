@@ -16,6 +16,8 @@
 #include "../_Shader/Standard/StandardGLShader.h"
 #include "../_Texture/Texture2D.h"
 #include "../../CoreLayer/FileSystem/FileSystem.h"
+#include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/Base/ECameraMovementMode.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {

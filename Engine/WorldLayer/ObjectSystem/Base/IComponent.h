@@ -5,8 +5,7 @@ namespace ObjectSystem {
 
 struct IComponent
 {
-   
-    // TODO:
+    
 };
 
 } // namespace ObjectSystem

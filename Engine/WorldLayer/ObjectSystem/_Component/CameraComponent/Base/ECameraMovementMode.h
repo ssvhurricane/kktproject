@@ -1,12 +1,15 @@
-#include "TransformComponent.h"
+#pragma once
 
 namespace Engine {
 namespace ObjectSystem {
-    
-TransformComponent::TransformComponent()
+
+enum ECameraMovementMode
 {
-    // TODO:
-}
+    FORWARD, 
+    BACKWARD,
+    LEFT,
+    RIGHT
+};
 
 } // namespace ObjectSystem
 } // namespace Engine
