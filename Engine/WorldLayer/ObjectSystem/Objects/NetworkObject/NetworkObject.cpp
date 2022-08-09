@@ -35,6 +35,29 @@ std::string NetworkObject::GetName()
     // TODO:
     return "";
 }
+
+void NetworkObject::SetOwner(SceneSystem::IScene*)
+{
+    // TODO:
+}
+
+SceneSystem::IScene* NetworkObject::GetOwner()
+{
+    // TODO:
+    return NULL;
+}
+
+void NetworkObject::SetParent(Engine::ObjectSystem::IObject*)
+{
+    // TODO:
+}
+
+Engine::ObjectSystem::IObject* NetworkObject::GetParent()
+{
+    // TODO:
+    return NULL;
+}
+
 void NetworkObject::AddComponent(IComponent* component)
 {
     // TODO:

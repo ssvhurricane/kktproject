@@ -35,6 +35,29 @@ std::string BasicObject::GetName()
     // TODO:
     return "";
 }
+
+void BasicObject::SetOwner(SceneSystem::IScene*)
+{
+    // TODO:
+}
+
+SceneSystem::IScene* BasicObject::GetOwner()
+{
+    // TODO:
+    return NULL;
+}
+
+void BasicObject::SetParent(Engine::ObjectSystem::IObject*)
+{
+    // TODO:
+}
+
+Engine::ObjectSystem::IObject* BasicObject::GetParent()
+{
+    // TODO:
+    return NULL;
+}
+
 void BasicObject::AddComponent(IComponent* component)
 {
     // TODO:

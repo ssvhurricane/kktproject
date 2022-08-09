@@ -18,6 +18,7 @@
 #include "../../CoreLayer/FileSystem/FileSystem.h"
 #include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.h"
 #include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/Base/ECameraMovementMode.h"
+#include "../../WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.h"
 
 namespace Engine {
 namespace OpenglRenderSystem {

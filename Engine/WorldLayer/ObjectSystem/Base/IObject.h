@@ -5,6 +5,7 @@
 
 #include "EObjectType.h"
 #include "IComponent.h"
+#include "../../SceneSystem/Base/IScene.h"
 
 namespace Engine {
 namespace ObjectSystem {
@@ -18,6 +19,14 @@ struct IObject
     virtual EObjectType GetType() = 0;
 
     virtual std::string GetName() = 0;
+
+    virtual void SetOwner(SceneSystem::IScene*) = 0;
+
+    virtual SceneSystem::IScene* GetOwner() = 0;
+
+    virtual void SetParent(Engine::ObjectSystem::IObject*) = 0;
+
+    virtual Engine::ObjectSystem::IObject* GetParent() = 0;
 
     virtual void AddComponent(IComponent*) = 0;
 

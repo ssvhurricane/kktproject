@@ -37,7 +37,7 @@ public:
 
     void Initialize();
    
-    void CreateObjectByName(std::string name, EObjectType eObjectType = EObjectType::BasicObject);
+    IObject* CreateObjectByName(std::string name, Engine::SceneSystem::IScene* owner, IObject* parent = NULL, Engine::ObjectSystem::EObjectType eObjectType = Engine::ObjectSystem::EObjectType::BasicObject);
 
     IObject* GetObjectByName(std::string);
 

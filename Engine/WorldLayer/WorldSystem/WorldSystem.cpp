@@ -31,52 +31,54 @@ void  WorldSystem::Initialize()
 
 }
 
-void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
+IWorld* WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
 {
+    IWorld* world = NULL;
+
     if(!MapContainsKey(_worlds, name))
     {
     switch(eWorldType)
     {
         case EWorldType::BasicWorld:
         {
-            auto basicWorld = new class Engine::WorldSystem::BasicWorld();
+            world = new class Engine::WorldSystem::BasicWorld();
 
-           _worlds.emplace(name, basicWorld);
+           _worlds.emplace(name, world);
 
-            basicWorld->Initialize(name, Engine::WorldSystem::EWorldType::BasicWorld, Engine::WorldSystem::EWorldMode::Combine);
+            world->Initialize(name, Engine::WorldSystem::EWorldType::BasicWorld, Engine::WorldSystem::EWorldMode::Combine);
 
             break;
         }
 
         case EWorldType::AppWorld:
         {
-            auto appWorld = new class Engine::WorldSystem::AppWorld();
+            world = new class Engine::WorldSystem::AppWorld();
 
-           _worlds.emplace(name, appWorld);
+           _worlds.emplace(name, world);
 
-            appWorld->Initialize(name, Engine::WorldSystem::EWorldType::AppWorld, Engine::WorldSystem::EWorldMode::Combine);
+            world->Initialize(name, Engine::WorldSystem::EWorldType::AppWorld, Engine::WorldSystem::EWorldMode::Combine);
 
             break;
         }
 
         case EWorldType::ARWorld:
         {
-            auto arWorld = new class Engine::WorldSystem::ARWorld();
+            world = new class Engine::WorldSystem::ARWorld();
 
-            _worlds.emplace(name, arWorld);
+            _worlds.emplace(name, world);
 
-            arWorld->Initialize(name, Engine::WorldSystem::EWorldType::ARWorld, Engine::WorldSystem::EWorldMode::Combine);
+            world->Initialize(name, Engine::WorldSystem::EWorldType::ARWorld, Engine::WorldSystem::EWorldMode::Combine);
 
             break;
         }
 
          case EWorldType::VRWorld:
         {
-            auto vrWorld = new class Engine::WorldSystem::VRWorld();
+            world = new class Engine::WorldSystem::VRWorld();
 
-            _worlds.emplace(name, vrWorld);
+            _worlds.emplace(name, world);
 
-            vrWorld->Initialize(name, Engine::WorldSystem::EWorldType::VRWorld, Engine::WorldSystem::EWorldMode::Combine);
+            world->Initialize(name, Engine::WorldSystem::EWorldType::VRWorld, Engine::WorldSystem::EWorldMode::Combine);
 
             break;
         }
@@ -115,13 +117,29 @@ void WorldSystem::CreateWorldByName(std::string name, EWorldType eWorldType)
                                         Engine::LogSystem::ELogType::Message,
                                         "Created Words: " +std::to_string(_worlds.size()),
                                         Engine::LogSystem::ELogOutputLocationType::All);
+    return world;
 }
 
 
 IWorld* WorldSystem::GetWorldByName(std::string name)
 {
-    // TODO:
-    return NULL;
+    auto item = _worlds.find(name);
+
+    if (item == _worlds.end()) 
+    {
+        dynamic_cast<Engine::LogSystem::LogSystem*>
+        (Engine::KKTEngine::InstancePtr()
+                                    ->GetContext()
+                                    ->GetSystem(ESystemType::LogSystem))
+                                    ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
+                                            typeid(this).name(),  
+                                            Engine::LogSystem::ELogType::Error,
+                                            "The world " + name + " not found!",
+                                            Engine::LogSystem::ELogOutputLocationType::All);
+        return NULL;
+    } 
+    else 
+        return  item->second;
 } 
 
 int WorldSystem::GetWorldId(std::string)

@@ -7,7 +7,19 @@
 
 namespace Engine {
 namespace ObjectSystem {
+#ifdef _WIN32
+class ENGINE_API TransformComponent : public IComponent
+#else
+#ifdef __APPLE__  
 class TransformComponent : public IComponent
+#endif
+#ifdef  __linux__
+class TransformComponent : public IComponent
+#endif
+#ifdef __EMSCRIPTEN__
+class TransformComponent : public IComponent
+#endif
+#endif
 {
 private:
    

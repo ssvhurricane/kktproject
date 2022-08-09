@@ -44,7 +44,7 @@ public:
 
     void Initialize();
 
-    void CreateWorldByName(std::string name, EWorldType eWorldType = EWorldType::BasicWorld);
+    IWorld* CreateWorldByName(std::string name, EWorldType eWorldType = EWorldType::BasicWorld);
 
     IWorld* GetWorldByName(std::string);
 

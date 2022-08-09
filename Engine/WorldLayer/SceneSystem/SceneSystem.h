@@ -9,6 +9,7 @@
 
 #include "Base/ESceneType.h"
 #include "Base/IScene.h"
+#include "Scenes/BasicScene.h"
 
 namespace Engine {
 namespace SceneSystem {
@@ -28,7 +29,9 @@ class SceneSystem : public ISystem
 {
 private: 
 
-   std::map<ESceneType, IScene*> _scenes;
+   std::map<std::string, IScene*> _scenes; 
+
+   bool MapContainsKey(std::map<std::string, IScene*>& map, std::string key);
 
 public:
 
@@ -36,13 +39,15 @@ public:
 
     void Initialize();
    
-    void CreateSceneByName(std::string name, ESceneType eSceneType = ESceneType::BasicScene);
+    IScene* CreateSceneByName(std::string name, Engine::WorldSystem::IWorld* owner, ESceneType eSceneType = ESceneType::BasicScene);
 
     IScene* GetSceneByName(std::string);
 
     int GetSceneId(std::string);
 
     IScene* GetCurrentScene();
+
+   
 };
 
 } // namespace SceneSystem

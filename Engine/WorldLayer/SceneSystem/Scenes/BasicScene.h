@@ -31,11 +31,11 @@ public:
 
     WorldSystem::IWorld* GetOwner();
 
-    virtual std::vector<ObjectSystem::IObject*> GetCurrentOBjects(); 
+   // std::vector<ObjectSystem::IObject*> GetCurrentOBjects(); 
 
-    virtual void AddObjectOnScene(std::vector<ObjectSystem::IObject*>);
+   // void AddObjectOnScene(std::vector<ObjectSystem::IObject*>);
 
-    virtual void RemoveObjectByName(std::string name);
+    //void RemoveObjectByName(std::string name);
 
 };
 

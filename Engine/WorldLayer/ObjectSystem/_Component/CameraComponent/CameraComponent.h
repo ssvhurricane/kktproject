@@ -19,7 +19,19 @@ const float ZOOM        =  45.0f;
 
 namespace Engine {
 namespace ObjectSystem {
+#ifdef _WIN32
+class ENGINE_API CameraComponent : public IComponent
+#else
+#ifdef __APPLE__  
 class CameraComponent : public IComponent
+#endif
+#ifdef  __linux__
+class CameraComponent : public IComponent
+#endif
+#ifdef __EMSCRIPTEN__
+class CameraComponent : public IComponent
+#endif
+#endif
 {
 private:
    void UpdateCameraVectors();

@@ -20,22 +20,44 @@ int main()
                                                             ->GetSystem(ESystemType::WorldSystem));
    
     worldSystem->CreateWorldByName("GameWorld", Engine::WorldSystem::BasicWorld);
-
+   
     // SceneSystem. 
     auto sceneSystem = dynamic_cast<Engine::SceneSystem::SceneSystem*>(engineContext
                                                             ->GetSystem(ESystemType::SceneSystem));
                                         
     
-    sceneSystem->CreateSceneByName("MainScene");
+    sceneSystem->CreateSceneByName("MainScene", worldSystem->GetWorldByName("GameWorld"));
 
     // ObjectSystem. 
     auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(engineContext
                                                             ->GetSystem(ESystemType::ObjectSystem));
                                         
     
-    objectSystem->CreateObjectByName("BaseGameObject");
+    auto cameraObject = objectSystem->CreateObjectByName("CameraGameObject", 
+                                                        sceneSystem->GetSceneByName("MainScene"), 
+                                                        NULL);
+    
+    if(cameraObject)
+    {
+        // Add components for object.
+        auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
+        cameraObject->AddComponent(transformComponent);
 
-    objectSystem->CreateObjectByName("UIGameObject", Engine::ObjectSystem::EObjectType::UIObject);
+        auto cameraComponent = new Engine::ObjectSystem::CameraComponent;
+        cameraObject->AddComponent(cameraComponent);
+    }
+
+    auto uiObject = objectSystem->CreateObjectByName("UIGameObject", 
+                                                        sceneSystem->GetSceneByName("MainScene"),
+                                                        NULL,
+                                                        Engine::ObjectSystem::EObjectType::UIObject);
+
+    if(uiObject)
+    {
+        // Add components for object.
+        auto transformComponent2 = new Engine::ObjectSystem::TransformComponent; 
+        uiObject->AddComponent(transformComponent2);
+    }
 
     // Start Engine(Runtime).
     gameEngine->StartEngine();

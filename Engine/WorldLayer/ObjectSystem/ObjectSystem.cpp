@@ -22,7 +22,7 @@ void ObjectSystem::Initialize()
     // TODO:
 }
    
-void ObjectSystem::CreateObjectByName(std::string name, EObjectType)
+IObject* ObjectSystem::CreateObjectByName(std::string name, Engine::SceneSystem::IScene* owner, IObject* parent, Engine::ObjectSystem::EObjectType eObjectType)
 { 
    // TODO:
    dynamic_cast<Engine::LogSystem::LogSystem*>
@@ -34,6 +34,7 @@ void ObjectSystem::CreateObjectByName(std::string name, EObjectType)
                                         Engine::LogSystem::ELogType::Message,
                                         "CreateObject: " + name,
                                          Engine::LogSystem::ELogOutputLocationType::All);
+    return NULL;
 
 }
 

@@ -42,23 +42,5 @@ WorldSystem::IWorld* BasicScene::GetOwner()
     return NULL;
 }
 
-std::vector<ObjectSystem::IObject*> BasicScene::GetCurrentOBjects()
-{
-    // TODO:
-    std::vector<ObjectSystem::IObject*> innerVector;
-
-    return innerVector;
-}
-
-void BasicScene::AddObjectOnScene(std::vector<ObjectSystem::IObject*>)
-{
-    // TODO:
-}
-
-void BasicScene::RemoveObjectByName(std::string name)
-{
-    // TODO:
-}
-
 } // namespace SceneSystem
 } // namespace Engine

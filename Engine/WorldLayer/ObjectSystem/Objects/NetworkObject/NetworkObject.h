@@ -3,6 +3,8 @@
 #include <string>
 #include <vector>
 
+#include "../../../../KKTEngine.h"
+
 #include "../../Base/EObjectType.h"
 #include "../../../../NetworkLayer/Base/INetworkObject.h"
 
@@ -32,6 +34,14 @@ public:
     EObjectType GetType();
 
     std::string GetName();
+
+    void SetOwner(SceneSystem::IScene*);
+
+    SceneSystem::IScene* GetOwner();
+
+    void SetParent(Engine::ObjectSystem::IObject*);
+
+    Engine::ObjectSystem::IObject* GetParent();
 
     void AddComponent(IComponent* component);
 
