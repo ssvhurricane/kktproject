@@ -12,7 +12,7 @@ StartSystem::StartSystem()
                                 ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
                                         typeid(this).name(),  
                                         Engine::LogSystem::ELogType::Message,
-                                        "Create StartSystem.",
+                                        "Initialize...",
                                         Engine::LogSystem::ELogOutputLocationType::All);
 }
 

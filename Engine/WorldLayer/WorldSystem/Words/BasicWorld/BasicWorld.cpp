@@ -14,7 +14,7 @@ BasicWorld::BasicWorld()
 
 }
 
-void BasicWorld::Initialize(std::string name, EWorldType eWorldType, EWorldMode eWorldName)
+void BasicWorld::Initialize(std::string name, EWorldType eWorldType, EWorldMode eWorldMode)
 {
     // TODO:
 }

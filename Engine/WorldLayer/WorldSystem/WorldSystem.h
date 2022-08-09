@@ -11,6 +11,11 @@
 #include "Base/EWorldType.h"
 #include "Base/IWorld.h"
 
+#include "Words/BasicWorld/BasicWorld.h"
+#include "Words/AppWorld/AppWorld.h"
+#include "Words/ARWorld/ARWorld.h"
+#include "Words/VRWorld/VRWorld.h"
+
 namespace Engine {
 namespace WorldSystem {
 #ifdef _WIN32
@@ -31,6 +36,8 @@ private:
 
     std::map<std::string, IWorld*> _worlds;
 
+    bool MapContainsKey(std::map<std::string, IWorld*>& map, std::string key);
+
 public:
 
     WorldSystem();
@@ -44,6 +51,7 @@ public:
     int GetWorldId(std::string);
 
     IWorld* GetCurrentWorld();
+    
 };
 
 } // namespace WorldSystem

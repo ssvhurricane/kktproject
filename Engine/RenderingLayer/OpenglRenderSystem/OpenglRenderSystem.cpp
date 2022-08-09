@@ -56,7 +56,7 @@ int OpenglRenderSystem::Render(bool bDemoMode)
                                 ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
                                         typeid(this).name(),  
                                         Engine::LogSystem::ELogType::Message,
-                                        "Rendering.",
+                                        "OpenGL Rendering...",
                                         Engine::LogSystem::ELogOutputLocationType::All);
 
      // glfw: initialize and configure

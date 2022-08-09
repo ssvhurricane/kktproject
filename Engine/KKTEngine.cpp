@@ -25,7 +25,7 @@ IContextInstaller* KKTEngine::GetContext()
 
  void KKTEngine::StartEngine()
  { 
-     std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Start.]"<< std::endl;
+     std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Start...]"<< std::endl;
 
      _startSystem = new Engine::StartSystem::StartSystem();
 
