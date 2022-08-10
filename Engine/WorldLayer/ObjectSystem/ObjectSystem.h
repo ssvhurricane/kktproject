@@ -2,6 +2,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 
 #include "../../KKTEngine.h"
 
@@ -10,6 +11,12 @@
 
 #include "Base/EObjectType.h"
 #include "Base/IObject.h"
+
+#include "Objects/BasicObject/BasicObject.h"
+#include "Objects/UIObject/UIObject.h"
+
+//#include "Objects/NetworkObject/NetworkObject.h"
+//#include "Objects/UINetworkObject/UINetworkObject.h"
 
 namespace Engine {
 namespace ObjectSystem {
@@ -29,7 +36,9 @@ class ObjectSystem : public ISystem
 {
 private: 
 
-    std::vector<IObject*> _objects;
+   std::map<std::string, IObject*> _objects;
+
+   bool MapContainsKey(std::map<std::string, IObject*>& map, std::string key);
 
 public:
 

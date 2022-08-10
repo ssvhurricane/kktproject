@@ -58,6 +58,8 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\ObjectPoolSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\BasicObject.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\NetworkObject.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UIObject\\UIObject.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UINetworkObject\\UINetworkObject.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\CameraComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\TransformComponent.cpp",
@@ -190,6 +192,8 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UIObject\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UINetworkObject\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\*.cpp",
@@ -313,6 +317,8 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
@@ -406,6 +412,8 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/ObjectPoolSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/BasicObject.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/NetworkObject.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/UIObject.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/UINetworkObject.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.cpp",
@@ -539,6 +547,8 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
