@@ -39,6 +39,21 @@ float lastFrame = 0.0f;
 std::function<void()> loop;
 void main_loop() { loop(); }
 
+void OpenglRenderSystem::RenderWorld(Engine::WorldSystem::IWorld* world)
+{
+	// TODO:
+}
+
+void OpenglRenderSystem::RenderScene(Engine::SceneSystem::IScene* scene)
+{
+	// TODO:
+}
+
+void OpenglRenderSystem::RenderObject(Engine::ObjectSystem::IObject* object)
+{
+	// TODO:
+}
+
 OpenglRenderSystem::OpenglRenderSystem()
 {
    SCR_WIDTH = 800;
@@ -331,10 +346,36 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
     // ------------------------------------------------------------------
    
     glfwTerminate();
-
     
     }
-    return 0;
+    else
+	{
+		// TODO:
+		// Get current world.
+		auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(Engine::KKTEngine::InstancePtr()
+																				 				->GetContext()
+                               																	->GetSystem(ESystemType::WorldSystem));
+                               
+		RenderWorld(worldSystem->GetCurrentWorld());
+
+		// Get current scene(s).
+        auto sceneSystem = dynamic_cast<Engine::SceneSystem::SceneSystem*>(Engine::KKTEngine::InstancePtr()
+																				 				->GetContext()
+                               																	->GetSystem(ESystemType::SceneSystem));
+		
+		RenderScene(sceneSystem->GetCurrentScene());
+		
+		// Get Objects.
+		auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(Engine::KKTEngine::InstancePtr()
+																				 				->GetContext()
+                               																	->GetSystem(ESystemType::ObjectSystem));
+		auto objects = objectSystem->GetAllObjects();		
+
+		for (auto objectItem : objects) RenderObject(objectItem.second);
+       
+	}
+
+	return 0;
 }
 
 void OpenglRenderSystem::Initialize()

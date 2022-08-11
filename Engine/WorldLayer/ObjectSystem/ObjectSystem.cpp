@@ -107,5 +107,16 @@ bool ObjectSystem::MapContainsKey(std::map<std::string, IObject*>& map, std::str
     return true;
 }
 
+std::map<std::string, IObject*> ObjectSystem::GetAllObjects()
+{
+    return _objects;
+}
+
+std::map<std::string, IObject*> ObjectSystem::GetAllObjectsOnScene(std::string sceneName)
+{
+    // TODO: search on sceneName.
+    return _objects;
+}
+
 }
 }

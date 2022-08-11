@@ -51,6 +51,12 @@ public:
     IObject* GetObjectByName(std::string);
 
     int GetObjectId(std::string);
+
+    std::map<std::string, IObject*> GetAllObjects();
+
+    std::map<std::string, IObject*> GetAllObjectsOnScene(std::string sceneName);
+
+   // std::map<std::string, IObject*> GetAllObjectsOnScene(IScene* scene); TODO:
 };
 
 } // namespace ObjectSystem
