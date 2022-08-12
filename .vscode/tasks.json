@@ -29,6 +29,10 @@
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\LogSystem.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\LogMessageData.cpp",
 
+                "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\MathSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\InputSystem.cpp",
+
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\UISystem.cpp", 
 
                 "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\PlaceHolderRenderSystem.cpp",
@@ -63,6 +67,10 @@
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\CameraComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\TransformComponent.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TextComponent\\TextComponent.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MeshComponent\\MeshComponent.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MaterialComponent\\MaterialComponent.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\LightComponent\\LightComponent.cpp",
 
                 "${workspaceFolder}\\Engine\\KKTEngine.cpp",
                
@@ -165,6 +173,10 @@
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
 
+                "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\*.cpp", 
 
                 "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\*.cpp",
@@ -197,6 +209,10 @@
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TextComponent\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MeshComponent\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MaterialComponent\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\LightComponent\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\*.cpp",
                 
@@ -290,6 +306,10 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
 
+                "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
@@ -322,6 +342,10 @@
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/LightComponent/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
 
@@ -383,6 +407,10 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/LogSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
 
+                "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+
+                "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
+
                 "${workspaceFolder}/Engine/UILayer/UISystem/UISystem.cpp", 
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/PlaceHolderRenderSystem.cpp",
@@ -417,6 +445,10 @@
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/MeshComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/LightComponent/LightComponent.cpp",
 
                 "${workspaceFolder}/Engine/KKTEngine.cpp",
                
@@ -520,6 +552,10 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
 
+                "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
@@ -552,6 +588,10 @@
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/LightComponent/*.cpp",
 
                 "${workspaceFolder}/Engine/*.cpp",
 

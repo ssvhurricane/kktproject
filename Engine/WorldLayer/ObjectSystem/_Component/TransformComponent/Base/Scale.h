@@ -3,10 +3,12 @@
 namespace Engine {
 namespace ObjectSystem {
 
-struct IComponent
+struct Scale
 {
-    virtual void SetId(int id) = 0;
-    virtual int GetId() = 0;
+    // TODO:
+    float X;
+    float Y;
+    float Z;
 };
 
 } // namespace ObjectSystem

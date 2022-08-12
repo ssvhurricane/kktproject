@@ -1,3 +1,4 @@
+// TODO: Text and his localization func.
 #pragma once
 
 #include "../../../../KKTEngine.h"
@@ -7,27 +8,26 @@
 namespace Engine {
 namespace ObjectSystem {
 #ifdef _WIN32
-class ENGINE_API MeshComponent : public IComponent
+class ENGINE_API TextComponent : public IComponent
 #else
 #ifdef __APPLE__  
-class MeshComponent : public IComponent
+class TextComponent : public IComponent
 #endif
 #ifdef  __linux__
-class MeshComponent : public IComponent
+class TextComponent : public IComponent
 #endif
 #ifdef __EMSCRIPTEN__
-class MeshComponent : public IComponent
+class TextComponent : public IComponent
 #endif
 #endif
 {
 private:
 
    int _id;
-
   
 public:
 
-    MeshComponent();
+    TextComponent();
      
     void SetId(int id);
 

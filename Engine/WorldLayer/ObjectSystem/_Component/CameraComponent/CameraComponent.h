@@ -34,7 +34,9 @@ class CameraComponent : public IComponent
 #endif
 {
 private:
-   void UpdateCameraVectors();
+    int _id;
+
+    void UpdateCameraVectors();
 public:
 
     // Атрибуты камеры
@@ -56,7 +58,11 @@ public:
     CameraComponent(glm::vec3 position = glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3 up = glm::vec3(0.0f, 1.0f, 0.0f), float yaw = YAW, float pitch = PITCH);
    
     CameraComponent(float posX, float posY, float posZ, float upX, float upY, float upZ, float yaw, float pitch);
-    
+
+    void SetId(int id);
+
+    int GetId();
+
     glm::mat4 GetViewMatrix();
 
     void ProcessKeyboard(ECameraMovementMode direction, float deltaTime);

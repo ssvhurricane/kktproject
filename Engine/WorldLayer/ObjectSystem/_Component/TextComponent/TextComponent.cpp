@@ -1,19 +1,18 @@
-#include "LightComponent.h"
+#include "TextComponent.h"
 
 namespace Engine {
 namespace ObjectSystem {
 
-LightComponent::LightComponent()
+TextComponent::TextComponent()
 {
     // TODO:
 }
-
-void LightComponent::SetId(int id)
+void TextComponent::SetId(int id)
 {
    _id = id;
 }
 
-int LightComponent::GetId()
+int TextComponent::GetId()
 {
     return _id;
 }

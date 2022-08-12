@@ -30,7 +30,17 @@ CameraComponent::CameraComponent(float posX, float posY, float posZ, float upX, 
 
     UpdateCameraVectors();
 }  
-   
+      
+void CameraComponent::SetId(int id)
+{
+    _id = id;
+}
+
+int CameraComponent::GetId()
+{
+    return _id;
+}
+
 glm::mat4 CameraComponent::GetViewMatrix()
 {
     return glm::lookAt(Position, Position + Front, Up);
