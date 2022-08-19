@@ -4,6 +4,10 @@
 #include "../../../../CoreLayer/LogSystem/LogSystem.h"
 #include "../../Base/IComponent.h"
 
+#include <assimp/Importer.hpp> // TODO: Remove this
+#include <assimp/scene.h>
+#include <assimp/postprocess.h>
+
 namespace Engine {
 namespace ObjectSystem {
 #ifdef _WIN32

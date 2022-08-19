@@ -16,6 +16,7 @@
                 "-I$C:\\emsdk\\upstream\\emscripten\\system\\include", // emscripten folder.
                 "-L${workspaceFolder}\\dependencies\\library",
                 "-L${workspaceFolder}\\dependencies\\library\\glfw3.lib",
+                "-L${workspaceFolder}\\dependencies\\library\\assimp-vc143-mtd.lib",
 
                   // Add engine headers. 
                 "-I${workspaceFolder}\\Engine",
@@ -164,7 +165,8 @@
                 "-L${workspaceFolder}\\dependencies\\library",
                 
                 "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
-                
+                "${workspaceFolder}\\dependencies\\library\\assimp-vc143-mtd.lib",
+
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
@@ -297,6 +299,7 @@
                 "-L${workspaceFolder}/dependencies/library",
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
+               // "${workspaceFolder}/dependencies/library/assimp-vc143-mtd.lib", TODO:
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
@@ -394,6 +397,7 @@
                 "-I$/Volumes/DataSSD/Programs/emsdk/upstream/emscripten/system/include",
                 "-L${workspaceFolder}/dependencies/library/mac",
                 "-L${workspaceFolder}/dependencies/library/mac/libglfw3.a",
+                 // "${workspaceFolder}/dependencies/library/assimp-vc143-mtd.lib", TODO:
 
                   // Add engine headers. 
                 "-I${workspaceFolder}/Engine",
@@ -543,6 +547,7 @@
                 "-L${workspaceFolder}/dependencies/library/mac",
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
+                 // "${workspaceFolder}/dependencies/library/assimp-vc143-mtd.lib", TODO:
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
