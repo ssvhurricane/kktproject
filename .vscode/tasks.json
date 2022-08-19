@@ -397,8 +397,8 @@
                 "-I$/Volumes/DataSSD/Programs/emsdk/upstream/emscripten/system/include",
                 "-L${workspaceFolder}/dependencies/library/mac",
                 "-L${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-               // "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.dylib", 
-               "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.2.4.dylib", 
+               "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.dylib", 
+               //"-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.2.4.dylib", 
                
                   // Add engine headers. 
                 "-I${workspaceFolder}/Engine",
@@ -548,8 +548,8 @@
                 "-L${workspaceFolder}/dependencies/library/mac",
 
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-               // "${workspaceFolder}/dependencies/library/mac/libassimpd.5.dylib", 
-                "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.2.4.dylib", 
+                "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.dylib", 
+                //"-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.2.4.dylib", 
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
