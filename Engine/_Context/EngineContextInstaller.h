@@ -1,35 +1,38 @@
-#ifndef ENGINE_CONTEXT_INSTALLER_H_
-#define ENGINE_CONTEXT_INSTALLER_H_
-//#include "boost/di.hpp"
+// This is non Context System (you can't use distanced services here).
+#pragma once
 
-//#include "CoreLayer/LogSystem/LogSystem.h"
+#include <iostream>
+#include <map>
 
-//namespace di = boost::di;
-//namespace core = boost::ext::di::v1_2_0::core;
-//namespace ver = boost::ext::di::v1_2_0;
+#include "base_context/IContextInstaller.h"
+#include "../CoreLayer/LogSystem/LogSystem.h" // This place for add system headers, then use all.
+#include "../UILayer/UISystem/UISystem.h"
+#include "../RenderingLayer/RenderSystem/RenderSystem.h"
+#include "../CoreLayer/FileSystem/FileSystem.h"
+#include "../WorldLayer/WorldSystem/WorldSystem.h"
+#include "../WorldLayer/SceneSystem/SceneSystem.h"
+#include "../WorldLayer/ObjectSystem/ObjectSystem.h"
 
 namespace Engine {
 namespace _Context {
 
-class EngineContextInstaller 
+class EngineContextInstaller : public IContextInstaller
 {
 private:
 
-  // core::injector<ver::config, core::pool_t<>> _injector;
+    std::map<ESystemType, ISystem*> _systems;
 
-   virtual void InstallBindings();
+    void InstallBindings();
+
+    void CreateContext();
 
 public: 
 
-   EngineContextInstaller ();
+    EngineContextInstaller();
 
-   virtual ~EngineContextInstaller ();
-
-   virtual void CreateContext();
+    ISystem* GetSystem(ESystemType);
 };
+
 
 } // namespace _Context
 } // namespace Engine
-
-
-#endif  // ENGINE_CONTEXT_INSTALLER_H_

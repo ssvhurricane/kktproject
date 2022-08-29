@@ -2,16 +2,43 @@
 
 namespace Engine {
 namespace _Context {
-   
-EngineContextInstaller::EngineContextInstaller(){}
-    
-EngineContextInstaller::~EngineContextInstaller(){}
+
+EngineContextInstaller::EngineContextInstaller()
+{
+    std::cout<< "[EngineLayer] -> [" << typeid(this).name() << "] -> [Create Installer.]" << std::endl;
+
+    CreateContext();
+}
 
 void EngineContextInstaller::InstallBindings()
 {  
-   //  _injector = di::make_injector();
+    // This add new LogSysyem
+    // etc Systems, order matters.
 
-    // _injector.create<LogSystem::LogSystem>();
+     std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings start proccess...]" << std::endl;
+
+    // 1. Add LogSystem.
+    _systems.emplace(ESystemType::LogSystem, new Engine::LogSystem::LogSystem);
+
+    // 2. Add UISystem.
+    _systems.emplace(ESystemType::UISystem, new Engine::UISystem::UISystem);
+
+    // 3. Add FileSystem.
+    _systems.emplace(ESystemType::FileSystem, new Engine::FileSystem::FileSystem);
+
+    // 3. Add RenderSystem.
+    _systems.emplace(ESystemType::RenderSystem, new Engine::RenderSystem::RenderSystem);
+
+    // 4. Add WorldSystem. 
+    _systems.emplace(ESystemType::WorldSystem, new Engine::WorldSystem::WorldSystem);
+
+    // 5. Add SceneSystem.
+    _systems.emplace(ESystemType::SceneSystem, new Engine::SceneSystem::SceneSystem);
+
+    // 6. Add ObjectSystem.
+    _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
+
+     std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
 }
 
 void EngineContextInstaller::CreateContext()
@@ -19,10 +46,10 @@ void EngineContextInstaller::CreateContext()
     InstallBindings();
 }
 
- void cplusplus_callback_CreateContext(EngineContextInstaller* engineContextInstaller)
- {
-    engineContextInstaller->CreateContext();
- }
+ISystem* EngineContextInstaller::GetSystem(ESystemType eSystemType)
+{
+    return _systems[eSystemType];
+}
 
 } // namespace _context
 } // namespace engine
