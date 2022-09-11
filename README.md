@@ -47,6 +47,29 @@ Build Project(Only visual studio code):
     - F5, Ctrl+F5;
     - if browser, neadd server simulate and run.
 
+Current dependencies ver.:
+
+   Glfw ver. -  3.3.7;
+
+   Glad ver. - 0.1.35;
+
+   Glm ver. -  0.9.9.8;
+
+   Nuklear ver. - none;
+
+   StbImage ver. - 2.25;
+
+   Windows Assimp ver. - 143;
+   Mac Assimp ver. - 143;
+
+   Windows Clang ver. - 14.0.5;
+   Mac Clang ver. -
+   Linux Clang ver. - 
+
+   Window Emscripten ver. - 3.1.15;
+   Mac Emscripten ver. -
+   Linux  Emscripten ver. -
+
 Warning! Need rebuild GLFW(cmake) without the option USE_MSVC_RUNTIME_LIBRARY_DLL.
 
 (*) - support may be added in the future.

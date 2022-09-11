@@ -5,7 +5,7 @@
         {
             "type": "cppbuild",
             "label": "(Window/Browser) -> engine_demo -> build active file (html).",
-            "command": "C:\\emsdk\\upstream\\emscripten\\emcc",
+            "command": "C:\\Users\\Admin\\Desktop\\Projects\\kkt_libs\\emsdk\\upstream\\emscripten\\emcc",
             "args": [
                 "-fdiagnostics-color=always",
                 "-Wall",
