@@ -49,7 +49,7 @@ Build Project(Only visual studio code):
 
 Current dependencies ver.:
 
-   Glfw ver. -  3.3.7;
+   Glfw ver. -  3.3.6;
 
    Glad ver. - 0.1.35;
 
@@ -69,6 +69,8 @@ Current dependencies ver.:
    Window Emscripten ver. - 3.1.15;
    Mac Emscripten ver. -
    Linux  Emscripten ver. -
+
+   Angle - uwp(Xbox) ver. -
 
 Warning! Need rebuild GLFW(cmake) without the option USE_MSVC_RUNTIME_LIBRARY_DLL.
 
