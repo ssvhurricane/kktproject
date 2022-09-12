@@ -64,13 +64,13 @@ Current dependencies ver.:
 
    Windows Clang ver. - 14.0.5;
    Mac Clang ver. -
-   Linux Clang ver. - 
+   Linux Clang ver. - 14.0.0
 
    Window Emscripten ver. - 3.1.15;
    Mac Emscripten ver. -
-   Linux  Emscripten ver. -
+   Linux  Emscripten ver. - 3.1.21;
 
-   Angle - uwp(Xbox) ver. -
+   Angle - uwp(Xbox) ver. - none
 
 Warning! Need rebuild GLFW(cmake) without the option USE_MSVC_RUNTIME_LIBRARY_DLL.
 

@@ -244,6 +244,119 @@
             "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""
         },
 
+         // Linux Tasks.
+         {
+            "type": "cppbuild",
+            "label": "(Linux/Browser) -> engine_demo -> build active file (html).",
+            "command": "/home/sergei/Projects/kkt_libs/emsdk/upstream/emscripten/emcc",
+            "args": [ 
+                //"-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+                
+                // Add dependencies headers.
+                "-I${workspaceFolder}/dependencies/include",
+                "-I$/Volumes/DataSSD/Programs/emsdk/upstream/emscripten/system/include",
+                
+                "-L${workspaceFolder}/dependencies/library/libglfw3.a",
+               // "${workspaceFolder}/dependencies/library/libassimp.5.so",
+               
+                  // Add engine headers. 
+                "-I${workspaceFolder}/Engine",
+
+                // Engine
+                // Add .cpp systems.
+                "${workspaceFolder}/Engine/_Context/EngineContextInstaller.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
+                
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/LogSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
+
+                "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+
+                "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
+
+                "${workspaceFolder}/Engine/UILayer/UISystem/UISystem.cpp", 
+
+                "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/PlaceHolderRenderSystem.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/OpenglRenderSystem.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/glad.c",
+                "${workspaceFolder}/Engine/RenderingLayer/VulkanRenderSystem/VulkanRenderSystem.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/RenderSystem.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/StandardGLShader.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture1D.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture2D.cpp",
+                "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture3D.cpp",
+
+                "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/PlatformFileSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
+
+                "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/ARWorld/ARWorld.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/BasicWorld/BasicWorld.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/VRWorld/VRWorld.cpp",
+
+                "${workspaceFolder}/Engine/WorldLayer/SceneSystem/SceneSystem.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/SceneSystem/Scenes/BasicScene.cpp",
+
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectSystem.cpp", 
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectFactorySystem/ObjectFactorySystem.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/ObjectPoolSystem.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/BasicObject.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/NetworkObject.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/UIObject.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/UINetworkObject.cpp",
+
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/MeshComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/LightComponent/LightComponent.cpp",
+
+                "${workspaceFolder}/Engine/KKTEngine.cpp",
+               
+                "${workspaceFolder}/EngineDemo/KKTEngineDemo.cpp",
+
+                "-s",
+                "USE_WEBGL2=1",
+                "-s",
+                "USE_GLFW=3",
+                "-s",
+                "WASM=1",
+                "-s",
+                "USE_SDL=2",
+                "-s",
+                "USE_SDL_IMAGE=2",
+
+                "-o", 
+                "${workspaceFolder}/bin/browser/${fileBasenameNoExtension}.html",
+ 
+                "--preload-file",
+                " ${workspaceFolder}/EngineDemo/Content@/Content",//For shaders preorety use --embed
+                
+                "--use-preload-plugins",
+
+                "-DENGINEDLL_EXPORTS",
+             
+                "-lglfw3",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+
         // Linux Tasks.
         {
             "type": "cppbuild",
@@ -299,7 +412,7 @@
                 "-L${workspaceFolder}/dependencies/library",
 
                 "${workspaceFolder}/dependencies/library/libglfw3.a",
-               // "${workspaceFolder}/dependencies/library/assimp-vc143-mtd.lib", TODO:
+               // "${workspaceFolder}/dependencies/library/libassimp.5.so",
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 

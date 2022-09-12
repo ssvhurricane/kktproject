@@ -129,7 +129,8 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/Volumes/
                                               fileSystem->GetFileData("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.fs")); 
 #endif
 #ifdef __linux__
-Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData(""), fileSystem->GetFileData("")); 
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/home/sergei/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.vs"),
+											 fileSystem->GetFileData("/home/sergei/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.fs")); 
 #endif
 #ifdef __EMSCRIPTEN__
 
@@ -231,7 +232,7 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
     data = texture2D_1.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
 #endif
 #ifdef __linux__
-   // TODO:
+   data = texture2D_1.LoadTexture("/home/sergei/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
 #endif
 #ifdef __EMSCRIPTEN__
     data = texture2D_1.LoadTexture("Content/Graphics/Textures/wooden_container.jpg", width, height, nrChannels);
@@ -253,7 +254,7 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
     data = texture2D_2.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
 #endif
 #ifdef __linux__
-    
+     data = texture2D_2.LoadTexture("/home/sergei/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
 #endif
 #ifdef __EMSCRIPTEN__
     data = texture2D_2.LoadTexture("Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
