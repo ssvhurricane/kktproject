@@ -63,11 +63,11 @@ Current dependencies ver.:
    Mac Assimp ver. - 143;
 
    Windows Clang ver. - 14.0.5;
-   Mac Clang ver. -
+   Mac Clang ver. - 13.1.6
    Linux Clang ver. - 14.0.0
 
    Window Emscripten ver. - 3.1.15;
-   Mac Emscripten ver. -
+   Mac Emscripten ver. - 3.1.15;
    Linux  Emscripten ver. - 3.1.21;
 
    Angle - uwp(Xbox) ver. - none
