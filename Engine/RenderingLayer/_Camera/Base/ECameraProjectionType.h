@@ -3,7 +3,7 @@
 namespace Engine {
 namespace RenderSystem {
 
-enum EECameraProjectionType
+enum ECameraProjectionType
 {
    Perspective,
    Orthographic

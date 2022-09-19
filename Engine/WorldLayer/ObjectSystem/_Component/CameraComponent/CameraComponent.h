@@ -1,10 +1,19 @@
-// TODO: Standard GL Shader Type.
+// TODO:.
 #pragma once
 
 #include "../../../../KKTEngine.h"
 #include "../../../../CoreLayer/LogSystem/LogSystem.h"
 #include "../../Base/IComponent.h"
 #include "Base/ECameraMovementMode.h"
+
+#include "../../../../RenderingLayer/Base/ICamera.h"
+#include "../../../../RenderingLayer/_Camera/Base/ECameraType.h"
+#include "../../../../RenderingLayer/_Camera/Base/ECameraProjectionType.h"
+#include "../../../../RenderingLayer/_Camera/Free/FreeCamera.h"
+#include "../../../../RenderingLayer/_Camera/FPS/FPSCamera.h"
+#include "../../../../RenderingLayer/_Camera/TPS/TPSCamera.h"
+#include "../../../../RenderingLayer/_Camera/TopDown/TopDownCamera.h"
+#include "../../../../RenderingLayer/_Camera/SideScroller/SideScrollerCamera.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>
@@ -34,9 +43,17 @@ class CameraComponent : public IComponent
 #endif
 {
 private:
-    int _id;
+
+    int _id; 
+    
+    Engine::RenderSystem::ECameraType _cameraType;
+
+    Engine::RenderSystem::ECameraProjectionType _cameraProjectionType; 
+
+    Engine::RenderSystem::ICamera* _camera;
 
     void UpdateCameraVectors();
+
 public:
 
     // Атрибуты камеры
@@ -62,6 +79,18 @@ public:
     void SetId(int id);
 
     int GetId();
+
+    void SetCamera(Engine::RenderSystem::ICamera* camera);
+
+    Engine::RenderSystem::ICamera* GetCamera();
+    
+    void SetCameraType(Engine::RenderSystem::ECameraType eCameraType);
+
+    Engine::RenderSystem::ECameraType GetCameraType();
+
+    void SetCameraProjectionType(Engine::RenderSystem::ECameraProjectionType eCameraProjectionType);
+
+    Engine::RenderSystem::ECameraProjectionType GetCameraProjectionType();
 
     glm::mat4 GetViewMatrix();
 

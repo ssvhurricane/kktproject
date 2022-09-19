@@ -41,6 +41,38 @@ int CameraComponent::GetId()
     return _id;
 }
 
+void CameraComponent::SetCamera(Engine::RenderSystem::ICamera* camera)
+ {
+    _camera = camera;
+ }
+
+Engine::RenderSystem::ICamera* CameraComponent::GetCamera()
+{
+    return _camera;
+}
+
+void CameraComponent::SetCameraType(Engine::RenderSystem::ECameraType eCameraType)
+{
+    // TODO:
+}
+
+Engine::RenderSystem::ECameraType CameraComponent::GetCameraType()
+{
+    // TODO:
+    return Engine::RenderSystem::ECameraType::Free;
+}
+
+void CameraComponent::SetCameraProjectionType(Engine::RenderSystem::ECameraProjectionType eCameraProjectionType)
+{
+    // TODO:
+}
+
+Engine::RenderSystem::ECameraProjectionType CameraComponent::GetCameraProjectionType()
+{
+    // TODO:
+    return Engine::RenderSystem::ECameraProjectionType::Orthographic;
+}
+
 glm::mat4 CameraComponent::GetViewMatrix()
 {
     return glm::lookAt(Position, Position + Front, Up);
