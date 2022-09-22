@@ -24,6 +24,10 @@
                 // Engine
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\EngineContextInstaller.cpp",
+
+                "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\ProjectSubSystem.cpp",
+                "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\SceneSubSystem.cpp",
+
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\InitializeSystem.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\StartSystem.cpp", 
                 
@@ -31,6 +35,8 @@
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\LogMessageData.cpp",
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\MathSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\ConfigSystem.cpp",
 
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\InputSystem.cpp",
 
@@ -174,6 +180,10 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\*.cpp", 
                 
@@ -181,6 +191,8 @@
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\*.cpp",
 
@@ -278,6 +290,10 @@
                 // Engine
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/EngineContextInstaller.cpp",
+
+                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
+                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
                 
@@ -285,6 +301,8 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
@@ -431,6 +449,10 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
+
+                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
+                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
 
@@ -438,6 +460,8 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
 
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 
@@ -539,6 +563,10 @@
                 // Engine
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/EngineContextInstaller.cpp",
+
+                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
+                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
                 
@@ -546,6 +574,8 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
@@ -691,6 +721,10 @@
 
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
+
+                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
+                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
                 
@@ -698,6 +732,8 @@
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 

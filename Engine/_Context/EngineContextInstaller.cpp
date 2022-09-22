@@ -38,6 +38,11 @@ void EngineContextInstaller::InstallBindings()
     // 6. Add ObjectSystem.
     _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
 
+
+    // 7. Add SubSystem.
+    _systems.emplace(ESystemType::ProjectSubSystem, new Engine::ProjectSubSystem::ProjectSubSystem);
+    _systems.emplace(ESystemType::SceneSubSystem, new Engine::SceneSubSystem::SceneSubSystem);
+
      std::cout << "[EngineLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
 }
 

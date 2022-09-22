@@ -1,8 +1,9 @@
 // Developer custom systems. SceneSubSystem, ProjectSystem. 
 #pragma once
 
-struct ISubSystem
+#include "base_context/ISystem.h"
+
+struct ISubSystem : public ISystem
 { 
     // TODO:
-    virtual void Initialize() = 0;
 };

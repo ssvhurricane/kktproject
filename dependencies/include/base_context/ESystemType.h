@@ -19,7 +19,11 @@ enum ESystemType
 
     //-------- UI --------//
     // UI Layer.
-    UISystem
+    UISystem,
+
+    // User sub system.
+    ProjectSubSystem,
+    SceneSubSystem
 
     //-------- Editor --------//
 };
