@@ -8,5 +8,10 @@ MathSystem::MathSystem()
     // TOD:
 }
 
+void MathSystem::Initialize()
+{
+    // TODO:
+}
+
 } // namespace Engine
 } // namespace MathSystem

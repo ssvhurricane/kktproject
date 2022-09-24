@@ -5,18 +5,18 @@
 #include "base_context/Defines.h"
 
 namespace Engine {
-namespace LocalizationSystem{
+namespace PhysicSystem{
 #ifdef _WIN32
-class ENGINE_API LocalizationSystem : public ISystem
+class ENGINE_API PhysicSystem : public ISystem
 #else 
 #ifdef __APPLE__
-class LocalizationSystem : public ISystem
+class PhysicSystem : public ISystem
 #endif
 #ifdef __linux__
-class LocalizationSystem : public ISystem
+class PhysicSystem : public ISystem
 #endif
 #ifdef  __EMSCRIPTEN__
-class LocalizationSystem : public ISystem
+class PhysicSystem : public ISystem
 #endif
 #endif
 {
@@ -24,9 +24,9 @@ private:
     // TODO:
 public:
 
-   LocalizationSystem();
+    PhysicSystem();
 
     void Initialize();
 };
-} // namespace LocalizationSystem
+} // namespace PhysicSystem
 } // namespace Engine

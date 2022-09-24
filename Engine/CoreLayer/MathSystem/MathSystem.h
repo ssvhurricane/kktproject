@@ -26,7 +26,10 @@ class MathSystem: public ISystem
 private:
     // TODO:
 public:
+
     MathSystem();
+    
+    void Initialize();
 };
 } // namespace Engine
 } // namespace MathSystem

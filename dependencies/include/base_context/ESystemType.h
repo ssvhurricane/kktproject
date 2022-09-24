@@ -4,13 +4,42 @@ enum ESystemType
 {
     //-------- Engine --------//
     // CoreLayer.
-    LogSystem,
+    AnalyticSystem,
+    ApprovalSystem,
+    ConfigSystem,
+    CRSystem,
+    FileSystem,
+    LocalizationSystem,
+    LogSystem, 
+    MathSystem,
+    MemorySystem,
+    ParserSystem,
+    RandomNumGenSystem,
+    RTTISystem,
+    StringSystem,
+    VideoSystem,
+
+    // Input Layer.
+    InputSystem,
+
+    // Network Layer.
+    NetworkSystem,
+
+    // Physic Layer.
+    PhysicSystem,
+
+    // ProfilingLayer.
+    ProfilingSystem,
+
 
     // Rendering Layer.
     RenderSystem,
+    
+    // Resource Layer.
+    ResourceSystem,
 
-    // FileSystem Layer
-    FileSystem,
+    // Test Layer.
+    TestSystem,
 
     // World Layer.
     WorldSystem,
@@ -23,7 +52,11 @@ enum ESystemType
 
     // User sub system.
     ProjectSubSystem,
-    SceneSubSystem
+    SceneSubSystem,
+
+    AISystem,
+    AnimationSystem,
+    AudioSystem
 
     //-------- Editor --------//
 };

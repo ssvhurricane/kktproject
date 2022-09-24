@@ -28,15 +28,35 @@
                 "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\ProjectSubSystem.cpp",
                 "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\SceneSubSystem.cpp",
 
+                "${workspaceFolder}\\Engine\\AILayer\\AISystem\\AISystem.cpp",
+
+                "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\AnimationSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioSystem\\AudioSystem.cpp",
+
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\InitializeSystem.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\StartSystem.cpp", 
-                
+                "${workspaceFolder}\\Engine\\CoreLayer\\AnalyticSystem\\AnalyticSystem.cpp", 
+                "${workspaceFolder}\\Engine\\CoreLayer\\ApprovalSystem\\ApprovalSystem.cpp", 
+                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\ConfigSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\CRSystem\\CRSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\FileSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\LocalizationSystem\\LocalizationSystem.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\LogSystem.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\LogMessageData.cpp",
-
                 "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\MathSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\MemorySystem\\MemorySystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\ParserSystem\\ParserSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\RandomNumGenSystem\\RandomNumGenSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\RTTISystem\\RTTISystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\StringSystem\\StringSystem.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\VideoSystem\\VideoSystem.cpp",
 
-                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\ConfigSystem.cpp",
+                "${workspaceFolder}\\Engine\\NetworkLayer\\NetworkSystem\\NetworkSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\PhysicLayer\\PhysicSystem\\PhysicSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\ProfilingLayer\\ProfilingSystem\\ProfilingSystem.cpp",
 
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\InputSystem.cpp",
 
@@ -57,8 +77,11 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TopDown\\TopDownCamera.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TPS\\TPSCamera.cpp",
 
+                "${workspaceFolder}\\Engine\\ResourceLayer\\ResourceSystem\\ResourceSystem.cpp",
+
+                "${workspaceFolder}\\Engine\\TestLayer\\TestSystem\\TestSystem.cpp",
+
                 "${workspaceFolder}\\Engine\\PlatformSpecificLayer\\PlatformFileSystem\\PlatformFileSystem.cpp",
-                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\FileSystem.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\WorldSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\AppWorld.cpp",
@@ -184,15 +207,35 @@
                 "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\*.cpp",
 
+                "${workspaceFolder}\\Engine\\AILayer\\AISystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\*.cpp", 
-                
+                "${workspaceFolder}\\Engine\\CoreLayer\\AnalyticSystem\\*.cpp", 
+                "${workspaceFolder}\\Engine\\CoreLayer\\ApprovalSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\CRSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\LocalizationSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\LogSystem\\Base\\*.cpp",
-
                 "${workspaceFolder}\\Engine\\CoreLayer\\MathSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\MemorySystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\ParserSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\RandomNumGenSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\RTTISystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\StringSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\CoreLayer\\VideoSystem\\*.cpp",
 
-                "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\NetworkLayer\\NetworkSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\PhysicLayer\\PhysicSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\ProfilingLayer\\ProfilingSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\*.cpp",
 
@@ -211,8 +254,11 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TopDown\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TPS\\*.cpp",
 
+                "${workspaceFolder}\\Engine\\ResourceLayer\\ResourceSystem\\*.cpp",
+
+                "${workspaceFolder}\\Engine\\TestLayer\\TestSystem\\*.cpp",
+
                 "${workspaceFolder}\\Engine\\PlatformSpecificLayer\\PlatformFileSystem\\*.cpp",
-                "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\WorldSystem\\Words\\AppWorld\\*.cpp",
@@ -294,15 +340,35 @@
                 "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
                 "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
 
+                "${workspaceFolder}/Engine/AILayer/AISystem/AISystem.cpp",
+
+                "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
+
+                "${workspaceFolder}/Engine/AudioLayer/AudioSystem/AudioSystem.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
-                
+                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/AnalyticSystem.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/ApprovalSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/CRSystem/CRSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LocalizationSystem/LocalizationSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/LogSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
-
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/MemorySystem/MemorySystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ParserSystem/ParserSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RandomNumGenSystem/RandomNumGenSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RTTISystem/RTTISystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/StringSystem/StringSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/VideoSystem/VideoSystem.cpp",
 
-                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
+                "${workspaceFolder}/Engine/NetworkLayer/NetworkSystem/NetworkSystem.cpp",
+
+                "${workspaceFolder}/Engine/PhysicLayer/PhysicSystem/PhysicSystem.cpp",
+
+                "${workspaceFolder}/Engine/ProfilingLayer/ProfilingSystem/ProfilingSystem.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
@@ -323,8 +389,11 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/TopDownCamera.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/TPSCamera.cpp",
 
+                "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/ResourceSystem.cpp",
+
+                "${workspaceFolder}/Engine/TestLayer/TestSystem/TestSystem.cpp",
+
                 "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/PlatformFileSystem.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
@@ -453,15 +522,35 @@
                 "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
                 "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
 
+                "${workspaceFolder}/Engine/AILayer/AISystem/*.cpp",
+
+                "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/AudioLayer/AudioSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
-
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp", 
-
-                "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
-
+                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/CRSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LocalizationSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/MemorySystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ParserSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RandomNumGenSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RTTISystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/StringSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/VideoSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/NetworkLayer/NetworkSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/PhysicLayer/PhysicSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/ProfilingLayer/ProfilingSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 
@@ -480,8 +569,11 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/*.cpp",
 
+                "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/TestLayer/TestSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/*.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",
@@ -538,7 +630,6 @@
         },
          
         // Mac Tasks.
-
         {
             "type": "cppbuild",
             "label": "(Mac/Browser) -> engine_demo -> build active file (html).",
@@ -567,15 +658,35 @@
                 "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
                 "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
 
+                "${workspaceFolder}/Engine/AILayer/AISystem/AISystem.cpp",
+
+                "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
+
+                "${workspaceFolder}/Engine/AudioLayer/AudioSystem/AudioSystem.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
-                
+                "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/AnalyticSystem.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/ApprovalSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/CRSystem/CRSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LocalizationSystem/LocalizationSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/LogSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/LogMessageData.cpp",
-
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/MathSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/MemorySystem/MemorySystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ParserSystem/ParserSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RandomNumGenSystem/RandomNumGenSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RTTISystem/RTTISystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/StringSystem/StringSystem.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/VideoSystem/VideoSystem.cpp",
 
-                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
+                "${workspaceFolder}/Engine/NetworkLayer/NetworkSystem/NetworkSystem.cpp",
+
+                "${workspaceFolder}/Engine/PhysicLayer/PhysicSystem/PhysicSystem.cpp",
+
+                "${workspaceFolder}/Engine/ProfilingLayer/ProfilingSystem/ProfilingSystem.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
@@ -596,8 +707,11 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/TopDownCamera.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/TPSCamera.cpp",
 
+                "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/ResourceSystem.cpp",
+
+                "${workspaceFolder}/Engine/TestLayer/TestSystem/TestSystem.cpp",
+
                 "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/PlatformFileSystem.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/WorldSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/AppWorld.cpp",
@@ -725,15 +839,35 @@
                 "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
                 "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
 
+                "${workspaceFolder}/Engine/AILayer/AISystem/*.cpp",
+
+                "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/AudioLayer/AudioSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
-                
+                "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/*.cpp", 
+                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/CRSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/LocalizationSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/LogSystem/Base/*.cpp",
-
                 "${workspaceFolder}/Engine/CoreLayer/MathSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/MemorySystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/ParserSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RandomNumGenSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/RTTISystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/StringSystem/*.cpp",
+                "${workspaceFolder}/Engine/CoreLayer/VideoSystem/*.cpp",
 
-                "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
+                "${workspaceFolder}/Engine/NetworkLayer/NetworkSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/PhysicLayer/PhysicSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/ProfilingLayer/ProfilingSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 
@@ -752,8 +886,11 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/*.cpp",
 
+                "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/*.cpp",
+
+                "${workspaceFolder}/Engine/TestLayer/TestSystem/*.cpp",
+
                 "${workspaceFolder}/Engine/PlatformSpecificLayer/PlatformFileSystem/*.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/*.cpp", 
                 "${workspaceFolder}/Engine/WorldLayer/WorldSystem/Words/AppWorld/*.cpp",

@@ -1,4 +1,4 @@
-// This is non Context System.
+// This is non Context System. Only PC.
 #pragma once
 
 #include "../../KKTEngine.h"

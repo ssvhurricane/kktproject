@@ -6,17 +6,17 @@
 #include "base_context/Defines.h"
 
 namespace Engine {
-namespace InGameConsoleSystem{
+namespace RwGameProccessSystem{
 
-class InGameConsoleSystem : public ISystem
+class RwGameProccessSystem : public ISystem
 {
 private:
     // TODO:
 public:
 
-    InGameConsoleSystem();
+    RwGameProccessSystem();
 
     void Initialize();
 };
-} // namespace InGameConsoleSystem
+} // namespace RwGameProccessSystem
 } // namespace Engine

@@ -27,6 +27,8 @@ private:
     // TODO:
 public:
     ConfigSystem();
+    
+    void Initialize();
 };
 } // namespace ConfigSystem
 } // namespace Engine
