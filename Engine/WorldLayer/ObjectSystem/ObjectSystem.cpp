@@ -22,7 +22,11 @@ void ObjectSystem::Initialize()
     // TODO:
 }
    
-IObject* ObjectSystem::CreateObjectByName(std::string name, Engine::SceneSystem::IScene* owner, IObject* parent, Engine::ObjectSystem::EObjectType eObjectType)
+IObject* ObjectSystem::CreateObjectByName(std::string name, 
+                                          Engine::SceneSystem::IScene* owner,
+                                          IObject* parent,
+                                          Engine::ObjectSystem::EObjectType eObjectType,
+                                          Engine::ObjectSystem::EObjectCreateMode eObjectCreateMode)
 { 
    IObject* object = NULL;
 

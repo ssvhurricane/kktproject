@@ -3,11 +3,9 @@
 namespace Engine {
 namespace ObjectSystem {
 
-struct IComponent
+struct IModel
 {
-    virtual void SetId(int id) = 0;
-    virtual int GetId() = 0;
-    
+    // TODO:
 };
 
 } // namespace ObjectSystem

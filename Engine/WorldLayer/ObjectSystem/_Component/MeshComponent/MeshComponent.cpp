@@ -4,9 +4,9 @@ namespace Engine {
 namespace ObjectSystem {
 
 MeshComponent::MeshComponent()
-   {
-        // TODO:
-   }
+{
+    // TODO:
+}
 
 void MeshComponent::SetId(int id)
 {

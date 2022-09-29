@@ -27,7 +27,6 @@ class MeshComponent : public IComponent
 private:
 
    int _id;
-
   
 public:
 

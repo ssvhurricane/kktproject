@@ -27,6 +27,10 @@
 #include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.h"
 #include "../../WorldLayer/ObjectSystem/_Component/CameraComponent/Base/ECameraMovementMode.h"
 #include "../../WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/MeshComponent/MeshComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/LightComponent/LightComponent.h"
 
 // Scene system.
 #include "../../WorldLayer/SceneSystem/SceneSystem.h"

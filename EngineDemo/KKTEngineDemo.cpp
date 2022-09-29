@@ -1,5 +1,6 @@
 #include <KKTEngine.h>
 #include <iostream>
+#include <string>
 
 #include "boost/di.hpp"
 
@@ -33,6 +34,31 @@ int main()
                                                             ->GetSystem(ESystemType::ObjectSystem));
                                         
     
+    // Create cubes.
+    for(int object = 0; object < 5; object++)
+    {
+       auto cubeObject = objectSystem->CreateObjectByName("CubeGameObject" + std::to_string(object), 
+                                                        sceneSystem->GetSceneByName("MainScene"), 
+                                                        NULL);
+
+        if(cubeObject)
+        { 
+            // Add components for object.
+            auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
+            // TODO: set position, rotation, etc.
+            cubeObject->AddComponent(transformComponent);
+
+            auto meshComponent = new Engine::ObjectSystem::MeshComponent;
+            // TODO: set, etc.
+            cubeObject->AddComponent(meshComponent);
+
+            auto materialComponent = new Engine::ObjectSystem::MaterialComponent;
+            // TODO: set, etc.
+            cubeObject->AddComponent(materialComponent);
+        }
+    }
+
+    // Create Camera(Player).
     auto cameraObject = objectSystem->CreateObjectByName("CameraGameObject", 
                                                         sceneSystem->GetSceneByName("MainScene"), 
                                                         NULL);
@@ -47,6 +73,21 @@ int main()
         cameraObject->AddComponent(cameraComponent);
     }
 
+    // Create Lights. 
+    auto pointLightObject = objectSystem->CreateObjectByName("PointLightGameObject", 
+                                                        sceneSystem->GetSceneByName("MainScene"), 
+                                                        NULL);
+    if(pointLightObject)
+    {
+         // Add components for object.
+        auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
+        pointLightObject->AddComponent(transformComponent);
+
+        auto lightComponent = new Engine::ObjectSystem::LightComponent;
+        pointLightObject->AddComponent(lightComponent);
+    }
+
+    // Create UI.
     auto uiObject = objectSystem->CreateObjectByName("UIGameObject", 
                                                         sceneSystem->GetSceneByName("MainScene"),
                                                         NULL,
@@ -55,9 +96,22 @@ int main()
     if(uiObject)
     {
         // Add components for object.
-        auto transformComponent2 = new Engine::ObjectSystem::TransformComponent; 
-        uiObject->AddComponent(transformComponent2);
+        auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
+        uiObject->AddComponent(transformComponent);
+
+        auto textComponent = new Engine::ObjectSystem::TextComponent;
+        uiObject->AddComponent(textComponent);
     }
+
+    // Input System Init. TODO:
+    auto inputSystem = dynamic_cast<Engine::InputSystem::InputSystem*>(engineContext
+                                                            ->GetSystem(ESystemType::InputSystem));
+
+    if(InputSystem)
+    {
+        inputSystem->Initialize(); // TODO:
+    }
+                                        
 
     // Start Engine(Runtime).
     gameEngine->StartEngine();

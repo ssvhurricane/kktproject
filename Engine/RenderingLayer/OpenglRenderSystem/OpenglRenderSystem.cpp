@@ -320,7 +320,7 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
 			glDrawArrays(GL_TRIANGLES, 0, 36);
         }
 
-        //gameUI->DemoRender();
+        gameUI->DemoRender();
  
         // glfw: swap buffers and poll IO events (keys pressed/released, mouse moved etc.)
         // -------------------------------------------------------------------------------
