@@ -1,12 +1,10 @@
 #pragma once
-#include "../../../WorldLayer/ObjectSystem/Base/IObject.h"
 
 namespace Engine {
-namespace UIsystem 
+namespace UISystem {
+struct IControl
 {
-struct IControl : public ObjectSystem::IObject// TODO parent IObject
-{
-
+    // TODO:
 };
-} // namespace UIsystem 
+} // namespace UISystem 
 } // namespace Engine

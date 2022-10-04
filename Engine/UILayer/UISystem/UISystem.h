@@ -9,6 +9,9 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "NuklearUISystem/NuklearUISystem.h"
+#include "ImgGuiUISystem/ImgGuiUISystem.h"
+
 namespace Engine {
 namespace UISystem {
 #ifdef _WIN32
@@ -26,7 +29,7 @@ class UISystem : public ISystem
 #endif
 {
 private:
-
+    ISystem* _uiSystem;
    // std::map<std::string, nk_context*> _uiContexts;
    
 public:

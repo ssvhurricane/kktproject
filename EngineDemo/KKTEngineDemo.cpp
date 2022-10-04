@@ -88,19 +88,34 @@ int main()
     }
 
     // Create UI.
-    auto uiObject = objectSystem->CreateObjectByName("UIGameObject", 
+    // Canvas.
+    auto uiCanvasObject = objectSystem->CreateObjectByName("UICanvasGameObject", 
                                                         sceneSystem->GetSceneByName("MainScene"),
-                                                        NULL,
-                                                        Engine::ObjectSystem::EObjectType::UIObject);
+                                                        NULL);
 
-    if(uiObject)
+    if(uiCanvasObject)
     {
         // Add components for object.
         auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
-        uiObject->AddComponent(transformComponent);
+        uiCanvasObject->AddComponent(transformComponent);
+
+        auto canvasComponent = new Engine::ObjectSystem::CanvasComponent;
+        uiCanvasObject->AddComponent(canvasComponent);
+    }
+
+    // Text.
+    auto uiTextObject = objectSystem->CreateObjectByName("UITextGameObject", 
+                                                        sceneSystem->GetSceneByName("MainScene"),
+                                                        uiCanvasObject);
+
+    if(uiTextObject)
+    {
+        // Add components for object.
+        auto transformComponent = new Engine::ObjectSystem::TransformComponent; 
+        uiTextObject->AddComponent(transformComponent);
 
         auto textComponent = new Engine::ObjectSystem::TextComponent;
-        uiObject->AddComponent(textComponent);
+        uiTextObject->AddComponent(textComponent);
     }
 
     // Input System Init. TODO:

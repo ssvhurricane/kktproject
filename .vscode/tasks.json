@@ -33,6 +33,8 @@
                 "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\AnimationSystem.cpp",
 
                 "${workspaceFolder}\\Engine\\AudioLayer\\AudioSystem\\AudioSystem.cpp",
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioListener\\AudioListener.cpp",
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioSource\\AudioSource.cpp",
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\InitializeSystem.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\StartSystem.cpp", 
@@ -61,6 +63,10 @@
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\InputSystem.cpp",
 
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\UISystem.cpp", 
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\NuklearUISystem\\NuklearUISystem.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\ImgGuiUISystem\\ImgGuiUISystem.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\_Control\\Canvas\\Canvas.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\_Control\\Text\\Text.cpp",
 
                 "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\PlaceHolderRenderSystem.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\OpenglRenderSystem.cpp",
@@ -97,11 +103,10 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\ObjectPoolSystem.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\BasicObject.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\NetworkObject.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UIObject\\UIObject.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UINetworkObject\\UINetworkObject.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\CameraComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\TransformComponent.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CanvasComponent\\CanvasComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TextComponent\\TextComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MeshComponent\\MeshComponent.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MaterialComponent\\MaterialComponent.cpp",
@@ -212,6 +217,8 @@
                 "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\AudioLayer\\AudioSystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioListener\\*.cpp",
+                "${workspaceFolder}\\Engine\\AudioLayer\\AudioSource\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\*.cpp", 
@@ -240,6 +247,10 @@
                 "${workspaceFolder}\\Engine\\InputLayer\\InputSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\*.cpp", 
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\NuklearUISystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\ImgGuiUISystem\\*.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\_Control\\Canvas\\*.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\_Control\\Text\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\RenderingLayer\\PlaceHolderRenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\OpenglRenderSystem\\*.cpp",
@@ -274,11 +285,10 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\*.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UIObject\\*.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\UINetworkObject\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CameraComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TransformComponent\\*.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\CanvasComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\TextComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MeshComponent\\*.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\_Component\\MaterialComponent\\*.cpp",
@@ -345,6 +355,8 @@
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
 
                 "${workspaceFolder}/Engine/AudioLayer/AudioSystem/AudioSystem.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioListener/AudioListener.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioSource/AudioSource.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
@@ -373,6 +385,10 @@
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/UISystem.cpp", 
+                "${workspaceFolder}/Engine/UILayer/UISystem/NuklearUISystem/NuklearUISystem.cpp",
+                "${workspaceFolder}/Engine/UILayer/UISystem/ImgGuiUISystem/ImgGuiUISystem.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Canvas/Canvas.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Text/Text.cpp",
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/PlaceHolderRenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/OpenglRenderSystem.cpp",
@@ -409,11 +425,10 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/ObjectPoolSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/BasicObject.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/NetworkObject.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/UIObject.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/UINetworkObject.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CanvasComponent/CanvasComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/MeshComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.cpp",
@@ -527,6 +542,8 @@
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/AudioLayer/AudioSystem/*.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioListener/*.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioSource/*.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
@@ -555,6 +572,10 @@
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
+                "${workspaceFolder}/Engine/UILayer/UISystem/NuklearUISystem/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/UISystem/ImgGuiUISystem/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Canvas/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Text/*.cpp",
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
@@ -589,11 +610,10 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CanvasComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/*.cpp",
@@ -663,6 +683,8 @@
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
 
                 "${workspaceFolder}/Engine/AudioLayer/AudioSystem/AudioSystem.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioListener/AudioListener.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioSource/AudioSource.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp",
@@ -691,6 +713,10 @@
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/InputSystem.cpp",
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/UISystem.cpp", 
+                "${workspaceFolder}/Engine/UILayer/UISystem/NuklearUISystem/NuklearUISystem.cpp",
+                "${workspaceFolder}/Engine/UILayer/UISystem/ImgGuiUISystem/ImgGuiUISystem.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Canvas/Canvas.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Text/Text.cpp",
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/PlaceHolderRenderSystem.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/OpenglRenderSystem.cpp",
@@ -727,11 +753,10 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/ObjectPoolSystem.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/BasicObject.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/NetworkObject.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/UIObject.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/UINetworkObject.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/CameraComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/TransformComponent.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CanvasComponent/CanvasComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/MeshComponent.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.cpp",
@@ -844,6 +869,8 @@
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/AudioLayer/AudioSystem/*.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioListener/*.cpp",
+                "${workspaceFolder}/Engine/AudioLayer/AudioSource/*.cpp",
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp",
@@ -872,6 +899,10 @@
                 "${workspaceFolder}/Engine/InputLayer/InputSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/UILayer/UISystem/*.cpp", 
+                "${workspaceFolder}/Engine/UILayer/UISystem/NuklearUISystem/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/UISystem/ImgGuiUISystem/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Canvas/*.cpp",
+                "${workspaceFolder}/Engine/UILayer/_Control/Text/*.cpp",
 
                 "${workspaceFolder}/Engine/RenderingLayer/PlaceHolderRenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/OpenglRenderSystem/*.cpp",
@@ -906,11 +937,10 @@
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/ObjectPoolSystem/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/BasicObject/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/NetworkObject/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UIObject/*.cpp",
-                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/Objects/UINetworkObject/*.cpp",
 
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CameraComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TransformComponent/*.cpp",
+                "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/CanvasComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/TextComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MeshComponent/*.cpp",
                 "${workspaceFolder}/Engine/WorldLayer/ObjectSystem/_Component/MaterialComponent/*.cpp",

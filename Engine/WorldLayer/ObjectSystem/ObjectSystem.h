@@ -14,10 +14,7 @@
 #include "Base/IObject.h"
 
 #include "Objects/BasicObject/BasicObject.h"
-#include "Objects/UIObject/UIObject.h"
-
 //#include "Objects/NetworkObject/NetworkObject.h"
-//#include "Objects/UINetworkObject/UINetworkObject.h"
 
 namespace Engine {
 namespace ObjectSystem {
@@ -50,7 +47,6 @@ public:
     IObject* CreateObjectByName(std::string name,
                                Engine::SceneSystem::IScene* owner,
                                IObject* parent = NULL,
-                               Engine::ObjectSystem::EObjectType eObjectType = Engine::ObjectSystem::EObjectType::BasicObject,
                                Engine::ObjectSystem::EObjectCreateMode eObjectCreateMode = Engine::ObjectSystem::EObjectCreateMode::BasicCreateMode);
 
     IObject* GetObjectByName(std::string);

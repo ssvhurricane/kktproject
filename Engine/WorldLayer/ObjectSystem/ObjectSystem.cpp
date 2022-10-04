@@ -25,21 +25,17 @@ void ObjectSystem::Initialize()
 IObject* ObjectSystem::CreateObjectByName(std::string name, 
                                           Engine::SceneSystem::IScene* owner,
                                           IObject* parent,
-                                          Engine::ObjectSystem::EObjectType eObjectType,
                                           Engine::ObjectSystem::EObjectCreateMode eObjectCreateMode)
 { 
    IObject* object = NULL;
 
    if(!MapContainsKey(_objects, name) && owner != NULL)
    {
-        switch (eObjectType)
-        {
-            case Engine::ObjectSystem::EObjectType::BasicObject:
-            {
-                object = new class Engine::ObjectSystem::BasicObject;
+       
+         object = new class Engine::ObjectSystem::BasicObject;
 
-                  dynamic_cast<Engine::LogSystem::LogSystem*>
-                 (Engine::KKTEngine::InstancePtr()
+         dynamic_cast<Engine::LogSystem::LogSystem*>
+            (Engine::KKTEngine::InstancePtr()
                                 ->GetContext()
                                 ->GetSystem(ESystemType::LogSystem))
                                 ->ShowLog(Engine::LogSystem::ELogLayer::Engine, 
@@ -47,35 +43,6 @@ IObject* ObjectSystem::CreateObjectByName(std::string name,
                                         Engine::LogSystem::ELogType::Message,
                                         "CreateObject: " + name,
                                          Engine::LogSystem::ELogOutputLocationType::All);
-
-                break;
-            }
-
-            case Engine::ObjectSystem::EObjectType::NetworkObject:
-            {
-                //object = new class Engine::ObjectSystem::NetworkObject;
-
-                break;
-            }
-
-            case Engine::ObjectSystem::EObjectType::UIObject:
-            {
-                //object = new class Engine::ObjectSystem::UIObject;
-
-                break;
-            }
-
-            case Engine::ObjectSystem::EObjectType::UINetworkObject:
-            {
-                //object = new class Engine::ObjectSystem::UINetworkObject;
-
-                break;
-            }
-            
-            default:
-                break;
-        }
-       
    }
    else
    {

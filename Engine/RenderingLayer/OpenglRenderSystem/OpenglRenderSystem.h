@@ -31,6 +31,7 @@
 #include "../../WorldLayer/ObjectSystem/_Component/MaterialComponent/MaterialComponent.h"
 #include "../../WorldLayer/ObjectSystem/_Component/TextComponent/TextComponent.h"
 #include "../../WorldLayer/ObjectSystem/_Component/LightComponent/LightComponent.h"
+#include "../../WorldLayer/ObjectSystem/_Component/CanvasComponent/CanvasComponent.h"
 
 // Scene system.
 #include "../../WorldLayer/SceneSystem/SceneSystem.h"
