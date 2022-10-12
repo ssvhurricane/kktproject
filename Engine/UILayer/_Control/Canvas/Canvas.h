@@ -10,7 +10,7 @@
 namespace Engine {
 namespace UISystem {
 
-class Canvas : /*public Engine::ObjectSystem::BasicObject*/ public Engine::ObjectSystem::IEditable, public IControl
+class Canvas : public Engine::ObjectSystem::BasicObject, public Engine::ObjectSystem::IEditable, public IControl
 {
 private:
    // TODO:

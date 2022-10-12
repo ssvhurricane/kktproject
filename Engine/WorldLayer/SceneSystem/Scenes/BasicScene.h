@@ -1,7 +1,5 @@
 #pragma once
 
-#include "../../../KKTEngine.h"
-
 #include "base_context/ISystem.h"
 #include "base_context/Defines.h"
 

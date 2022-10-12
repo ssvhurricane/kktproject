@@ -3,7 +3,7 @@
 #include <map>
 #include <string>
 
-#include "../../KKTEngine.h"
+#include "../../KKTEngine.h" // Include only systems and components.
 
 #include "base_context/ISystem.h"
 #include "base_context/Defines.h"

@@ -3,8 +3,6 @@
 #include <string>
 #include <vector>
 
-#include "../../../../KKTEngine.h"
-
 #include "../../Base/IObject.h"
 #include "../../Base/EObjectType.h"
 

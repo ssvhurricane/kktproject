@@ -2,9 +2,10 @@
 #include <string>
 #include <map>
 
+//#include "../../KKTEngine.h" // Include only systems and components.
+
 #include "base_context/ISystem.h"
 #include "base_context/Defines.h"
-
 
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>

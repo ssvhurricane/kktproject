@@ -4,8 +4,6 @@
 #include <string>
 #include <vector>
 
-#include "../../../../KKTEngine.h"
-
 #include "../../Base/EObjectType.h"
 #include "../../../../NetworkLayer/Base/INetworkObject.h"
 
