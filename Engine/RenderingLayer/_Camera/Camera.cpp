@@ -1,4 +1,4 @@
-#include "FPSCamera.h"
+#include "Camera.h"
 
 namespace Engine {
 namespace RenderSystem {

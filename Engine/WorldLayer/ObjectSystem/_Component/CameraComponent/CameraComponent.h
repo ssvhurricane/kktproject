@@ -9,11 +9,7 @@
 #include "../../../../RenderingLayer/Base/ICamera.h"
 #include "../../../../RenderingLayer/_Camera/Base/ECameraType.h"
 #include "../../../../RenderingLayer/_Camera/Base/ECameraProjectionType.h"
-#include "../../../../RenderingLayer/_Camera/Free/FreeCamera.h"
-#include "../../../../RenderingLayer/_Camera/FPS/FPSCamera.h"
-#include "../../../../RenderingLayer/_Camera/TPS/TPSCamera.h"
-#include "../../../../RenderingLayer/_Camera/TopDown/TopDownCamera.h"
-#include "../../../../RenderingLayer/_Camera/SideScroller/SideScrollerCamera.h"
+#include "../../../../RenderingLayer/_Camera/Camera.h"
 
 #include <glad/glad.h>
 #include <glm/glm.hpp>

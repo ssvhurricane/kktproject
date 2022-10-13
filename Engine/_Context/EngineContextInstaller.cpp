@@ -16,8 +16,6 @@ void EngineContextInstaller::InstallBindings()
 
     // Add core systems.
     _systems.emplace(ESystemType::LogSystem, new Engine::LogSystem::LogSystem); 
-    _systems.emplace(ESystemType::AnalyticSystem, new Engine::AnalyticSystem::AnalyticSystem);
-    _systems.emplace(ESystemType::ApprovalSystem, new Engine::ApprovalSystem::ApprovalSystem);
     _systems.emplace(ESystemType::ConfigSystem, new Engine::ConfigSystem::ConfigSystem);
     _systems.emplace(ESystemType::CRSystem, new Engine::CRSystem::CRSystem);
     _systems.emplace(ESystemType::FileSystem, new Engine::FileSystem::FileSystem);
@@ -58,9 +56,7 @@ void EngineContextInstaller::InstallBindings()
     _systems.emplace(ESystemType::WorldSystem, new Engine::WorldSystem::WorldSystem);
     _systems.emplace(ESystemType::SceneSystem, new Engine::SceneSystem::SceneSystem);
     _systems.emplace(ESystemType::ObjectSystem, new Engine::ObjectSystem::ObjectSystem);
-    _systems.emplace(ESystemType::ProjectSubSystem, new Engine::ProjectSubSystem::ProjectSubSystem);
-    _systems.emplace(ESystemType::SceneSubSystem, new Engine::SceneSubSystem::SceneSubSystem);
-   
+
     _systems.emplace(ESystemType::AISystem, new Engine::AISystem::AISystem);
    
     _systems.emplace(ESystemType::AnimationSystem, new Engine::AnimationSystem::AnimationSystem); 

@@ -4,8 +4,6 @@ enum ESystemType
 {
     //-------- Engine --------//
     // CoreLayer.
-    AnalyticSystem,
-    ApprovalSystem,
     ConfigSystem,
     CRSystem,
     FileSystem,
@@ -49,11 +47,7 @@ enum ESystemType
     //-------- UI --------//
     // UI Layer.
     UISystem,
-
-    // User sub system.
-    ProjectSubSystem,
-    SceneSubSystem,
-
+ 
     AISystem,
     AnimationSystem,
     AudioSystem

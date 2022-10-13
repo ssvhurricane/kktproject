@@ -7,8 +7,6 @@
 #include "base_context/IContextInstaller.h"
 
 // Add Base systems. This place for add system headers, then use all.
-#include "../CoreLayer/AnalyticSystem/AnalyticSystem.h"
-#include "../CoreLayer/ApprovalSystem/ApprovalSystem.h"
 #include "../CoreLayer/ConfigSystem/ConfigSystem.h"
 #include "../CoreLayer/CRSystem/CRSystem.h"
 #include "../CoreLayer/FileSystem/FileSystem.h"
@@ -40,10 +38,6 @@
 #include "../WorldLayer/WorldSystem/WorldSystem.h"
 #include "../WorldLayer/SceneSystem/SceneSystem.h"
 #include "../WorldLayer/ObjectSystem/ObjectSystem.h"
-
-// Add SubSystems.
-#include "../_SubSystem/ProjectSubSystem/ProjectSubSystem.h"
-#include "../_SubSystem/SceneSubSystem/SceneSubSystem.h"
 
 #include "../AILayer/AISystem/AISystem.h"
 #include "../AnimationLayer/AnimationSystem/AnimationSystem.h"

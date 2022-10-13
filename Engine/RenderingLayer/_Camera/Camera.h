@@ -1,12 +1,12 @@
 // TODO: Base Camera.
 #pragma once
 
-#include "../../Base/ICamera.h"
+#include "../Base/ICamera.h"
 
 namespace Engine {
 namespace RenderSystem {
 
-class FreeCamera : public ICamera
+class Camera : public ICamera
 {
 private:
 

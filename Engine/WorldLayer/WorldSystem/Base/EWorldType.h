@@ -5,10 +5,10 @@ namespace WorldSystem {
 
 enum EWorldType
 {
-    BasicWorld,
-    VRWorld,
+    BasicWorld, // Suitable for games.
+    VRWorld, 
     ARWorld,
-    AppWorld
+    AppWorld // suitable for applications.
 };
 
 } // namespace WorldSystem

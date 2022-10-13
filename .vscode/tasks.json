@@ -25,9 +25,6 @@
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\EngineContextInstaller.cpp",
 
-                "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\ProjectSubSystem.cpp",
-                "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\SceneSubSystem.cpp",
-
                 "${workspaceFolder}\\Engine\\AILayer\\AISystem\\AISystem.cpp",
 
                 "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\AnimationSystem.cpp",
@@ -38,8 +35,6 @@
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\InitializeSystem.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\StartSystem.cpp", 
-                "${workspaceFolder}\\Engine\\CoreLayer\\AnalyticSystem\\AnalyticSystem.cpp", 
-                "${workspaceFolder}\\Engine\\CoreLayer\\ApprovalSystem\\ApprovalSystem.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\ConfigSystem.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\CRSystem\\CRSystem.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\FileSystem.cpp",
@@ -64,7 +59,7 @@
 
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\UISystem.cpp", 
                 "${workspaceFolder}\\Engine\\UILayer\\UISystem\\NuklearUISystem\\NuklearUISystem.cpp",
-                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\ImgGuiUISystem\\ImgGuiUISystem.cpp",
+                "${workspaceFolder}\\Engine\\UILayer\\UISystem\\ImgGuiUISystem\\ImgGuiUISystem.cpp", //del
                 "${workspaceFolder}\\Engine\\UILayer\\_Control\\Canvas\\Canvas.cpp",
                 "${workspaceFolder}\\Engine\\UILayer\\_Control\\Text\\Text.cpp",
 
@@ -77,11 +72,7 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture1D.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture2D.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\Texture3D.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\FPS\\FPSCamera.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\Free\\FreeCamera.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\SideScroller\\SideScrollerCamera.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TopDown\\TopDownCamera.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TPS\\TPSCamera.cpp",
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\Camera.cpp",
 
                 "${workspaceFolder}\\Engine\\ResourceLayer\\ResourceSystem\\ResourceSystem.cpp",
 
@@ -99,8 +90,8 @@
                 "${workspaceFolder}\\Engine\\WorldLayer\\SceneSystem\\Scenes\\BasicScene.cpp",
 
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectSystem.cpp", 
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectFactorySystem\\ObjectFactorySystem.cpp",
-                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\ObjectPoolSystem.cpp",
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectFactorySystem\\ObjectFactorySystem.cpp",//del
+                "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\ObjectPoolSystem\\ObjectPoolSystem.cpp",//del
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\BasicObject\\BasicObject.cpp",
                 "${workspaceFolder}\\Engine\\WorldLayer\\ObjectSystem\\Objects\\NetworkObject\\NetworkObject.cpp",
 
@@ -209,9 +200,6 @@
                 // Add .cpp systems.
                 "${workspaceFolder}\\Engine\\_Context\\*.cpp",
 
-                "${workspaceFolder}\\Engine\\_SubSystem\\ProjectSubSystem\\*.cpp",
-                "${workspaceFolder}\\Engine\\_SubSystem\\SceneSubSystem\\*.cpp",
-
                 "${workspaceFolder}\\Engine\\AILayer\\AISystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\AnimationLayer\\AnimationSystem\\*.cpp",
@@ -222,8 +210,6 @@
 
                 "${workspaceFolder}\\Engine\\CoreLayer\\InitializeSystem\\*.cpp", 
                 "${workspaceFolder}\\Engine\\CoreLayer\\StartSystem\\*.cpp", 
-                "${workspaceFolder}\\Engine\\CoreLayer\\AnalyticSystem\\*.cpp", 
-                "${workspaceFolder}\\Engine\\CoreLayer\\ApprovalSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\ConfigSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\CRSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\CoreLayer\\FileSystem\\*.cpp",
@@ -259,12 +245,8 @@
                 "${workspaceFolder}\\Engine\\RenderingLayer\\RenderSystem\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Shader\\Standard\\*.cpp",
                 "${workspaceFolder}\\Engine\\RenderingLayer\\_Texture\\*.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\FPS\\*.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\Free\\*.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\SideScroller\\*.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TopDown\\*.cpp",
-                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\TPS\\*.cpp",
-
+                "${workspaceFolder}\\Engine\\RenderingLayer\\_Camera\\*.cpp",
+              
                 "${workspaceFolder}\\Engine\\ResourceLayer\\ResourceSystem\\*.cpp",
 
                 "${workspaceFolder}\\Engine\\TestLayer\\TestSystem\\*.cpp",
@@ -346,10 +328,7 @@
                 // Engine
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/EngineContextInstaller.cpp",
-
-                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
-                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
-
+          
                 "${workspaceFolder}/Engine/AILayer/AISystem/AISystem.cpp",
 
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
@@ -360,8 +339,6 @@
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/AnalyticSystem.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/ApprovalSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/CRSystem/CRSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
@@ -399,12 +376,8 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture1D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture2D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture3D.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/FPS/FPSCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Free/FreeCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/SideScroller/SideScrollerCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/TopDownCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/TPSCamera.cpp",
-
+                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Camera.cpp",
+            
                 "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/ResourceSystem.cpp",
 
                 "${workspaceFolder}/Engine/TestLayer/TestSystem/TestSystem.cpp",
@@ -534,9 +507,6 @@
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
 
-                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
-                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
-
                 "${workspaceFolder}/Engine/AILayer/AISystem/*.cpp",
 
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
@@ -547,8 +517,6 @@
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/CRSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
@@ -584,12 +552,8 @@
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/FPS/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Free/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/SideScroller/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/*.cpp",
-
+                "${workspaceFolder}/Engine/RenderingLayer/_Camera/*.cpp",
+               
                 "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/TestLayer/TestSystem/*.cpp",
@@ -675,9 +639,6 @@
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/EngineContextInstaller.cpp",
 
-                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/ProjectSubSystem.cpp",
-                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/SceneSubSystem.cpp",
-
                 "${workspaceFolder}/Engine/AILayer/AISystem/AISystem.cpp",
 
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/AnimationSystem.cpp",
@@ -688,8 +649,6 @@
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/InitializeSystem.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/StartSystem.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/AnalyticSystem.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/ApprovalSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/ConfigSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/CRSystem/CRSystem.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/FileSystem/FileSystem.cpp",
@@ -727,12 +686,8 @@
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture1D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture2D.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/Texture3D.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/FPS/FPSCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Free/FreeCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/SideScroller/SideScrollerCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/TopDownCamera.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/TPSCamera.cpp",
-
+                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Camera.cpp",
+               
                 "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/ResourceSystem.cpp",
 
                 "${workspaceFolder}/Engine/TestLayer/TestSystem/TestSystem.cpp",
@@ -861,9 +816,6 @@
                 // Add .cpp systems.
                 "${workspaceFolder}/Engine/_Context/*.cpp", 
 
-                "${workspaceFolder}/Engine/_SubSystem/ProjectSubSystem/*.cpp",
-                "${workspaceFolder}/Engine/_SubSystem/SceneSubSystem/*.cpp",
-
                 "${workspaceFolder}/Engine/AILayer/AISystem/*.cpp",
 
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
@@ -874,8 +826,6 @@
 
                 "${workspaceFolder}/Engine/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Engine/CoreLayer/StartSystem/*.cpp",
-                "${workspaceFolder}/Engine/CoreLayer/AnalyticSystem/*.cpp", 
-                "${workspaceFolder}/Engine/CoreLayer/ApprovalSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/ConfigSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/CRSystem/*.cpp",
                 "${workspaceFolder}/Engine/CoreLayer/FileSystem/*.cpp",
@@ -911,12 +861,8 @@
                 "${workspaceFolder}/Engine/RenderingLayer/RenderSystem/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Shader/Standard/*.cpp",
                 "${workspaceFolder}/Engine/RenderingLayer/_Texture/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/FPS/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/Free/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/SideScroller/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TopDown/*.cpp",
-                "${workspaceFolder}/Engine/RenderingLayer/_Camera/TPS/*.cpp",
-
+                "${workspaceFolder}/Engine/RenderingLayer/_Camera/*.cpp",
+                
                 "${workspaceFolder}/Engine/ResourceLayer/ResourceSystem/*.cpp",
 
                 "${workspaceFolder}/Engine/TestLayer/TestSystem/*.cpp",
