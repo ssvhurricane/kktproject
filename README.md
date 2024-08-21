@@ -74,4 +74,4 @@ Current dependencies ver.:
 
 Warning! Need rebuild GLFW(cmake) without the option USE_MSVC_RUNTIME_LIBRARY_DLL.
 
-(*) - support may be added in the future.
+(*) - support may be added in the feature.

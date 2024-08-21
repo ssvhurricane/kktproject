@@ -9,12 +9,12 @@
 
 int main()
 {
-    // Create and Init GameEngine.
-    Engine::KKTEngine* gameEngine = Engine::KKTEngine::InstancePtr(); // Create Engine.
+    // Create and Init engine.
+    Engine::KKTEngine* engine = Engine::KKTEngine::InstancePtr(); // Create Engine.
 
-    gameEngine->InitialEngine();
+    engine->InitialEngine();
     
-    IContextInstaller* engineContext = gameEngine->GetContext();
+    IContextInstaller* engineContext = engine->GetContext();
 
     // WorldSystem. 
     auto worldSystem = dynamic_cast<Engine::WorldSystem::WorldSystem*>(engineContext
@@ -129,7 +129,7 @@ int main()
                                         
 
     // Start Engine(Runtime).
-    gameEngine->StartEngine();
+    engine->StartEngine();
 
     // Example For GameMode, etc.
     // ...
