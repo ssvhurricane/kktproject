@@ -125,8 +125,8 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("C:/Users/
        
 #else 
 #ifdef __APPLE__ 
-Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.vs"), 
-                                              fileSystem->GetFileData("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.fs")); 
+Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/Volumes/DataSSD/Projects/CustomProjects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.vs"), 
+                                              fileSystem->GetFileData("/Volumes/DataSSD/Projects/CustomProjects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.fs")); 
 #endif
 #ifdef __linux__
 Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("/home/sergei/Projects/kkt/EngineDemo/Content/Shaders/ShaderExample4/ShaderExample4.vs"),
