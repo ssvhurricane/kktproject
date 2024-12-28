@@ -617,7 +617,7 @@
         {
             "type": "cppbuild",
             "label": "(Mac/Browser) -> engine_demo -> build active file (html).",
-            "command": "/Volumes/DataSSD/Programs/emsdk/upstream/emscripten/emcc",
+            "command": "/Volumes/DataSSD/Projects/CustomProjects/kkt_libs/emsdk/upstream/emscripten/emcc",
             "args": [ 
                 //"-std=c++17",
                 "-fdiagnostics-color=always",

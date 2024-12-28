@@ -67,7 +67,7 @@ Current dependencies ver.:
    Linux Clang ver. - 14.0.0
 
    Window Emscripten ver. - 3.1.74;
-   Mac Emscripten ver. - 3.1.15;
+   Mac Emscripten ver. - 3.1.74;
    Linux Emscripten ver. - 3.1.21;
 
    Angle - uwp(Xbox) ver. - none
