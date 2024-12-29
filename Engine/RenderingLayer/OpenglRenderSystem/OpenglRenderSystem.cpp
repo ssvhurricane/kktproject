@@ -229,7 +229,7 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
     data = texture2D_1.LoadTexture("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg", width, height, nrChannels);
 #else 
 #ifdef __APPLE__ 
-    data = texture2D_1.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
+    data = texture2D_1.LoadTexture("/Volumes/DataSSD/Projects/CustomProjects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
 #endif
 #ifdef __linux__
    data = texture2D_1.LoadTexture("/home/sergei/Projects/kkt/EngineDemo/Content/Graphics/Textures/wooden_container.jpg",  width, height, nrChannels);
@@ -251,7 +251,7 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
     data = texture2D_2.LoadTexture("C:/Users/Admin/Desktop/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
 #else 
 #ifdef __APPLE__ 
-    data = texture2D_2.LoadTexture("/Volumes/DataSSD/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
+    data = texture2D_2.LoadTexture("/Volumes/DataSSD/Projects/CustomProjects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
 #endif
 #ifdef __linux__
      data = texture2D_2.LoadTexture("/home/sergei/Projects/kkt/EngineDemo/Content/Graphics/Textures/awesomeface.png", width, height, nrChannels, true);
