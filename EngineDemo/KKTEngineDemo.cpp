@@ -27,7 +27,7 @@ int main()
                                                             ->GetSystem(ESystemType::SceneSystem));
                                         
     
-    sceneSystem->CreateSceneByName("MainScene", worldSystem->GetWorldByName("GameWorld"));
+    sceneSystem->CreateSceneByName("MainScene", worldSystem->GetWorldByName("World"));
 
     // ObjectSystem. 
     auto objectSystem = dynamic_cast<Engine::ObjectSystem::ObjectSystem*>(engineContext
@@ -37,7 +37,7 @@ int main()
     // Create cubes.
     for(int object = 0; object < 5; object++)
     {
-       auto cubeObject = objectSystem->CreateObjectByName("CubeGameObject" + std::to_string(object), 
+       auto cubeObject = objectSystem->CreateObjectByName("CubeObject" + std::to_string(object), 
                                                         sceneSystem->GetSceneByName("MainScene"), 
                                                         NULL);
 
@@ -59,7 +59,7 @@ int main()
     }
 
     // Create Camera(Player).
-    auto cameraObject = objectSystem->CreateObjectByName("CameraGameObject", 
+    auto cameraObject = objectSystem->CreateObjectByName("CameraObject", 
                                                         sceneSystem->GetSceneByName("MainScene"), 
                                                         NULL);
     
@@ -74,7 +74,7 @@ int main()
     }
 
     // Create Lights. 
-    auto pointLightObject = objectSystem->CreateObjectByName("PointLightGameObject", 
+    auto pointLightObject = objectSystem->CreateObjectByName("PointLightObject", 
                                                         sceneSystem->GetSceneByName("MainScene"), 
                                                         NULL);
     if(pointLightObject)
@@ -89,7 +89,7 @@ int main()
 
     // Create UI.
     // Canvas.
-    auto uiCanvasObject = objectSystem->CreateObjectByName("UICanvasGameObject", 
+    auto uiCanvasObject = objectSystem->CreateObjectByName("UICanvasObject", 
                                                         sceneSystem->GetSceneByName("MainScene"),
                                                         NULL);
 
@@ -104,7 +104,7 @@ int main()
     }
 
     // Text.
-    auto uiTextObject = objectSystem->CreateObjectByName("UITextGameObject", 
+    auto uiTextObject = objectSystem->CreateObjectByName("UITextObject", 
                                                         sceneSystem->GetSceneByName("MainScene"),
                                                         uiCanvasObject);
 
