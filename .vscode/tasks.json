@@ -796,6 +796,44 @@
         },
         {
             "type": "cppbuild",
+            "label": "(Mac) -> Editor -> build active file ().",
+            "command": "/usr/bin/clang++",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+
+                // Add dependencies headers.
+                "-I${workspaceFolder}/dependencies/include",
+
+                // Add engine headers.
+                "-I${workspaceFolder}/Engine",
+              
+                // Add cpp, lib.
+                "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
+                "${workspaceFolder}/Editor/*.cpp",
+                
+                "-o",
+                "${workspaceFolder}/bin/mac_os/Editor",
+               
+                "-fdeclspec",
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: /usr/bin/clang++"
+        },
+        {
+            "type": "cppbuild",
             "label": "(Mac) -> engine -> build dynamic library file (dylib).",
             "command": "/usr/bin/clang++",
             "args": [
