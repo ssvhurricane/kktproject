@@ -42,10 +42,23 @@
             "miDebuggerPath": "/usr/bin/gdb"
         },
         {
-            "name": "(Mac) - Сборка и отладка активного файла",
+            "name": "(Mac) - Сборка и отладка активного файла(DemoApp)",
             "type": "cppdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/mac_os/KKTEngineDemo",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb"
+        }
+        ,
+        {
+            "name": "(Mac) - Сборка и отладка активного файла(Editor)",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/mac_os/Editor",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

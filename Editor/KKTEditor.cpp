@@ -1,7 +1,4 @@
-
-
-
-   // Dear ImGui: standalone example application for GLFW + OpenGL 3, using programmable pipeline
+// Dear ImGui: standalone example application for GLFW + OpenGL 3, using programmable pipeline
 // (GLFW is a cross-platform general purpose library for handling windows, inputs, OpenGL/Vulkan/Metal graphics context creation, etc.)
 
 // Learn about Dear ImGui:
@@ -10,14 +7,12 @@
 // - Documentation        https://dearimgui.com/docs (same as your local docs/ folder).
 // - Introduction, links and more at the top of imgui.cpp
 
-#include "imgui/imgui.h"
-#include "imgui/backends/imgui_impl_glfw.h"
-#include "imgui/backends/imgui_impl_opengl3.h"
+#include <glad/glad.h>
+#include "img_ui/imgui.h"
+#include "img_ui/backends/imgui_impl_glfw.h"
+#include "img_ui/backends/imgui_impl_opengl3.h"
 #include <stdio.h>
 
-#include <KKTEngine.h>
-#include <iostream>
-#include <string>
 
 #define GL_SILENCE_DEPRECATION
 #if defined(IMGUI_IMPL_OPENGL_ES2)
@@ -34,7 +29,7 @@
 
 // This example can also compile and run with Emscripten! See 'Makefile.emscripten' for details.
 #ifdef __EMSCRIPTEN__
-#include <imgui/emscripten/emscripten_mainloop_stub.h>
+#include <img_ui/emscripten/emscripten_mainloop_stub.h>
 #endif
 
 static void glfw_error_callback(int error, const char* description)
@@ -193,9 +188,10 @@ int main(int, char**)
         ImGui::Render();
         int display_w, display_h;
         glfwGetFramebufferSize(window, &display_w, &display_h);
-        glViewport(0, 0, display_w, display_h);
-        glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
-        glClear(GL_COLOR_BUFFER_BIT);
+       // TODO:need fix!
+        //glViewport(0, 0, display_w, display_h);
+       // glClearColor(clear_color.x * clear_color.w, clear_color.y * clear_color.w, clear_color.z * clear_color.w, clear_color.w);
+       // glClear(GL_COLOR_BUFFER_BIT);
         ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
         glfwSwapBuffers(window);

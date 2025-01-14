@@ -807,6 +807,10 @@
                 // Add dependencies headers.
                 "-I${workspaceFolder}/dependencies/include",
 
+                "${workspaceFolder}/dependencies/include/img_ui/*.cpp",
+                "${workspaceFolder}/dependencies/include/img_ui/backends/*.cpp",
+                "${workspaceFolder}/dependencies/include/img_ui/misc/cpp/*.cpp",
+
                 // Add engine headers.
                 "-I${workspaceFolder}/Engine",
               
