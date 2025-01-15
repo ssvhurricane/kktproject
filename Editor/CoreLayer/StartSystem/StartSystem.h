@@ -22,9 +22,6 @@ class StartSystem : public ISystem
 #endif
 #endif
 {
-private:
-
-
 public:
 
     StartSystem();

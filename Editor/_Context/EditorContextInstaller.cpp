@@ -16,8 +16,11 @@ void EditorContextInstaller::InstallBindings()
 
     // Add core systems.
    _systems.emplace(ESystemType::ConfigSystem, new Editor::ConfigSystem::ConfigSystem);
-
-   std::cout << "[EditorLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
+    
+     // Render Systems.
+    _systems.emplace(ESystemType::RenderSystem, new Editor::RenderSystem::RenderSystem);
+  
+     std::cout << "[EditorLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
 }
 
 void EditorContextInstaller::CreateContext()

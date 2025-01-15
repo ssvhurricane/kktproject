@@ -820,6 +820,11 @@
                 "${workspaceFolder}/Editor/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Editor/CoreLayer/StartSystem/*.cpp",
                 "${workspaceFolder}/Editor/CoreLayer/ConfigSystem/*.cpp",
+
+                "${workspaceFolder}/Editor/RenderingLayer/OpenglRenderSystem/*.cpp",
+                "${workspaceFolder}/Editor/RenderingLayer/OpenglRenderSystem/*.c",
+                "${workspaceFolder}/Editor/RenderingLayer/VulkanRenderSystem/*.cpp",
+                "${workspaceFolder}/Editor/RenderingLayer/RenderSystem/*.cpp",
               
                 // Add cpp, lib.
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",

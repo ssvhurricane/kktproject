@@ -20,13 +20,8 @@ StartSystem::StartSystem()
 }
 
 void StartSystem::Initialize()
-{
-    /*
-  dynamic_cast<Engine::WorldSystem::WorldSystem*>
-   (Engine::KKTEngine::InstancePtr()
-                                ->GetContext()
-                                ->GetSystem(ESystemType::WorldSystem))->Initialize();
-*/
+{ 
+     // TODO:
 }
 
 } // namespace StartSystem

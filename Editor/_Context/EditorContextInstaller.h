@@ -7,6 +7,7 @@
 
 // Add Base systems. This place for add system headers, then use all.
 #include "../CoreLayer/ConfigSystem/ConfigSystem.h"
+#include "../RenderingLayer/RenderSystem/RenderSystem.h"
 
 namespace Editor {
 namespace _Context {

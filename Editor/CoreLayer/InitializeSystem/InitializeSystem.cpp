@@ -10,11 +10,12 @@ InitializeSystem::InitializeSystem()
 
 void InitializeSystem::Initialize()
 {
-     std::cout<< "[EditorLayer] -> [" << typeid(this).name() <<  "] -> [Initialize...]" << std::endl;
+   // TODO:
 }
 
 IContextInstaller* InitializeSystem::GetContext()
 {
+    // TODO:
     _context = new Editor::_Context::EditorContextInstaller();
 
     return _context;
