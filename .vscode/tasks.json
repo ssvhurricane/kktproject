@@ -831,7 +831,7 @@
                 "${workspaceFolder}/Editor/*.cpp",
                 
                 "-o",
-                "${workspaceFolder}/bin/mac_os/Editor",
+                "${workspaceFolder}/bin/mac_os/KKTEditor",
                
                 "-fdeclspec",
                 "-Wno-deprecated"
