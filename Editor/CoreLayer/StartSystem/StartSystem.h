@@ -27,6 +27,10 @@ public:
     StartSystem();
 
     void Initialize();
+
+    void Play();
+
+    void Pause(bool isPaused);
 };
 
 } // namespace StartSystem

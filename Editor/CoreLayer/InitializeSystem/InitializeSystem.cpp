@@ -8,9 +8,15 @@ InitializeSystem::InitializeSystem()
     // TODO:
 }
 
-void InitializeSystem::Initialize()
+void InitializeSystem::Initialize(IContextInstaller* _mainContext)
 {
-   // TODO:
+    // Create and Draw editor.
+    auto renderSystem = dynamic_cast<Editor::RenderSystem::RenderSystem*>
+                    (_mainContext->GetSystem(ESystemType::RenderSystem));
+
+    renderSystem->Configurate(Editor::RenderSystem::ERenderSystemType::OpenGL, Editor::RenderSystem::ERenderMode::Edit);
+
+    renderSystem->Render(true);
 }
 
 IContextInstaller* InitializeSystem::GetContext()

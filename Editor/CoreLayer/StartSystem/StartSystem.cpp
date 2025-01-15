@@ -24,5 +24,15 @@ void StartSystem::Initialize()
      // TODO:
 }
 
+void StartSystem::Play()
+{
+    // TODO:
+}
+
+void StartSystem::Pause(bool isPaused)
+{
+    // TODO:
+}
+
 } // namespace StartSystem
 } // namespace Editor
