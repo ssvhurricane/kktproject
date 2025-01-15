@@ -813,6 +813,13 @@
 
                 // Add engine headers.
                 "-I${workspaceFolder}/Engine",
+
+                // Add .cpp systems.
+                "${workspaceFolder}/Editor/_Context/*.cpp", 
+
+                "${workspaceFolder}/Editor/CoreLayer/InitializeSystem/*.cpp", 
+                "${workspaceFolder}/Editor/CoreLayer/StartSystem/*.cpp",
+                "${workspaceFolder}/Editor/CoreLayer/ConfigSystem/*.cpp",
               
                 // Add cpp, lib.
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
