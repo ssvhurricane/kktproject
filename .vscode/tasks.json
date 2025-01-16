@@ -4,7 +4,7 @@
         // Windows Tasks.
         {
             "type": "cppbuild",
-            "label": "(Window/Browser) -> engine_demo -> build active file (html).",
+            "label": "(Window/Browser) -> Engine_demo -> build active file (html).",
             "command": "C:\\Users\\Admin\\Desktop\\Projects\\kkt_libs\\emsdk\\upstream\\emscripten\\emcc",
             "args": [
                 "-fdiagnostics-color=always",
@@ -144,7 +144,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "(Windows) -> engine_demo -> build active file (exe).",
+            "label": "(Windows) -> Engine_demo -> build active file (exe).",
             "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
             "args": [
                 "-std=c++17",
@@ -181,7 +181,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "(Windows) -> engine -> build dynamic library file (dll).",
+            "label": "(Windows) -> Engine -> build dynamic library file (dll).",
             "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
             "args": [
                 "-std=c++17",
@@ -307,7 +307,7 @@
          // Linux Tasks.
          {
             "type": "cppbuild",
-            "label": "(Linux/Browser) -> engine_demo -> build active file (html).",
+            "label": "(Linux/Browser) -> Engine_demo -> build active file (html).",
             "command": "/home/sergei/Projects/kkt_libs/emsdk/upstream/emscripten/emcc",
             "args": [ 
                 //"-std=c++17",
@@ -450,7 +450,7 @@
         // Linux Tasks.
         {
             "type": "cppbuild",
-            "label": "(Linux) -> engine_demo -> build active file ().",
+            "label": "(Linux) -> Engine_demo -> build active file ().",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
@@ -488,7 +488,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "(Linux) -> engine -> build dynamic library file ().",
+            "label": "(Linux) -> Engine -> build dynamic library file ().",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
@@ -616,7 +616,7 @@
         // Mac Tasks.
         {
             "type": "cppbuild",
-            "label": "(Mac/Browser) -> engine_demo -> build active file (html).",
+            "label": "(Mac/Browser) -> Engine_demo -> build active file (html).",
             "command": "/Volumes/DataSSD/Projects/CustomProjects/kkt_libs/emsdk/upstream/emscripten/emcc",
             "args": [ 
                 //"-std=c++17",
@@ -758,7 +758,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "(Mac) -> engine_demo -> build active file ().",
+            "label": "(Mac) -> Engine_demo -> build active file ().",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
@@ -820,6 +820,8 @@
                 "${workspaceFolder}/Editor/CoreLayer/InitializeSystem/*.cpp", 
                 "${workspaceFolder}/Editor/CoreLayer/StartSystem/*.cpp",
                 "${workspaceFolder}/Editor/CoreLayer/ConfigSystem/*.cpp",
+                "${workspaceFolder}/Editor/CoreLayer/LogSystem/*.cpp", 
+                "${workspaceFolder}/Editor/CoreLayer/LogSystem/Base/*.cpp",
 
                 "${workspaceFolder}/Editor/RenderingLayer/OpenglRenderSystem/*.cpp",
                 "${workspaceFolder}/Editor/RenderingLayer/OpenglRenderSystem/*.c",
@@ -850,7 +852,7 @@
         },
         {
             "type": "cppbuild",
-            "label": "(Mac) -> engine -> build dynamic library file (dylib).",
+            "label": "(Mac) -> Engine -> build dynamic library file (dylib).",
             "command": "/usr/bin/clang++",
             "args": [
                 "-std=c++17",
