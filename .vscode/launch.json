@@ -5,10 +5,21 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "(Windows) - Сборка и отладка активного файла",
+            "name": "(Windows) - Сборка и отладка активного файла(DemoApp)",
             "type": "cppvsdbg",
             "request": "launch",
             "program": "${workspaceFolder}/bin/windows_os/KKTEngineDemo.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}/bin/",
+            "environment": [],
+            "console": "externalTerminal"
+        },
+        {
+            "name": "(Windows) - Сборка и отладка активного файла(Editor)",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/bin/windows_os/KKTEditor.exe",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}/bin/",

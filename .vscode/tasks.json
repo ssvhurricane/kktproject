@@ -181,6 +181,61 @@
         },
         {
             "type": "cppbuild",
+            "label": "(Windows) -> Editor -> build active file (exe).",
+            "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
+            "args": [
+                "-std=c++17",
+                "-fdiagnostics-color=always",
+                "-Wall",
+                "-g",
+
+                // Add dependencies headers.
+                "-I${workspaceFolder}\\dependencies\\include",
+                
+                "${workspaceFolder}\\dependencies\\include\\img_ui\\*.cpp",
+                "${workspaceFolder}\\dependencies\\include\\img_ui\\backends\\*.cpp",
+                "${workspaceFolder}\\dependencies\\include\\img_ui\\misc\\cpp\\*.cpp",
+
+                // Add engine headers. 
+                "-I${workspaceFolder}\\Engine", 
+
+                 // Add .cpp systems.
+                 "${workspaceFolder}\\Editor\\_Context\\*.cpp", 
+
+                 "${workspaceFolder}\\Editor\\CoreLayer\\InitializeSystem\\*.cpp", 
+                 "${workspaceFolder}\\Editor\\CoreLayer\\StartSystem\\*.cpp",
+                 "${workspaceFolder}\\Editor\\CoreLayer\\ConfigSystem\\*.cpp",
+                 "${workspaceFolder}\\Editor\\CoreLayer\\LogSystem\\*.cpp", 
+                 "${workspaceFolder}\\Editor\\CoreLayer\\LogSystem\\Base\\*.cpp",
+ 
+                 "${workspaceFolder}\\Editor\\RenderingLayer\\OpenglRenderSystem\\*.cpp",
+                 "${workspaceFolder}\\Editor\\RenderingLayer\\OpenglRenderSystem\\*.c",
+                 "${workspaceFolder}\\Editor\\RenderingLayer\\VulkanRenderSystem\\*.cpp",
+                 "${workspaceFolder}\\Editor\\RenderingLayer\\RenderSystem\\*.cpp",
+
+                // Add cpp, lib.
+                "${workspaceFolder}\\bin\\windows_os\\KKTEngine.lib",
+                "${workspaceFolder}\\Editor\\*.cpp",
+               
+                "-o", 
+                "${workspaceFolder}\\bin\\windows_os\\KKTEditor.exe",
+            
+                "-Wno-deprecated"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "compiler: \"C:\\Program Files\\LLVM\\bin\\clang++.exe\""
+        },
+        {
+            "type": "cppbuild",
             "label": "(Windows) -> Engine -> build dynamic library file (dll).",
             "command": "C:\\Program Files\\LLVM\\bin\\clang++.exe",
             "args": [
