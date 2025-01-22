@@ -5,6 +5,8 @@
 #include "../Base/ERenderSystemType.h"
 #include "base_context/Defines.h"
 
+#include "../../UILayer/UISystem/UISystem.h"
+
 namespace Editor {
 namespace OpenglRenderSystem {
 #ifdef _WIN32

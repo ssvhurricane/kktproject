@@ -7,6 +7,8 @@
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 
+#include "../_View/MainContainerView/MainContainerView.h"
+
 namespace Editor {
 namespace UISystem {
 #ifdef _WIN32

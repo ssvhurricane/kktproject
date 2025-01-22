@@ -883,7 +883,19 @@
                 "${workspaceFolder}/Editor/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Editor/RenderingLayer/RenderSystem/*.cpp",
 
+                // UI system.
                 "${workspaceFolder}/Editor/UILayer/UISystem/*.cpp", 
+                // Views.
+                "${workspaceFolder}/Editor/UILayer/_View/MainContainerView/*.cpp", 
+                "${workspaceFolder}/Editor/UILayer/_View/MainMenuView/*.cpp", 
+                "${workspaceFolder}/Editor/UILayer/_View/StartMenuView/*.cpp", 
+                "${workspaceFolder}/Editor/UILayer/_View/SceneView/*.cpp", 
+                "${workspaceFolder}/Editor/UILayer/_View/RunView/*.cpp",
+                "${workspaceFolder}/Editor/UILayer/_View/ProjectView/*.cpp",
+                "${workspaceFolder}/Editor/UILayer/_View/InspectorView/*.cpp",
+                "${workspaceFolder}/Editor/UILayer/_View/HierarchyView/*.cpp",
+                "${workspaceFolder}/Editor/UILayer/_View/ConsoleView/*.cpp",
+                // Ctrls.
               
                 // Add cpp, lib.
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",

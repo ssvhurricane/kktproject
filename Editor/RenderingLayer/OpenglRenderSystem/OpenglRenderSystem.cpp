@@ -200,6 +200,11 @@ int OpenglRenderSystem::Render(bool bDemoMode)
             ImGui::End();
         }
 
+
+        // TODO:
+        auto uiSystem = new Editor::UISystem::UISystem;
+        uiSystem->Render();
+
         // Rendering.
         ImGui::Render();
         int display_w, display_h;
