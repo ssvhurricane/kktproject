@@ -21,6 +21,10 @@ void EditorContextInstaller::InstallBindings()
      // Render Systems.
     _systems.emplace(ESystemType::RenderSystem, new Editor::RenderSystem::RenderSystem);
   
+    // UI systems.
+    _systems.emplace(ESystemType::UISystem, new Editor::UISystem::UISystem);
+
+   
     std::cout << "[EditorLayer] -> [" << typeid(this).name() << "] -> [Install bindings stop proccess.]" << std::endl;
 }
 

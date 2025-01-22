@@ -9,6 +9,8 @@
 #include "../CoreLayer/ConfigSystem/ConfigSystem.h"
 #include "../RenderingLayer/RenderSystem/RenderSystem.h"
 #include "../CoreLayer/LogSystem/LogSystem.h"
+#include "../UILayer/UISystem/UISystem.h"
+
 namespace Editor {
 namespace _Context {
 class EditorContextInstaller : public IContextInstaller

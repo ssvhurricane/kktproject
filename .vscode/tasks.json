@@ -827,6 +827,8 @@
                 "${workspaceFolder}/Editor/RenderingLayer/OpenglRenderSystem/*.c",
                 "${workspaceFolder}/Editor/RenderingLayer/VulkanRenderSystem/*.cpp",
                 "${workspaceFolder}/Editor/RenderingLayer/RenderSystem/*.cpp",
+
+                "${workspaceFolder}/Editor/UILayer/UISystem/*.cpp", 
               
                 // Add cpp, lib.
                 "${workspaceFolder}/bin/mac_os/KKTEngine.dylib",
