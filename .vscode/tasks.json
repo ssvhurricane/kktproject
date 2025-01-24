@@ -191,8 +191,10 @@
 
                 // Add dependencies headers.
                 "-I${workspaceFolder}\\dependencies\\include",
-
-
+                "-L${workspaceFolder}\\dependencies\\library",
+                
+                "${workspaceFolder}\\dependencies\\library\\glfw3.lib",
+               
                 "${workspaceFolder}\\dependencies\\include\\img_ui\\*.cpp",
                 "${workspaceFolder}\\dependencies\\include\\img_ui\\backends\\*.cpp",
                 "${workspaceFolder}\\dependencies\\include\\img_ui\\misc\\cpp\\*.cpp",
@@ -235,6 +237,14 @@
                 "-o", 
                 "${workspaceFolder}\\bin\\windows_os\\${fileBasenameNoExtension}.exe",
             
+                "-DENGINEDLL_EXPORTS",
+
+                "-lwinmm",
+                "-lgdi32",
+                "-lopengl32",
+                "-lshell32",
+                "-luser32",
+                "-lglfw3",
                 "-Wno-deprecated"
             ],
             "options": {
