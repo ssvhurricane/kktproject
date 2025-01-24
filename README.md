@@ -57,6 +57,8 @@ Current dependencies ver.:
 
    Nuklear ver. - none;
 
+   Dear imgui - v1.91.7 WIP
+
    StbImage ver. - 2.25;
 
    Windows Assimp ver. - 143;
