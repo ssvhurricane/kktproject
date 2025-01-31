@@ -50,6 +50,8 @@ Build Project(Only visual studio code):
 Current dependencies ver.:
 
    Glfw ver. -  3.3.6;
+   
+   Sdl ver. - 3.2.1;
 
    Glad ver. - 0.1.35;
 

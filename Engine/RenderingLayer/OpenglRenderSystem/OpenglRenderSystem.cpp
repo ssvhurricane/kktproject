@@ -9,6 +9,7 @@
 #endif
 
 #include <GLFW/glfw3.h>
+#include <SDL3/SDL.h>
 
 namespace Engine {
 namespace OpenglRenderSystem {
@@ -61,7 +62,7 @@ OpenglRenderSystem::OpenglRenderSystem()
 }
 
 int OpenglRenderSystem::Render(bool bDemoMode)
-{
+{/*
     if(bDemoMode)
     {
    dynamic_cast<Engine::LogSystem::LogSystem*>
@@ -375,7 +376,18 @@ Engine::RenderSystem::StandardGLShader shader(fileSystem->GetFileData("Content/S
 		for (auto objectItem : objects) RenderObject(objectItem.second);
        
 	}
+*/
+	// SDL, (Ctrl + Alt + Del on Windows or Cmd + Option + Esc on macOS)
+	SDL_Init(SDL_INIT_VIDEO);
 
+	SDL_Window* Window { SDL_CreateWindow(
+		"Hello Window (SDL 3.2.0)",  800, 600, 0
+	) };
+	
+	SDL_Event event;
+	while(true) {
+		SDL_PollEvent(&event);
+	}
 	return 0;
 }
 

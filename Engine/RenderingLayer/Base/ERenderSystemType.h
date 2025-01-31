@@ -7,8 +7,8 @@ enum ERenderSystemType
 {
     OpenGL,
     Vulkan,
-    Auto // TODO:
+    Auto
 };
 
-} // namespace Engine
+} // namespace RenderSystem
 } // namespace Engine 

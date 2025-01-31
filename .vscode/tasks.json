@@ -769,10 +769,17 @@
                 "-shared",
                 "-Wall",
                 "-g",
+                "-lSDL3",
+
                 "-I${workspaceFolder}/dependencies/include",
-                "-L${workspaceFolder}/dependencies/library/mac",
+              
+                "-rpath",
+                "${workspaceFolder}/dependencies/library/mac",
+                
                 "${workspaceFolder}/dependencies/library/mac/libglfw3.a",
-                "-L${workspaceFolder}/dependencies/library/mac/libassimpd.5.dylib",
+                "${workspaceFolder}/dependencies/library/mac/libSDL3_test.a",
+                "${workspaceFolder}/dependencies/library/mac/libSDL_uclibc.a",
+
                 "${workspaceFolder}/Engine/_Context/*.cpp",
                 "${workspaceFolder}/Engine/AILayer/AISystem/*.cpp",
                 "${workspaceFolder}/Engine/AnimationLayer/AnimationSystem/*.cpp",
@@ -847,7 +854,7 @@
                 "-framework",
                 "CoreVideo",
                 "-framework",
-                "CoreFoundation",
+                "CoreFoundation", 
                 "-Wno-deprecated"
             ],
             "options": {

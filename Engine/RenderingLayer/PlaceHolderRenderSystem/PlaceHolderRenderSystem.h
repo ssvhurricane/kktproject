@@ -8,6 +8,8 @@
 #include "Base/IPlaceHolder.h"
 #include "Base/EPlaceHolderType.h"
 
+#include "../Base/EWindowRenderApiSystemType.h"
+
 namespace Engine {
 namespace PlaceHolderRenderSystem {
 #ifdef _WIN32

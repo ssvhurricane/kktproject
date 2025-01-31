@@ -2,6 +2,7 @@
 #pragma once
 #include <functional>
 #include <vector>
+#include <iostream>
 
 #include "../../KKTEngine.h"
 
@@ -70,6 +71,10 @@ public:
     OpenglRenderSystem();
 
     int Render(bool bDemoMode);
+
+    void TestRenderWindowGLTW();
+
+    void TestRenderwindowSDL();
 
     void Initialize();
 }; 
